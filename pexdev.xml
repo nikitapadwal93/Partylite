@@ -1,0 +1,263 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite-FullRegression" parallel = "tests" thread-count="3">
+	<listeners>
+		<listener class-name="framework.utils.TestNGListener" />
+	</listeners>
+	<!-- <test name ="Admin_Settings_Captcha_disable"> 
+	<groups> 
+	<run> 
+	<include name="Captcha"/> 
+	<include name="Common"/> 
+	</run> 
+	</groups>
+	<classes> 
+	<class name="framework.test.TurnOffCaptcha_PartyLite"/> 
+	</classes> 
+	</test> -->
+
+	   <test thread-count="8" name="Test-FullRegression" parallel="methods">
+	  <parameter name ="paramURL" value="https://pexdev.partylite.co.uk" />
+  	   <parameter name ="paramCountry" value="UK"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+		
+	   <class name="framework.test.GuestOrder_PartyLiteEU" />
+       <class name="framework.test.GuestOrderViaCategory_PartyLiteEU"/>
+		<class name="framework.test.NewCustomerOrder_PartyLiteEU"/>
+		<class name="framework.test.GuestOrder_Discount_Detail_PartyLite" />
+		<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+	  
+	  
+	 <!-- <class name="framework.test.ConsultantContacts_PartyLite"/>
+      <class name="framework.test.CreatePartyContacts_PartyLite"/> 
+	 
+	 <class name="framework.test.FYSPartyOrder_PartyLite"/>
+	   <class name="framework.test.CollectivePartyOrder_PartyLite"/>
+        <class name="framework.test.ClassicPartyOrder_PartyLite"/>
+        
+	  <class name="framework.test.ClassicPartyPrevHost_NewAddress_PartyLite"/>
+     <class name="framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite"/>
+     
+     
+    <class name="framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyNewHost_PartyLite"/>
+     
+     <class name="framework.test.FacebookPartyPrevHost_NewAddress_PartyLite"/>
+     <class name="framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite"/>  
+    
+      <class name="framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite"/>
+       <class name="framework.test.FacebookPartyNewHost_PartyLite"/>  -->
+       
+  
+	
+	<!-- <class name="framework.test.ClassicChildParty_PartyLite"/>
+	<class name="framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyPrevHost_HostAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyPrevHost_PreviousAddress_PartyLite"/>
+      
+      <class name="framework.test.FacebookPartyPrevHost_HostAddress_PartyLite"/> 
+      <class name="framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite"/>   -->
+        
+      </classes>
+	</test>  
+	
+	   
+	
+	
+	<test thread-count="12" name="Test-FullRegression-FR" parallel="methods">
+	  <parameter name ="paramURL" value="https://pexdev.partylite.fr" />
+  	   <parameter name ="paramCountry" value="FR"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+	
+	  <class name="framework.test.GuestOrder_PartyLiteEU" />
+      <class name="framework.test.GuestOrderViaCategory_PartyLiteEU"/>
+	  <class name="framework.test.NewCustomerOrder_PartyLiteEU"/>
+	  
+	 <!--  <class name="framework.test.ClassicPartyPrevHost_NewAddress_PartyLite"/>
+     <class name="framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite"/>
+     
+    <class name="framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyNewHost_PartyLite"/>
+     
+     <class name="framework.test.FacebookPartyPrevHost_NewAddress_PartyLite"/>
+     <class name="framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite"/>
+      <class name="framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite"/>  
+    
+      <class name="framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite"/>
+       <class name="framework.test.FacebookPartyNewHost_PartyLite"/> 
+ 
+        <class name="framework.test.ConsultantContacts_PartyLite"/>
+        <class name="framework.test.CreatePartyContacts_PartyLite"/> 
+	
+	<class name="framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyPrevHost_HostAddress_PartyLite"/>
+      <class name="framework.test.ClassicPartyPrevHost_PreviousAddress_PartyLite"/>
+      
+      <class name="framework.test.FacebookPartyPrevHost_HostAddress_PartyLite"/> 
+      <class name="framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite"/>  
+      
+      <class name="framework.test.FYSPartyOrder_PartyLite"/>
+	   <class name="framework.test.CollectivePartyOrder_PartyLite"/>
+        <class name="framework.test.ClassicPartyOrder_PartyLite"/>
+        <class name="framework.test.ClassicChildParty_PartyLite"/>   -->
+     
+        
+     
+      </classes>
+	</test>  	
+
+	
+	 <test name="Test-FullRegression-OutsideOrder">
+	<parameter name ="paramURL" value="https://pexdev.partylite.co.uk" />
+  	<parameter name ="paramCountry" value="UK"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+		
+       <class name="framework.test.Create_NanoUserAccount_PartyLite"/>
+       <!-- <class name="framework.test.ClassicSendInvitation_PartyLite"/>
+       <class name="framework.test.ClassicOutsideOrder_PartyLite"/>  -->
+		</classes>
+	</test> 
+	
+	<test  name="Online Enrollment UK"> 
+  <parameter name ="paramURL" value="https://pexdev.partylite.co.uk" />
+  <parameter name ="paramCountry" value="OEUK"/>
+  <groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+   <classes>
+         <class name="framework.test.OnlineEnrollment_UK_PartyLite"/>
+	</classes> 
+  </test>
+	 
+	 <test thread-count="10" name="EShop_US" parallel="methods"> 
+  <parameter name ="paramURL" value="https://pexdev.partylite.com" />
+  <parameter name ="paramCountry" value="US"/>
+   <groups>
+  <run>
+  
+  <include name="Common"/>
+  <include name="eShop"/>
+  </run>
+  </groups>
+   <classes>
+   <class name="framework.test.GuestOrder_PartyLite" />
+   			<class name="framework.test.GuestOrderViaCategory_PartyLite"/>
+   		<class name="framework.test.NewCustomerOrder_PartyLite"/>
+	</classes> 
+  </test>
+  
+  <test thread-count="10" name="EShop_CA" parallel="methods">
+		<parameter name="paramURL"
+			value="https://pexdev.partylite.ca" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test  name="Online Enrollment US"> 
+  <parameter name ="paramURL" value="https://pexdev.partylite.com" />
+  <parameter name ="paramCountry" value="OEUS"/>
+  <groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+   <classes>
+   		<class name="framework.test.FakeUSAddress_PartyLite"/>
+         <class name="framework.test.OnlineEnrollment_US_PartyLite"/>
+	</classes> 
+  </test>
+  
+  <test name="Online Enrollment CA">
+		<parameter name="paramURL"
+			value="https://pexdev.partylite.ca" />
+		<parameter name="paramCountry" value="OECA" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.FakeCAAddress_PartyLite" />
+			<class name="framework.test.OnlineEnrollment_CA_PartyLite" />
+		</classes>
+	</test>
+  
+<!--   <test name="Virtual Random account outside order UK">
+ 	<parameter name ="paramURL" value="https://pexdev.partylite.co.uk" />
+  	<parameter name ="paramCountry" value="UK"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+		
+	  <class name="framework.test.VirtualSendInvitation_RandomAccountPartyLite"/>
+   		<class name="framework.test.VirtualRandom_OutsideOrder_PartyLite"/>
+   		<class name="framework.test.VirtualCustomer_OutsideOrder_PartyLite" />
+        <class name="framework.test.Virtual_PartyOrder_PartyLite" />
+		</classes>
+	</test>  -->
+	
+	<!-- <test name ="Admin_Settings_Captcha_enable"> 
+	<groups> 
+	<run> 
+	<include name="Captcha"/> 
+	<include name="Common"/> 
+	</run> 
+	</groups>
+	<classes> 
+	<class name="framework.test.TurnOnCaptcha_PartyLite" />
+	</classes> 
+	</test> -->
+	<!-- Test -->
+</suite> <!-- Suite -->

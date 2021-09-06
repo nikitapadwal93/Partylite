@@ -1,0 +1,98 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite-FullRegression">
+	<listeners>
+		<listener class-name="framework.utils.TestNGListener" />
+	</listeners>
+	<!-- <test name ="Admin_Settings_Captcha_disable"> 
+	<groups> 
+	<run> 
+	<include name="Captcha"/> 
+	<include name="Common"/> 
+	</run> 
+	</groups>
+	<classes> 
+	<class name="framework.test.TurnOffCaptcha_PartyLite"/> 
+	</classes> 
+	</test>
+ -->	<!-- <test name="Test-FullRegression - FR">
+ 	<parameter name ="paramURL" value="https://pexdev.partylite.fr" />
+  	<parameter name ="paramCountry" value="FR"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+	   
+	  
+		</classes>
+	</test>  -->
+	
+	<!-- <test name="Test-FullRegression - UK">
+ 	<parameter name ="paramURL" value="https://magentoqa.partylite.co.uk" />
+  	<parameter name ="paramCountry" value="UK"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+	  
+	   <class name="framework.test.SignIn_PartyLite"/>
+		</classes>
+	</test>  -->
+	
+	
+	<test name="Test-FullRegression - UK">
+ 	<parameter name ="paramURL" value="https://magentostage.partylite.co.uk" />
+  	<parameter name ="paramCountry" value="UK"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+	 <class name="framework.test.CategoryNavigation_PartyLite"/>
+		</classes>
+	</test> 
+	
+	<!-- <test name="Test-FullRegression - FR" thread-count="3" parallel="methods">
+ 	<parameter name ="paramURL" value="https://magentoqa.partylite.fr" />
+  	<parameter name ="paramCountry" value="FR"/> 
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+	  
+	   <class name="framework.test.GuestOrder_PartyLite"/>
+	  
+		</classes>
+	</test>  -->
+	
+	<!-- <test name ="Admin_Settings_Captcha_enable"> 
+	<groups> 
+	<run> 
+	<include name="Captcha"/> 
+	<include name="Common"/> 
+	</run> 
+	</groups>
+	<classes> 
+	<class name="framework.test.TurnOnCaptcha_PartyLite" />
+	</classes> 
+	</test> -->
+	<!-- Test -->
+</suite> <!-- Suite -->

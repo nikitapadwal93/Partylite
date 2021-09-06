@@ -1,0 +1,123 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite-FullRegression" parallel="tests" thread-count="4">
+	<listeners>
+		<listener class-name="framework.utils.TestNGListener" />
+	</listeners>
+	
+ <!-- <test thread-count="10" name="EShop_US" parallel="methods">
+		<parameter name="paramURL"
+			value="https://pexdev.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />		
+		</classes>
+	</test> -->
+
+  	<!-- <test thread-count="10" name="EShop_DE" parallel="methods">
+		<parameter name="paramURL"
+			value="https://pexdev.partylite.de" />
+		<parameter name="paramCountry" value="DE" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLiteEU" />
+					
+		</classes>
+	</test>  -->  
+	
+	<!-- <test thread-count="10" name="EShop_CH" parallel="methods">
+		<parameter name="paramURL"
+			value="https://pexdev.partylite.de" />
+		<parameter name="paramCountry" value="CH" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLiteEU" />
+					
+		</classes>
+	</test>   
+ -->
+ 	 <!-- <test thread-count="10" name="EShop_US" parallel="methods">
+		<parameter name="paramURL"
+			value="https://pexdev.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_LineTypeCoupon_US_PartyLite" />
+					
+		</classes>
+	</test>  -->
+	
+	<!-- <test thread-count="10" name="EShop_AT" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.at" />
+		<parameter name="paramCountry" value="AT" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.NewCustomerOrder_PartyLiteEU" />
+					
+		</classes>
+	</test>  -->  
+	
+   <test name="Test-FullRegression-OutsideOrder-AT">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com/" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>  
+	
+	<!--   	 <test thread-count="10" name="EShop_CA" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ca" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+					
+		</classes>
+	</test>    -->
+	
+
+	<!-- <test name ="Admin_Settings_Captcha_enable"> <groups> <run> <include 
+		name="Captcha"/> <include name="Common"/> </run> </groups> <classes> <class 
+		name="framework.test.TurnOnCaptcha_PartyLite" /> </classes> </test> -->
+	<!-- Test -->
+</suite> <!-- Suite -->

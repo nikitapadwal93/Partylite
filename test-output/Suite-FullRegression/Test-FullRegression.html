@@ -1,0 +1,848 @@
+<html>
+<head>
+<title>TestNG:  Test-FullRegression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test-FullRegression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/4/15</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Dec 23 19:11:09 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>1351 seconds (1351276 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>PEX Smokes eShop Common </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite.classicConsAsHost_PreviousAddress()'><b>classicConsAsHost_PreviousAddress</b><br>Test class: framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite.classicConsAsHost_PreviousAddress(ClassicPartyConsAsHost_PreviousAddress_PartyLite.java:70)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace981400479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace981400479'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite.classicConsAsHost_PreviousAddress(ClassicPartyConsAsHost_PreviousAddress_PartyLite.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>180</td>
+<td>framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite@2c039ac6</td></tr>
+<tr>
+<td title='framework.test.GuestOrderUsing_PickupPoint_PartyLite.createGuestOrder()'><b>createGuestOrder</b><br>Test class: framework.test.GuestOrderUsing_PickupPoint_PartyLite<br>Parameters: P92992, 10, party@mailinator.com, anand, v, 4,Beechtree Avenue,    ,    , SL7 3NJ, Marlow, 01923 825119, Debit Card, 4917610000000000, 05, 23, 123</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.GuestOrderUsing_PickupPoint_PartyLite.createGuestOrder(GuestOrderUsing_PickupPoint_PartyLite.java:95)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace449626299", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace449626299'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.GuestOrderUsing_PickupPoint_PartyLite.createGuestOrder(GuestOrderUsing_PickupPoint_PartyLite.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>154</td>
+<td>framework.test.GuestOrderUsing_PickupPoint_PartyLite@631330c</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite.facebookPartyConsAsHost_PrevAddress()'><b>facebookPartyConsAsHost_PrevAddress</b><br>Test class: framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_PA, 30/06/2019, 2333.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite.facebookPartyConsAsHost_PrevAddress(FacebookPartyConsAsHost_PrevAddress_PartyLite.java:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1645444637", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1645444637'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite.facebookPartyConsAsHost_PrevAddress(FacebookPartyConsAsHost_PrevAddress_PartyLite.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>219</td>
+<td>framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite@27808f31</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite.facebookPartyPrevHost_HostAddress()'><b>facebookPartyPrevHost_HostAddress</b><br>Test class: framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_HA, 30/06/2019, 2333.0, Codemtest@mailinator.com</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite.facebookPartyPrevHost_HostAddress(FacebookPartyPrevHost_PrevAddress_PartyLite.java:70)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace322152432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace322152432'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite.facebookPartyPrevHost_HostAddress(FacebookPartyPrevHost_PrevAddress_PartyLite.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>163</td>
+<td>framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite@42f93a98</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='framework.test.ClassicChildParty_PartyLite.childParty()'><b>childParty</b><br>Test class: framework.test.ClassicChildParty_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 28/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, Privy, Guest, guestPrivy, 01234567890, Child Party, 30/06/2019, 1000.0</td>
+<td></td>
+<td>375</td>
+<td>framework.test.ClassicChildParty_PartyLite@fad74ee</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite.classicConsAsHost_HostAddress()'><b>classicConsAsHost_HostAddress</b><br>Test class: framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0</td>
+<td></td>
+<td>137</td>
+<td>framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite@9a7504c</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite.classicConsAsHost_NewAddress()'><b>classicConsAsHost_NewAddress</b><br>Test class: framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, 01234567889</td>
+<td></td>
+<td>170</td>
+<td>framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite@3e57cd70</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyNewHost_PartyLite.classicPartyNewHost()'><b>classicPartyNewHost</b><br>Test class: framework.test.ClassicPartyNewHost_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ</td>
+<td></td>
+<td>170</td>
+<td>framework.test.ClassicPartyNewHost_PartyLite@1d8d30f7</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyPrevHost_HostAddress_PartyLite.classicPartyPrevHost_HostAddress()'><b>classicPartyPrevHost_HostAddress</b><br>Test class: framework.test.ClassicPartyPrevHost_HostAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, Codemtest@mailinator.com</td>
+<td></td>
+<td>207</td>
+<td>framework.test.ClassicPartyPrevHost_HostAddress_PartyLite@3d921e20</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyPrevHost_NewAddress_PartyLite.classicPartyPrevHost_NewAddress()'><b>classicPartyPrevHost_NewAddress</b><br>Test class: framework.test.ClassicPartyPrevHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, Codemtest@mailinator.com, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, 01234567889</td>
+<td></td>
+<td>177</td>
+<td>framework.test.ClassicPartyPrevHost_NewAddress_PartyLite@587d1d39</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyPrevHost_PreviousAddress_PartyLite.classicPartyPrevHost_PreviousAddress()'><b>classicPartyPrevHost_PreviousAddress</b><br>Test class: framework.test.ClassicPartyPrevHost_PreviousAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, Codemtest@mailinator.com</td>
+<td></td>
+<td>217</td>
+<td>framework.test.ClassicPartyPrevHost_PreviousAddress_PartyLite@3234e239</td></tr>
+<tr>
+<td title='framework.test.GuestOrder_PartyLite.createGuestOrder()'><b>createGuestOrder</b><br>Test class: framework.test.GuestOrder_PartyLite<br>Parameters: P92992, 10, party@mailinator.com, anand, v, 4,Beechtree Avenue,    ,    , SL7 3NJ, Marlow, 01923 825119, Debit Card, 4917610000000000, 05, 23, 123</td>
+<td></td>
+<td>356</td>
+<td>framework.test.GuestOrder_PartyLite@36b4cef0</td></tr>
+<tr>
+<td title='framework.test.CreatePartyContacts_PartyLite.createPartyContacts()'><b>createPartyContacts</b><br>Test class: framework.test.CreatePartyContacts_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, ContactPrivy, ContactWonder, mw2demo_johnsmith, 01234567890, 36.0, Beechtree, Marlow, SL7 3NJ</td>
+<td></td>
+<td>181</td>
+<td>framework.test.CreatePartyContacts_PartyLite@58c1670b</td></tr>
+<tr>
+<td title='framework.test.ConsultantContacts_PartyLite.createPartyContacts()'><b>createPartyContacts</b><br>Test class: framework.test.ConsultantContacts_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, ContactPrivy, ContactWonder, mw2demo_johnsmith, 01234567890, 36.0, Beechtree, Marlow, SL7 3NJ</td>
+<td></td>
+<td>233</td>
+<td>framework.test.ConsultantContacts_PartyLite@7a187f14</td></tr>
+<tr>
+<td title='framework.test.CollectivePartyOrder_PartyLite.createPartyOrder()'><b>createPartyOrder</b><br>Test class: framework.test.CollectivePartyOrder_PartyLite<br>Parameters: Codemdemo_collective@mailinator.com, PEXpassword123!, Collective PT Order, 29/06/2019, 30/06/2019, 2200.0, 2333.0, Privy, Guest, guestPrivy, 01234567890, g73c, 4917610000000000, 05, 23, 123</td>
+<td></td>
+<td>745</td>
+<td>framework.test.CollectivePartyOrder_PartyLite@51e2adc7</td></tr>
+<tr>
+<td title='framework.test.FYSPartyOrder_PartyLite.createPartyOrder()'><b>createPartyOrder</b><br>Test class: framework.test.FYSPartyOrder_PartyLite<br>Parameters: codemdemo_fys@mailinator.com, PEXpassword123!, Final PT Order, 15/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, Privy, Guest, guestPrivy, 01234567890, g73c, 4917610000000000, 05, 23, 123</td>
+<td></td>
+<td>752</td>
+<td>framework.test.FYSPartyOrder_PartyLite@1a8a8f7c</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyOrder_PartyLite.createPartyOrder()'><b>createPartyOrder</b><br>Test class: framework.test.ClassicPartyOrder_PartyLite<br>Parameters: Codemdemo_classic@mailinator.com, PEXpassword123!, Final PT Order, 15/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, Privy, Guest, guestPrivy, 01234567890, g73c, 4917610000000000, 05, 23, 123</td>
+<td></td>
+<td>705</td>
+<td>framework.test.ClassicPartyOrder_PartyLite@6f195bc3</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite.facebookPartyConsAsHost_HostAddress()'><b>facebookPartyConsAsHost_HostAddress</b><br>Test class: framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_PA, 30/06/2019, 2333.0</td>
+<td></td>
+<td>140</td>
+<td>framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite@436e852b</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite.facebookPartyConsAsHost_NewAddress()'><b>facebookPartyConsAsHost_NewAddress</b><br>Test class: framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_NA, 30/06/2019, 2333.0, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 01234567889</td>
+<td></td>
+<td>150</td>
+<td>framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite@37d31475</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyNewHost_PartyLite.facebookPartyNewHost()'><b>facebookPartyNewHost</b><br>Test class: framework.test.FacebookPartyNewHost_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_NA, 30/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ</td>
+<td></td>
+<td>169</td>
+<td>framework.test.FacebookPartyNewHost_PartyLite@1a1d6a08</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyPrevHost_HostAddress_PartyLite.facebookPartyPrevHost_HostAddress()'><b>facebookPartyPrevHost_HostAddress</b><br>Test class: framework.test.FacebookPartyPrevHost_HostAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_HA, 30/06/2019, 2333.0, Codemtest@mailinator.com</td>
+<td></td>
+<td>205</td>
+<td>framework.test.FacebookPartyPrevHost_HostAddress_PartyLite@c46bcd4</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyPrevHost_NewAddress_PartyLite.facebookPartyPrevHost_NewAddress()'><b>facebookPartyPrevHost_NewAddress</b><br>Test class: framework.test.FacebookPartyPrevHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, Codemtest@mailinator.com, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 01234567889</td>
+<td></td>
+<td>204</td>
+<td>framework.test.FacebookPartyPrevHost_NewAddress_PartyLite@32d2fa64</td></tr>
+<tr>
+<td title='framework.test.LoggedInCustomerOrder_PartyLite.loggedInCustomerOrder()'><b>loggedInCustomerOrder</b><br>Test class: framework.test.LoggedInCustomerOrder_PartyLite<br>Parameters: anand@codem.com, Karthi@14, MY ACCOUNT, P92992, 10, 4,Beechtree Avenue,    ,    , SL7 3NJ, Marlow, 01923 825119, Debit Card, 4462030000000000, 02, 22, 123</td>
+<td></td>
+<td>375</td>
+<td>framework.test.LoggedInCustomerOrder_PartyLite@2353b3e6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='framework.test.ClassicChildParty_PartyLite.childParty()'><b>childParty</b><br>Test class: framework.test.ClassicChildParty_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 28/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, Privy, Guest, guestPrivy, 01234567890, Child Party, 30/06/2019, 1000.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.pages.partyDetailsPage.verifyPartyDashboardPageTitle(partyDetailsPage.java:36)
+	at framework.test.ClassicChildParty_PartyLite.childParty(ClassicChildParty_PartyLite.java:89)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace264100184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace264100184'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.pages.partyDetailsPage.verifyPartyDashboardPageTitle(partyDetailsPage.java:36)
+	at framework.test.ClassicChildParty_PartyLite.childParty(ClassicChildParty_PartyLite.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>234</td>
+<td>framework.test.ClassicChildParty_PartyLite@fad74ee</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite.classicConsAsHost_HostAddress()'><b>classicConsAsHost_HostAddress</b><br>Test class: framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite.classicConsAsHost_HostAddress(ClassicPartyConsAsHost_HostAddress_PartyLite.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1671842074", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1671842074'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite.classicConsAsHost_HostAddress(ClassicPartyConsAsHost_HostAddress_PartyLite.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>193</td>
+<td>framework.test.ClassicPartyConsAsHost_HostAddress_PartyLite@9a7504c</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite.classicConsAsHost_NewAddress()'><b>classicConsAsHost_NewAddress</b><br>Test class: framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, 01234567889</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite.classicConsAsHost_NewAddress(ClassicPartyConsAsHost_NewAddress_PartyLite.java:87)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1667987276", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1667987276'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite.classicConsAsHost_NewAddress(ClassicPartyConsAsHost_NewAddress_PartyLite.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>192</td>
+<td>framework.test.ClassicPartyConsAsHost_NewAddress_PartyLite@3e57cd70</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite.classicConsAsHost_PreviousAddress()'><b>classicConsAsHost_PreviousAddress</b><br>Test class: framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite.classicConsAsHost_PreviousAddress(ClassicPartyConsAsHost_PreviousAddress_PartyLite.java:70)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1885146169", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1885146169'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite.classicConsAsHost_PreviousAddress(ClassicPartyConsAsHost_PreviousAddress_PartyLite.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>204</td>
+<td>framework.test.ClassicPartyConsAsHost_PreviousAddress_PartyLite@2c039ac6</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyNewHost_PartyLite.classicPartyNewHost()'><b>classicPartyNewHost</b><br>Test class: framework.test.ClassicPartyNewHost_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.ClassicPartyNewHost_PartyLite.classicPartyNewHost(ClassicPartyNewHost_PartyLite.java:59)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace512494530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace512494530'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.ClassicPartyNewHost_PartyLite.classicPartyNewHost(ClassicPartyNewHost_PartyLite.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>193</td>
+<td>framework.test.ClassicPartyNewHost_PartyLite@1d8d30f7</td></tr>
+<tr>
+<td title='framework.test.ClassicPartyPrevHost_NewAddress_PartyLite.classicPartyPrevHost_NewAddress()'><b>classicPartyPrevHost_NewAddress</b><br>Test class: framework.test.ClassicPartyPrevHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, Codemtest@mailinator.com, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 4,Beechtree, Avenue, Marlow, UK, SL7 3NJ, 01234567889</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.ClassicPartyPrevHost_NewAddress_PartyLite.classicPartyPrevHost_NewAddress(ClassicPartyPrevHost_NewAddress_PartyLite.java:91)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873850877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873850877'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.ClassicPartyPrevHost_NewAddress_PartyLite.classicPartyPrevHost_NewAddress(ClassicPartyPrevHost_NewAddress_PartyLite.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>194</td>
+<td>framework.test.ClassicPartyPrevHost_NewAddress_PartyLite@587d1d39</td></tr>
+<tr>
+<td title='framework.test.GuestOrderUsing_PickupPoint_PartyLite.createGuestOrder()'><b>createGuestOrder</b><br>Test class: framework.test.GuestOrderUsing_PickupPoint_PartyLite<br>Parameters: P92992, 10, party@mailinator.com, anand, v, 4,Beechtree Avenue,    ,    , SL7 3NJ, Marlow, 01923 825119, Debit Card, 4917610000000000, 05, 23, 123</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.GuestOrderUsing_PickupPoint_PartyLite.createGuestOrder(GuestOrderUsing_PickupPoint_PartyLite.java:95)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2056772483", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2056772483'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.GuestOrderUsing_PickupPoint_PartyLite.createGuestOrder(GuestOrderUsing_PickupPoint_PartyLite.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>231</td>
+<td>framework.test.GuestOrderUsing_PickupPoint_PartyLite@631330c</td></tr>
+<tr>
+<td title='framework.test.ConsultantContacts_PartyLite.createPartyContacts()'><b>createPartyContacts</b><br>Test class: framework.test.ConsultantContacts_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, ContactPrivy, ContactWonder, mw2demo_johnsmith, 01234567890, 36.0, Beechtree, Marlow, SL7 3NJ</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.ConsultantContacts_PartyLite.createPartyContacts(ConsultantContacts_PartyLite.java:83)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace250583633", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace250583633'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.ConsultantContacts_PartyLite.createPartyContacts(ConsultantContacts_PartyLite.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>191</td>
+<td>framework.test.ConsultantContacts_PartyLite@7a187f14</td></tr>
+<tr>
+<td title='framework.test.CreatePartyContacts_PartyLite.createPartyContacts()'><b>createPartyContacts</b><br>Test class: framework.test.CreatePartyContacts_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, ContactPrivy, ContactWonder, mw2demo_johnsmith, 01234567890, 36.0, Beechtree, Marlow, SL7 3NJ</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.CreatePartyContacts_PartyLite.createPartyContacts(CreatePartyContacts_PartyLite.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2051506349", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2051506349'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.test.CreatePartyContacts_PartyLite.createPartyContacts(CreatePartyContacts_PartyLite.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>194</td>
+<td>framework.test.CreatePartyContacts_PartyLite@58c1670b</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite.facebookPartyConsAsHost_HostAddress()'><b>facebookPartyConsAsHost_HostAddress</b><br>Test class: framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_PA, 30/06/2019, 2333.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite.facebookPartyConsAsHost_HostAddress(FacebookPartyConsAsHost_HostAddress_PartyLite.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace304833369", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace304833369'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite.facebookPartyConsAsHost_HostAddress(FacebookPartyConsAsHost_HostAddress_PartyLite.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>193</td>
+<td>framework.test.FacebookPartyConsAsHost_HostAddress_PartyLite@436e852b</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite.facebookPartyConsAsHost_NewAddress()'><b>facebookPartyConsAsHost_NewAddress</b><br>Test class: framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_NA, 30/06/2019, 2333.0, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 01234567889</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.LandingPage_PartyLite.clickSignin(LandingPage_PartyLite.java:209)
+	at framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite.facebookPartyConsAsHost_NewAddress(FacebookPartyConsAsHost_NewAddress_PartyLite.java:51)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2024440373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2024440373'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.LandingPage_PartyLite.clickSignin(LandingPage_PartyLite.java:209)
+	at framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite.facebookPartyConsAsHost_NewAddress(FacebookPartyConsAsHost_NewAddress_PartyLite.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>219</td>
+<td>framework.test.FacebookPartyConsAsHost_NewAddress_PartyLite@37d31475</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite.facebookPartyConsAsHost_PrevAddress()'><b>facebookPartyConsAsHost_PrevAddress</b><br>Test class: framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_PA, 30/06/2019, 2333.0</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite.facebookPartyConsAsHost_PrevAddress(FacebookPartyConsAsHost_PrevAddress_PartyLite.java:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2138646888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2138646888'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite.facebookPartyConsAsHost_PrevAddress(FacebookPartyConsAsHost_PrevAddress_PartyLite.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>311</td>
+<td>framework.test.FacebookPartyConsAsHost_PrevAddress_PartyLite@27808f31</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyNewHost_PartyLite.facebookPartyNewHost()'><b>facebookPartyNewHost</b><br>Test class: framework.test.FacebookPartyNewHost_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_NA, 30/06/2019, 2333.0, FNAuto, LNAuto, codemdemo_anand@mailinator.com, 01234567889, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.FacebookPartyNewHost_PartyLite.facebookPartyNewHost(FacebookPartyNewHost_PartyLite.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1711974197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1711974197'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.FacebookPartyNewHost_PartyLite.facebookPartyNewHost(FacebookPartyNewHost_PartyLite.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>189</td>
+<td>framework.test.FacebookPartyNewHost_PartyLite@1a1d6a08</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite.facebookPartyPrevHost_HostAddress()'><b>facebookPartyPrevHost_HostAddress</b><br>Test class: framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Facebook_HA, 30/06/2019, 2333.0, Codemtest@mailinator.com</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite.facebookPartyPrevHost_HostAddress(FacebookPartyPrevHost_PrevAddress_PartyLite.java:70)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace905321770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace905321770'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:88)
+	at framework.pages.PartyCreationPage.selectExperianAddress(PartyCreationPage.java:551)
+	at framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite.facebookPartyPrevHost_HostAddress(FacebookPartyPrevHost_PrevAddress_PartyLite.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>247</td>
+<td>framework.test.FacebookPartyPrevHost_PrevAddress_PartyLite@42f93a98</td></tr>
+<tr>
+<td title='framework.test.FacebookPartyPrevHost_NewAddress_PartyLite.facebookPartyPrevHost_NewAddress()'><b>facebookPartyPrevHost_NewAddress</b><br>Test class: framework.test.FacebookPartyPrevHost_NewAddress_PartyLite<br>Parameters: Codemtest06@mailinator.com, PEXpassword123!, Auto1, 30/06/2019, 2333.0, Codemtest@mailinator.com, 4,Beechtree, Avenue, Marlow, United Kingdom, SL7 3NJ, 01234567889</td>
+<td><div><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.FacebookPartyPrevHost_NewAddress_PartyLite.facebookPartyPrevHost_NewAddress(FacebookPartyPrevHost_NewAddress_PartyLite.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace286249272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace286249272'><pre>java.lang.RuntimeException
+	at framework.utils.Reports.reportStep(Reports.java:71)
+	at framework.utils.Reports.reportStep(Reports.java:81)
+	at framework.core.ImplClass_SAF_V_0_2.click(ImplClass_SAF_V_0_2.java:84)
+	at framework.pages.Party_Dashboard.clickCreateParty(Party_Dashboard.java:79)
+	at framework.test.FacebookPartyPrevHost_NewAddress_PartyLite.facebookPartyPrevHost_NewAddress(FacebookPartyPrevHost_NewAddress_PartyLite.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>198</td>
+<td>framework.test.FacebookPartyPrevHost_NewAddress_PartyLite@32d2fa64</td></tr>
+</table><p>
+</body>
+</html>

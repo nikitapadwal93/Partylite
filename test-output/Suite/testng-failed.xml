@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="methods" name="EShop_UK(failed)">
+    <parameter name="paramURL" value="https://pexdev.partylite.co.uk"/>
+    <parameter name="paramCountry" value="OEUK"/>
+    <groups>
+      <run>
+        <include name="Common"/>
+        <include name="eShop"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="framework.test.OnlineEnrollment_UK_PartyLite">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="populatePropCountry"/>
+          <include name="afterMethod"/>
+          <include name="createGuestOrder" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="setDataOEUS"/>
+          <include name="markExtentReportWithTestNGFailStatus"/>
+        </methods>
+      </class> <!-- framework.test.OnlineEnrollment_UK_PartyLite -->
+    </classes>
+  </test> <!-- EShop_UK(failed) -->
+</suite> <!-- Failed suite [Suite] -->

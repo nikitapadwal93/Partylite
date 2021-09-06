@@ -1,0 +1,297 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite-FullRegression" parallel="tests"
+	thread-count="3">
+	<listeners>
+		<listener class-name="framework.utils.TestNGListener" />
+	</listeners>
+	<!-- <test name ="Admin_Settings_Captcha_disable"> 
+	<groups> 
+	<run> 
+	<include name="Captcha"/> 
+	<include name="Common"/> 
+	</run> 
+	</groups>
+	<classes> 
+	<class name="framework.test.TurnOffCaptcha_PartyLite"/> 
+	</classes> 
+	</test> -->
+
+	  <test thread-count="10" name="EShop_DE" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.de" />
+		<parameter name="paramCountry" value="DE" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+
+
+			<class name="framework.test.GuestOrder_PartyLite" />
+
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+
+		</classes>
+	</test>
+
+
+
+	<test thread-count="10" name="EShop_AT" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.at" />
+		<parameter name="paramCountry" value="AT" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+		</classes>
+	</test>
+
+	<test thread-count="10" name="EShop_FI" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.fi" />
+		<parameter name="paramCountry" value="FI" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+
+
+			<class name="framework.test.GuestOrder_PartyLite" />
+
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+		</classes>
+	</test>
+	<test thread-count="10" name="EShop_NO" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.no" />
+		<parameter name="paramCountry" value="NO" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			<class name="framework.test.GuestOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+		</classes>
+	</test>
+	<test thread-count="10" name="EShop_SE" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.se" />
+		<parameter name="paramCountry" value="SE" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+
+		</classes>
+	</test>
+
+	<test thread-count="10" name="EShop_US" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+		</classes>
+	</test>
+
+	<test thread-count="10" name="EShop_CA" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ca" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+		</classes>
+	</test>
+
+	<test thread-count="10" name="EShop_CH" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ch" />
+		<parameter name="paramCountry" value="CH" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+
+		</classes>
+	</test>
+	
+	<test thread-count="10" name="PWS_UK" parallel="methods">
+		<parameter name="paramURL"
+			value="https://testpwsqa1.partylite.co.uk" />
+		<parameter name="paramCountry" value="PWS_UK" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+
+		</classes>
+	</test>
+	
+	<test thread-count="3" name="Test-FullRegression-FR"
+		parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.fr" />
+		<parameter name="paramCountry" value="FR" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+
+			<class name="framework.test.GuestOrder_PartyLite" />
+
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+			
+			<class name="framework.test.ClassicPartyOrder_FR_PartyLite" />
+			<class name="framework.test.CollectivePartyOrder_FR_PartyLite" />
+			<class name="framework.test.FYSPartyOrder_FR_PartyLite" />
+		</classes>
+	</test>  
+	
+	<test thread-count="20" name="Test-FullRegression"
+		parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.co.uk" />
+		<parameter name="paramCountry" value="UK" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+
+
+			<class name="framework.test.GuestOrder_PartyLite" />
+
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Paypal_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PayPal_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PayPal_PartyLite" />
+			
+			<class name="framework.test.GuestOrder_Discount_Detail_PartyLite" />
+			
+			<class name="framework.test.ClassicPartyOrder_PartyLite" />
+			<class name="framework.test.CollectivePartyOrder_PartyLite" />
+			<class name="framework.test.FYSPartyOrder_PartyLite" />
+
+		</classes>
+	</test>
+	
+	<!-- <test name ="Admin_Settings_Captcha_enable"> 
+	<groups> 
+	<run> 
+	<include name="Captcha"/> 
+	<include name="Common"/> 
+	</run> 
+	</groups>
+	<classes> 
+	<class name="framework.test.TurnOnCaptcha_PartyLite" />
+	</classes> 
+	</test> -->
+	<!-- Test -->
+</suite> <!-- Suite -->

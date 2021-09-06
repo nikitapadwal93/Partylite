@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Suite-FullRegression]" parallel="tests">
+  <listeners>
+    <listener class-name="framework.utils.TestNGListener"/>
+  </listeners>
+  <test thread-count="4" name="Test-FullRegression-OutsideOrder-AT(failed)" parallel="tests">
+    <parameter name="paramURL" value="https://magentoqa.partylite.ca/vsysxtvmyyggndv"/>
+    <parameter name="paramCountry" value="CA"/>
+    <groups>
+      <run>
+        <include name="Smokes"/>
+        <include name="Common"/>
+        <include name="PEX"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="framework.test.AffiliateSignInOrderCheckout">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="populatePropCountry"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="setDataSIGNINAFF"/>
+          <include name="signInToPartyLiteAff"/>
+          <include name="beforeMethod"/>
+          <include name="markExtentReportWithTestNGFailStatus"/>
+        </methods>
+      </class> <!-- framework.test.AffiliateSignInOrderCheckout -->
+    </classes>
+  </test> <!-- Test-FullRegression-OutsideOrder-AT(failed) -->
+</suite> <!-- Failed suite [Suite-FullRegression] -->

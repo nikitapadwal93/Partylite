@@ -1,0 +1,84 @@
+package framework.test;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import framework.appInit.Class_initCAFakeAddress;
+import framework.appInit.Class_initUSFakeAddress;
+import framework.pages.LandingPage_FakeCAAddress;
+import framework.pages.LandingPage_FakeUSAddress;
+
+public class FakeCAAddress_PartyLite extends Class_initCAFakeAddress{
+	public String country;
+	
+	public FakeCAAddress_PartyLite() throws FileNotFoundException, IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Parameters("paramCountry")
+	@BeforeTest(groups= {"Common"})
+	public void setDataFAKECAAddress(@Optional String paramCountry)  {
+		tcName = "CA Address fetch";
+		tcDescription = "CA Address fetch from Fake Address generator";
+		category = "Smokes_"+paramCountry;
+		authors = "Anand";
+		testNodes = "CA address fetch";
+		ExcelFileName="PartyLite_Smokes_Data";
+		sheetName = "Login_ExistingUser_PL";
+		country = paramCountry;
+		
+	}
+	
+	
+	@Test(groups= {"eShop"})
+	public void fetchCAAddress() {
+		
+		try {
+			
+			try {
+			
+			new LandingPage_FakeCAAddress(driver, Test)
+			.getStreet()
+			.getCity()
+			.getState()
+			.getZipcode()
+			.getPhoneNum()
+			.getMobNum();
+			
+			} catch(RuntimeException e) {
+				System.out.println("Test case name =  " +getClass().getName());
+				System.out.println(e.getMessage());
+				reportStep("The test encountered an exception.","warning");
+				
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+			
+		
+	}
+	
+	/*@DataProvider(name="LoginDetails")
+	public  Object[][] getData(){
+		try {
+			return ExcelDataReader.getData(ExcelFileName, sheetName);		
+		}catch(NullPointerException e) {
+			reportStep("Excel sheet or file is not available.","fail", false);
+			return null;
+		}
+}*/
+	
+
+}

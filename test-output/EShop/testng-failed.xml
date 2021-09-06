@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [EShop]" parallel="tests">
+  <listeners>
+    <listener class-name="framework.utils.TestNGListener"/>
+  </listeners>
+  <test thread-count="4" name="EShop_CH(failed)" parallel="methods">
+    <parameter name="paramURL" value="https://magentostage.partylite.ch"/>
+    <parameter name="paramCountry" value="CH"/>
+    <groups>
+      <run>
+        <include name="Common"/>
+        <include name="eShop"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="framework.test.GuestOrderViaCategory_PartyLite">
+        <methods>
+          <include name="setDataGOVC"/>
+          <include name="beforeSuite"/>
+          <include name="populatePropCountry"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="createGuestOrder" invocation-numbers="0 0"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="markExtentReportWithTestNGFailStatus"/>
+        </methods>
+      </class> <!-- framework.test.GuestOrderViaCategory_PartyLite -->
+    </classes>
+  </test> <!-- EShop_CH(failed) -->
+</suite> <!-- Failed suite [EShop] -->

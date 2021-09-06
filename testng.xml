@@ -1,0 +1,283 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite-FullRegression" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="framework.utils.TestNGListener" />
+	</listeners>
+
+	<!-- <test name="Test-FullRegression-CA">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ca" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-US">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-UK">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.co.uk" />
+		<parameter name="paramCountry" value="UK" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-FR">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.fr" />
+		<parameter name="paramCountry" value="FR" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-DE">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.de" />
+		<parameter name="paramCountry" value="DE" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-AT">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.at" />
+		<parameter name="paramCountry" value="AT" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-CH">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ch" />
+		<parameter name="paramCountry" value="CH" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-SE">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.se" />
+		<parameter name="paramCountry" value="SE" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-FI">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.fi" />
+		<parameter name="paramCountry" value="FI" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+	
+	<test name="Test-FullRegression-NO">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.no" />
+		<parameter name="paramCountry" value="NO" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+		</classes>
+	</test>
+ -->
+ 
+ <!--  
+ <test  name="Online Enrollment US"> 
+  <parameter name ="paramURL" value="https://magentoqa.partylite.com" />
+  <parameter name ="paramCountry" value="OEUS"/>
+  <groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+   <classes>
+   		<class name="framework.test.FakeUSAddress_PartyLite"/> 
+         <class name="framework.test.OnlineEnrollment_US_PartyLite"/>
+	</classes> 
+  </test>-->
+ <!--   
+  <test  name="Online Enrollment CA"> 
+  <parameter name ="paramURL" value="https://magentoqa.partylite.ca" />
+  <parameter name ="paramCountry" value="OECA"/>
+  <groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+   <classes>
+   		 <class name="framework.test.FakeCAAddress_PartyLite"/> 
+         <class name="framework.test.OnlineEnrollment_CA_PartyLite"/>
+	</classes> 
+  </test>-->
+<!--  	
+<test thread-count="10" name="EShop_US" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			<class name="framework.test.ClassicPartyOrder_US_PartyLite" />
+		</classes>
+	</test>-->
+<!--  
+	<test thread-count="10" name="EShop_CA" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ca" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			<class name="framework.test.ClassicPartyOrder_CA_PartyLite" />
+		</classes>
+	</test>
+	
+	<test thread-count="10" name="EShop_US_Affiliates" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.com/kjafutazkyiefdf" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			<class name="framework.test.ClassicPartyOrder_US_PartyLite" />
+		</classes>
+	</test>-->
+
+	<test thread-count="10" name="EShop_CA_Affiliates" parallel="methods">
+		<parameter name="paramURL"
+			value="https://magentoqa.partylite.ca/vsysxtvmyyggndv" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+		<!--  	<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.NewCustomerOrder_PartyLite" />
+			<class name="framework.test.ClassicPartyOrder_CA_PartyLite" />-->
+			<class name="framework.test.AffiliateSignInOrderCheckout" />
+		</classes>
+	</test>
+
+	<!-- <test name ="Admin_Settings_Captcha_enable"> <groups> <run> <include 
+		name="Captcha"/> <include name="Common"/> </run> </groups> <classes> <class 
+		name="framework.test.TurnOnCaptcha_PartyLite" /> </classes> </test> -->
+	<!-- Test -->
+</suite> <!-- Suite -->

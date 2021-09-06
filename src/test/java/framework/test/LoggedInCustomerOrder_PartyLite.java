@@ -98,7 +98,7 @@ public class LoggedInCustomerOrder_PartyLite extends Class_initEcomPrac{
 			.confirmOrderIsSuccess();
 			
 			
-			
+			System.out.println("Order is placed successfully");
 			
 			
 			} catch(RuntimeException e) {

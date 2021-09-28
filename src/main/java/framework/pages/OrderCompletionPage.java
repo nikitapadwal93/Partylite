@@ -31,13 +31,14 @@ public class OrderCompletionPage extends Class_initEcomPrac  {
 	@FindBy(xpath="//div[@class='success-text']/h2")
 	WebElement confirmOrderSuccess;
 	public OrderCompletionPage confirmOrderIsSuccess() {
+		String successMessage=confirmOrderSuccess.getText(); 
 		try {
-			System.out.println("After submit card details"+driver.get().getCurrentUrl());
+			System.out.println("After submit card details  "+driver.get().getCurrentUrl());
 			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
 					(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//section[@class='details']"))));
-			if(confirmOrderSuccess.isDisplayed()
-					&& driver.get().getCurrentUrl().contains("onepage/success")) {
-				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed with text - " + confirmOrderSuccess.getText(), "pass");
+			if(successMessage.contains("Thanks for shopping!")
+					|| driver.get().getCurrentUrl().contains("onepage/success")) {
+				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed with text - " + successMessage, "pass");
 			return this;
 		}
 			else {

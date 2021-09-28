@@ -3,6 +3,7 @@ package framework.pages;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -27,110 +28,6 @@ public class PaymentMethodsPage extends Class_initEcomPrac  {
 		this.Test = Test;
 			
 }
-	@FindBy(name="street[0]")
-	WebElement txtBoxStreetAddress1;
-	public PaymentMethodsPage enterCustomerAddress1(String Country, String address1) {
-		try {
-			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
-			System.out.println("Waiting for loader to finish page rendering.");
-			isPageReady = new WebDriverWait(driver.get(), 30).until(ExpectedConditions.refreshed
-					(ExpectedConditions.attributeContains(loader, "style", "none")));
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		try
-		{
-			type(txtBoxStreetAddress1,markets.get(Country).getProperty("propAddress1", address1));
-		}
-		catch(Exception e) {
-			System.out.println("Multiple street boxes");
-		}
-		try {
-			txtBoxStreetAddress1=driver.get().findElementByXPath("(//input[@name='street[0]'])[3]");
-			type(txtBoxStreetAddress1,markets.get(Country).getProperty("propAddress1", address1));
-		}
-		catch(Exception e) {
-			System.out.println("Multiple street boxes");
-		}
-		
-		try
-		{
-			txtBoxStreetAddress1=driver.get().findElementByXPath("(//input[@name='street[0]'])[2]");
-			type(txtBoxStreetAddress1,markets.get(Country).getProperty("propAddress1", address1));
-		}
-		catch(Exception e) {
-			System.out.println("Multiple street boxes");
-		}
-		
-		return this;
-	}
-	
-	@FindBy(name="postcode")
-	WebElement txtBoxZipCode;
-	public PaymentMethodsPage enterCustomerZipCode(String Country, String zipcode) {
-		
-		zipcode = markets.get(Country).getProperty("postcode");//multi-lingual support
-		System.out.println("Retrieved postcode value is " + zipcode);
-		
-		try
-		{
-			type(txtBoxZipCode,zipcode);
-		}
-		catch(Exception e) {
-			System.out.println("Multiple post boxes");
-		}
-		
-		try
-		{
-			txtBoxZipCode=driver.get().findElementByXPath("(//input[@name='postcode'])[3]");
-			type(txtBoxZipCode,zipcode);
-		}
-		catch(Exception e) {
-			System.out.println("Multiple post boxes");
-		}
-		
-		try
-		{
-			txtBoxZipCode=driver.get().findElementByXPath("(//input[@name='postcode'])[2]");
-			type(txtBoxZipCode,zipcode);
-		}
-		catch(Exception e) {
-			System.out.println("Multiple post boxes");
-		}
-		return this;
-	}
-	
-	@FindBy(name="city")
-	WebElement txtBoxCity;
-	public PaymentMethodsPage enterCustomerCity(String Country, String city) {
-		
-		try
-		{
-			type(txtBoxCity,markets.get(Country).getProperty("propCity", city));
-		}
-		catch(Exception e) {
-			System.out.println("Multiple city boxes");
-		}
-		try
-		{
-			txtBoxCity=driver.get().findElementByXPath("(//input[@name='city'])[3]");
-			type(txtBoxCity,markets.get(Country).getProperty("propCity", city));
-		}
-		catch(Exception e) {
-			System.out.println("Multiple city boxes");
-		}
-		
-		try
-		{
-			txtBoxCity=driver.get().findElementByXPath("(//input[@name='city'])[2]");
-			type(txtBoxCity,markets.get(Country).getProperty("propCity", city));
-		}
-		catch(Exception e) {
-			System.out.println("Multiple city boxes");
-		}
-		return this;
-	}
 	
 	@FindBy(name="telephone")
 	WebElement txtBoxTelephone;
@@ -263,11 +160,140 @@ public PaymentMethodsPage clickRadioDebit() {
 	public PaymentMethodsPage selectSameasShipping() {
 		try {
 		click(selectSameasShipping);
+		driver.get().manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 		} catch(org.openqa.selenium.NoSuchElementException e) {  //multi-lingual support added
 			reportStep("Same as Shipping option not available in the screen. Ignoring this step.","info");
 			return this;
 		}
 		return this;
+	}
+	
+	@FindBy(xpath="//*[@id=\"P8MC4SL\"]")
+	WebElement txtBoxFirstName;
+	public PaymentMethodsPage enterCustomerFirstName(String firstname) {
+		type(txtBoxFirstName,firstname);
+		return this;
+	}
+
+	@FindBy(xpath="//*[@id=\"HMCDFOB\"]")
+	WebElement txtBoxLastName;
+	public PaymentMethodsPage enterCustomerLastName(String lastname) {
+		type(txtBoxLastName,lastname);
+		return this;
+	}
+
+	@FindBy(name="street[0]")
+	WebElement txtBoxStreetAddress1;
+	public PaymentMethodsPage enterCustomerAddress1(String address1) {
+		type(txtBoxStreetAddress1,address1);
+			return this;
+	}
+
+	@FindBy(name="street[1]")
+	WebElement txtBoxStreetAddress2;
+	public PaymentMethodsPage enterCustomerAddress2(String address2) {
+		type(txtBoxStreetAddress2,address2);
+		return this;
+	}
+
+	@FindBy(name="street[2]") // multi-lingual support added
+	WebElement txtBoxStreetAddress3;
+	public PaymentMethodsPage enterCustomerAddress3(String address3) {
+		String current_url=driver.get().getCurrentUrl();
+		System.out.println(current_url+" current url");
+		if(current_url.contains("partylite.co.uk")
+				|| current_url.contains("partylite.ca"))
+		{
+			try {
+				type(txtBoxStreetAddress3,address3);
+			} catch (org.openqa.selenium.NoSuchElementException e) {
+				reportStep("Textbox field for street address 3 not found.","info");
+				return this;
+			}	
+		}
+		return this;
+	}
+
+	@FindBy(name="postcode")
+	WebElement txtBoxZipCode;
+	public PaymentMethodsPage enterCustomerZipCode(String zipcode) {
+		System.out.println("Retrieved postcode value is " + zipcode);
+		type(txtBoxZipCode,zipcode);
+		return this;
+	}
+
+	@FindBy(name="city")
+	WebElement txtBoxCity;
+	public PaymentMethodsPage enterCustomerCity(String city) {
+		type(txtBoxCity,city);
+		return this;
+	}
+	
+	@FindBy(name="region_id")
+	WebElement state_selection;
+	public PaymentMethodsPage selectState(String state) {
+		//state=markets.get(Country).getProperty("state");
+		System.out.println("Retrieved state value is " + state);
+		String current_url=driver.get().getCurrentUrl();
+		System.out.println(current_url+" current url");
+		if(current_url.contains("partylite.com")
+				|| current_url.contains("partylite.ca")) 
+		{
+			try {
+				selectDropDownUsingText(state_selection, state);
+			} catch(Exception e) {  //multi-lingual support added
+				reportStep("State selection option not available in the screen. Ignoring this step.","info");
+			}
+		}
+		return this;
+	}
+	
+	@FindBy(xpath="//*[@id=\"checkout-payment-method-load\"]/div/div/div[2]/div[2]/fieldset/div/div/div/label")
+	WebElement clickSubscribeCheckbox;
+	public PaymentMethodsPage selectSubscribeCheckox() {
+		try {
+		click(clickSubscribeCheckbox);
+		} catch(org.openqa.selenium.NoSuchElementException e) {  //multi-lingual support added
+			reportStep("Click to Subscribe checkbox option not available in the screen. Ignoring this step.","info");
+			return this;
+		}
+		return this;
+	}
+	
+	
+	@FindBy(xpath="//*[@id=\"checkout\"]/div[1]/a")
+	WebElement back_to_order;
+	public PaymentMethodsPage clickBacktoOrder() {
+		click(back_to_order);
+		return this;
+	}
+	
+	@FindBy(xpath="//button[@data-role='proceed-to-checkout']")
+	WebElement btnGoToCheckout;
+	public CheckoutPage clickGoToCheckout() {
+		try {
+			WebElement total_cart_page=driver.get().findElementByCssSelector("#cart-totals table .grand");
+			new WebDriverWait(driver.get(), reducedTimeout).until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(total_cart_page)));
+			System.out.println("Totals table wait success");
+		}
+		catch(Exception e) {
+			System.out.println("Aria busy false check in cart page");
+		}
+
+		//loaderCheck();
+		try {
+			new WebDriverWait(driver.get(), reducedTimeout).until(ExpectedConditions.elementToBeClickable(btnGoToCheckout));
+			click(btnGoToCheckout);
+			return new CheckoutPage(driver, Test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
 	}
 	
 	@FindBy(css="div.billing-address-details")
@@ -276,6 +302,7 @@ public PaymentMethodsPage clickRadioDebit() {
 		verifyEnabled(billing_address_section);
 		return this;
 	}
+	
 	
 	@FindBy(xpath="//label[@for='termsCash' or @for='termsCredit' or @for='terms1']/span") //multi-lingual support added
 	WebElement chkboxAcceptTerms; // xpath updated to identify the second option - all payment memthods available , first being cash on delivery
@@ -544,6 +571,32 @@ public PaymentMethodsPage clickRadioDebit() {
 		click(PaybyPaypal);
 		return this;
 	}
+	
+	@FindBy(xpath="//*[@id=\"shipping-new-address-form\"]/div[4]/div/button[2]")
+	WebElement confirmAddress;
+	public CheckoutPage clickConfirmAddress() {
+		// TODO Auto-generated method stub
+		click(confirmAddress);
+		return null;
+	}
+	
+	@FindBy(xpath="//*[@id=\"newsletter-validate-detail\"]/div/div/div[1]/button")
+	WebElement clickSubscribefromFooter;
+	public PaymentMethodsPage clickFooterSubscribeButton() {
+		click(clickSubscribefromFooter);
+		return this;
+
+	}
+
+	
+	@FindBy(xpath="//*[@id=\"newsletter\"]")
+	WebElement newsletterFooter;
+	public PaymentMethodsPage enterEmailtoSubscribeFooter(String email) {
+		type(newsletterFooter, email);
+		return this;
+
+	}
+	
 	
 }
 

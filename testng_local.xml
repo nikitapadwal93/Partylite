@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite-FullRegression" parallel="tests" thread-count="4">
+<suite name="Suite-FullSmokeTest" parallel="tests" thread-count="8">
 	<listeners>
 		<listener class-name="framework.utils.TestNGListener" />
 	</listeners>
-	
- <!-- <test thread-count="10" name="EShop_US" parallel="methods">
+<!--  
+	<test name="EShop_US_Loggedin-Customer" >
 		<parameter name="paramURL"
-			value="https://pexdev.partylite.com" />
+			value="https:mcstaging.partylite.com" />
 		<parameter name="paramCountry" value="US" />
 		<groups>
 			<run>
@@ -15,78 +15,14 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="framework.test.GuestOrder_PartyLite" />		
+			<class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2" />		
 		</classes>
 	</test> -->
-
-  	<!-- <test thread-count="10" name="EShop_DE" parallel="methods">
+<!--  	
+	<test name="Test-Online_Enrollment-CA">
 		<parameter name="paramURL"
-			value="https://pexdev.partylite.de" />
-		<parameter name="paramCountry" value="DE" />
-		<groups>
-			<run>
-				<include name="Common" />
-				<include name="eShop" />
-			</run>
-		</groups>
-		<classes>
-			<class name="framework.test.GuestOrder_PartyLiteEU" />
-					
-		</classes>
-	</test>  -->  
-	
-	<!-- <test thread-count="10" name="EShop_CH" parallel="methods">
-		<parameter name="paramURL"
-			value="https://pexdev.partylite.de" />
-		<parameter name="paramCountry" value="CH" />
-		<groups>
-			<run>
-				<include name="Common" />
-				<include name="eShop" />
-			</run>
-		</groups>
-		<classes>
-			<class name="framework.test.GuestOrder_PartyLiteEU" />
-					
-		</classes>
-	</test>   
- -->
- 	 <!-- <test thread-count="10" name="EShop_US" parallel="methods">
-		<parameter name="paramURL"
-			value="https://pexdev.partylite.com" />
-		<parameter name="paramCountry" value="US" />
-		<groups>
-			<run>
-				<include name="Common" />
-				<include name="eShop" />
-			</run>
-		</groups>
-		<classes>
-			<class name="framework.test.GuestOrder_LineTypeCoupon_US_PartyLite" />
-					
-		</classes>
-	</test>  -->
-	
-	<!-- <test thread-count="10" name="EShop_AT" parallel="methods">
-		<parameter name="paramURL"
-			value="https://magentoqa.partylite.at" />
-		<parameter name="paramCountry" value="AT" />
-		<groups>
-			<run>
-				<include name="Common" />
-				<include name="eShop" />
-			</run>
-		</groups>
-		<classes>
-			<class name="framework.test.NewCustomerOrder_PartyLiteEU" />
-					
-		</classes>
-	</test>  -->  
-	
-   <test name="Test-FullRegression-OutsideOrder-AT">
-		<parameter name="paramURL"
-			value="https://mcstaging.partylite.com/" />
-		<parameter name="paramCountry" value="US" />
+			value="https://mcstaging.partylite.ca/" />
+		<parameter name="paramCountry" value="CA" />
 		<groups>
 			<run>
 				<include name="Smokes" />
@@ -95,13 +31,90 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.OnlineEnrollment_CA_PartyLite" />
 		</classes>
-	</test>  
-	
-	<!--   	 <test thread-count="10" name="EShop_CA" parallel="methods">
+	</test>  -->
+	<!--  
+   <test name="EShop_US_Loggedin-Customer" >
 		<parameter name="paramURL"
-			value="https://magentoqa.partylite.ca" />
+			value="https://mcstaging.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrderViaCategory_PartyLite" />		
+		</classes>
+	</test> -->
+	<!--  
+	<test name="EShop_US-Guest" >
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2" />		
+		</classes>
+	</test> -->
+<!--  	  
+   <test name="Test-Online_Enrollment-CA">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.ca/" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.OnlineEnrollment_CA_PartyLite" />
+		</classes>
+	</test>  -->
+ 
+  <test name="Test-Online_Enrollment-US">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com.au" />
+		<parameter name="paramCountry" value="AU" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.OnlineEnrollment_US_PartyLite" />
+		</classes>
+	</test>  	
+ <!-- 
+ <test name="TC-2: US - CWS - eShop - Logged in checkout" >
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2" />		
+		</classes>
+	</test>  -->
+ 	<!--  
+	<test name="TC-3: CAEN - PWS - eShop - Anonymous checkout" >
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.ca/ctwenty-six" />
 		<parameter name="paramCountry" value="CA" />
 		<groups>
 			<run>
@@ -110,11 +123,57 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="framework.test.GuestOrder_PartyLite" />
-					
+			<class name="framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3" />		
 		</classes>
-	</test>    -->
-	
+	</test> 
+  	
+   <test name="TC-6: AU - CWS - eShop - Anonymous Checkout2">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com.au/ " />
+		<parameter name="paramCountry" value="AU" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite_AU_Smoke_TC6" />
+		</classes>
+	</test> 
+ 
+<test name="TC-7: FR - PWS - eShop">
+		<parameter name="paramURL"
+			value="https://testpwsmcstaging.partylite.fr/" />
+		<parameter name="paramCountry" value="FR-PWS" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_PartyLite_FR_PWS_Smoke_TC7" />
+		</classes>
+	</test>  
+	 
+	<test name="TC-8: DE- DE- CWS - eShop">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.de/" />
+		<parameter name="paramCountry" value="DE" />
+		<groups>
+			<run>
+				<include name="Smokes" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8" />
+		</classes>
+	</test>  -->
 
 	<!-- <test name ="Admin_Settings_Captcha_enable"> <groups> <run> <include 
 		name="Captcha"/> <include name="Common"/> </run> </groups> <classes> <class 

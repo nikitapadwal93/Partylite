@@ -22,7 +22,7 @@ public class CategoryPage_PartyLite extends Class_initEcomPrac{
 			
 }
 	
-	@FindBy(xpath="//img[@class]")
+	@FindBy(xpath="(//img[@class])[2]")
 	WebElement firstProduct;
 	public ProductDescriptionPage clickfirstProduct() {
 		try {

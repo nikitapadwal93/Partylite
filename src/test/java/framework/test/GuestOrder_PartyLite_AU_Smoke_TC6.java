@@ -13,35 +13,36 @@ import framework.appInit.Class_initEcomPrac;
 import framework.pages.LandingPage_PartyLite;
 import framework.utils.ExcelDataReader;
 
-//This test case signs in Affiliate and place an order
-public class AffiliateSignInOrderCheckout extends Class_initEcomPrac {
+//This test case creates an order and apply discount code at the checkout page
+public class GuestOrder_PartyLite_AU_Smoke_TC6 extends Class_initEcomPrac{
 	public String country;
 	
-	public AffiliateSignInOrderCheckout() throws FileNotFoundException, IOException {
+	public GuestOrder_PartyLite_AU_Smoke_TC6() throws FileNotFoundException, IOException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
-	public void setDataSIGNINAFF(@Optional String paramCountry)  {
-		tcName = "Affiliate order checkout";
-		tcDescription = "Signing in through homepage as Affiliate using Excel";
+	public void setDataGO(@Optional String paramCountry) {
+		tcName = "Smoke_TC-6: AU - CWS - eShop - Anonymous Checkout";
+		tcDescription = "placing order in eShop by guest";
 		category = "Smokes_"+paramCountry;
 		authors = "Shashwat";
-		testNodes = "Signing-in using excel datareader";
+		testNodes = "guest order in eshop";
 		ExcelFileName="PartyLite_Smokes_Data";
-		sheetName = "Login_ExistingUser_PL";
+		sheetName = "Smoke_TestCase_6";
 		country = paramCountry;
 		
 	}
-	@Test(groups= {"eShop", "Smokes"}, dataProvider="LoginDetailsAffiliate")
-	public void signInToPartyLiteAff(String uname, String password, String Verification_content, 
-			String SKU,String qty,String email,String firstname,
+	
+	@Test(groups= {"eShop", "Smokes"}, dataProvider="GuestOrder")
+	public void createGuestOrder(String SKU,String qty,String email,String firstname,
 			String lastname,String address1,String address2,String address3,
 			String zipcode,String city,String phone,String state,String PaymentType, String cardNumber,
-			String expMonth,String expYear,String cardCVV) {
+			String expMonth,String expYear,String cardCVV, String addressbill, String citybill, String statebill, String zipbill){
 		
-try {
+		try {
 			
 			try {
 			
@@ -50,39 +51,45 @@ try {
 			//.closeDialogSignUpNewsLetter()
 			.closeListrakNewsLetter()
 			.clickToAllowCookie()
-			.clickSignin()
-			.enterEmailName(uname)
-			.enterPassword(password)
-			.btnClickSignin()
 			.clickBtnSearch()
 			.enterSKU(SKU)
 			//.clickSearchButton()
 			.clickProductImage()
-			.enterQty(qty)
+			//.enterQty(qty)
 			.clickBtnAddToCart()
 			.clickBtnMiniCart()
 			.clickBtnViewBasket()
-			.clickCouponApplyButton()
-			//.verifyCouponApplyMessage()
+			//.typeCouponCode(coupon)
 			//call voucher entry data
 			.clickGoToCheckout()
 			.enterCustomerEmail(email)
 			.enterCustomerFirstName(firstname)
 			.enterCustomerLastName(lastname)
-			.enterCustomerAddress1(country, address1)
+			.enterCustomerAddress1(address1)
 			.enterCustomerAddress2(address2)
 			.enterCustomerAddress3(address3)
-			.enterCustomerZipCode(country, zipcode)
-			.enterCustomerCity(country, city)
+			.enterCustomerZipCode(zipcode)
+			.enterCustomerCity(city)
+			.removeExtraDots(zipcode)
 			.enterCustomerTelephone(country, phone)
-			.selectState(country, state)
+			.selectState(state)
 			.clickDeliveryTypeBox()
 			.chooseDeliveryType()
 			.clickGuestNextButton()
 			.selectAddressFormat()
 			.clickNextProceedToPayment()
 			.selectTypeOfPayment(PaymentType)
+			/*.selectSameasShipping()
+			.enterCustomerFirstName(firstname)
+			.enterCustomerLastName(lastname)
+			.enterCustomerAddress1(addressbill)
+			.enterCustomerZipCode(zipbill)
+			.enterCustomerCity(citybill)
+			.enterCustomerTelephone(country, phone)
+			.selectState(statebill)*/
+			//.clickUpdateAddressButton()
 			.clickAcceptTerms()
+			.selectSubscribeCheckox()
 			.clickPlaceOrderButton()
 			.enterCardNumber(cardNumber)
 			.enterCardExpMonth(expMonth)
@@ -90,7 +97,7 @@ try {
 			.enterCardCVV(cardCVV)
 			.getOrderNumber()
 			.clickConfirm()
-			.clickAuthenticate()
+			//.clickAuthenticate()
 			.confirmOrderIsSuccess();
 //			.getOrderEmail()
 //			.getOrderNumber()
@@ -120,7 +127,7 @@ try {
 		
 	}
 	
-	@DataProvider(name="LoginDetailsAffiliate")
+	@DataProvider(name="GuestOrder")
 	public  Object[][] getData(){
 		try {
 			return ExcelDataReader.getData(ExcelFileName, sheetName);		

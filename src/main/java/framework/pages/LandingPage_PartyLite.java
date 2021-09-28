@@ -99,19 +99,50 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	public LandingPage_PartyLite closeListrakNewsLetter() {
 		try {
 			click(ListrakNewsLetterText);
-			reportStep("Newsletter closed in "+a+"attempt","info");
+			reportStep("Newsletter closed in "+a+"st attempt","info");
 			
 		} catch(Exception e) {
-			System.out.println("Newsletter subscription missing" +a+"time");
-			reportStep("Newsletter subscription missing" +a+"time","info");
-			driver.get().navigate().refresh();
-			a++;
-			closeListrakNewsLetter();
+			System.out.println("Newsletter subscription missing");
+			reportStep("Newsletter subscription missing","info");
+			//driver.get().navigate().refresh();
+			//a++;
+			//closeListrakNewsLetter();
 		}
 
 		return this;
 	}
 
+	@FindBy(xpath = "//input[@id='ltkpopup-email']")
+	WebElement NewsLetterEmail;
+	public LandingPage_PartyLite enterNewsletterEmail(String emailsubscribe) {
+		try {
+			type(NewsLetterEmail, emailsubscribe);
+			reportStep("Newsletter email entered as "+emailsubscribe+"","info");
+			
+		} catch(Exception e) {
+			System.out.println("Newsletter email textbox not found");
+			reportStep("Newsletter subscription email textbox missing","info");
+		}
+
+		return this;
+	}
+
+	@FindBy(xpath = "//input[@id='ltkpopup-submit']")
+	WebElement NewsLetterbuttonClick;
+	public LandingPage_PartyLite clickNewsletterbtn() {
+		click(NewsLetterbuttonClick);
+		return this;
+	}
+	
+	
+	@FindBy(xpath="((//button[@data-role='action']/span)[2]")
+	WebElement Continue;
+	public LandingPage_PartyLite clickContinue()
+	{
+		click(Continue);
+		return this;
+	}
+	
 	@CacheLookup
 	@FindBy(id="btn-cookie-allow")
 	WebElement btnContinue;
@@ -222,7 +253,7 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	}
 
 	@CacheLookup
-	@FindBy(xpath="//*[@id=\"search_mini_form\"]/div[1]/div/div[1]/div[3]/div[1]/div[2]/div/ul/li/div/div[1]/a/img")
+	@FindBy(xpath="//*[@id=\"search_mini_form\"]/div[1]/div/div[1]/div[3]/div[1]/div[1]/div[1]/ul/li/a/div")
 	//@FindBy(xpath="//*[@id=\"mana_ajax_wrapper_search_result\"]/div[3]/div[2]/ol/li/div/a/span/span/img")
 	//*[@id="mana_ajax_wrapper_search_result"]/div[3]/div[2]/ol/li/div/a/span/span/img
 	WebElement linkProductImage;
@@ -346,7 +377,7 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		return this;
 	}
 
-	@FindBy(xpath="//button[@data-role='action']/span[text()='Continue Shopping']")
+	@FindBy(xpath="//*[@id=\"ltkpopup-thanks\"]/div/a")
 	WebElement btnContinueShopping;
 	public LandingPage_PartyLite clickContinueShopping() {
 		click(btnContinueShopping);
@@ -358,6 +389,22 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	public LandingPage_PartyLite clickMenuExpansionLink() {
 		linkMenuExpansion.click();
 		return this;
+	}
+	
+	@FindBy(xpath="//*[@id='newsletter']")
+	WebElement newsletterFooter;
+	public LandingPage_PartyLite enterEmailtoSubscribeFooter(String email) {
+		type(newsletterFooter, email);
+		return this;
+
+	}
+	
+	@FindBy(xpath="//*[@id='newsletter-validate-detail']/div/div/div[1]/button")
+	WebElement clickSubscribefromFooter;
+	public LandingPage_PartyLite clickFooterSubscribeButton() {
+		click(clickSubscribefromFooter);
+		return this;
+
 	}
 	
 	@FindAll({@FindBy(css="div[class='customer-menu'][aria-hidden='false'] a")})

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
@@ -46,11 +47,11 @@ public class CheckoutPage extends Class_initEcomPrac {
 			//e.printStackTrace();
 		}
 		bodyContainer();
-		WebDriverWait wait=new WebDriverWait(driver.get(), waitTimeout);
-		wait.until(ExpectedConditions.visibilityOf(txtBoxCustomerEmail));
-		long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
-		String guest_email = email+randomNum+"@mailinator.com";
-		type(txtBoxCustomerEmail,guest_email);
+		//WebDriverWait wait=new WebDriverWait(driver.get(), waitTimeout);
+	//	wait.until(ExpectedConditions.visibilityOf(txtBoxCustomerEmail));
+	//	long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
+		//String guest_email = email+randomNum+"@mailinator.com";
+		type(txtBoxCustomerEmail,email);
 		return this;
 	}
 
@@ -70,18 +71,9 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 	@FindBy(name="street[0]")
 	WebElement txtBoxStreetAddress1;
-	public CheckoutPage enterCustomerAddress1(String Country, String address1) {
-		try {
-			System.out.println(markets.get(Country).getProperty("propAddress1"));
-			type(txtBoxStreetAddress1,markets.get(Country).getProperty("propAddress1", address1));
-		}
-		catch(Exception e) {
-			type(txtBoxStreetAddress1,"123 St");
-			System.out.println("123 st entered"+driver.get().getCurrentUrl());
-			reportStep("123 st entered"+driver.get().getCurrentUrl(), "info");
-		}
-
-		return this;
+	public CheckoutPage enterCustomerAddress1(String address1) {
+		type(txtBoxStreetAddress1,address1);
+			return this;
 	}
 
 	@FindBy(name="street[1]")
@@ -138,9 +130,6 @@ public class CheckoutPage extends Class_initEcomPrac {
 		return this;
 
 	}
-
-
-
 
 
 	@FindBy(xpath="//label[@for='shipping-party']")
@@ -205,18 +194,20 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 	@FindBy(name="postcode")
 	WebElement txtBoxZipCode;
-	public CheckoutPage enterCustomerZipCode(String Country, String zipcode) {
-
-		zipcode = markets.get(Country).getProperty("postcode");//multi-lingual support
+	public CheckoutPage enterCustomerZipCode(String zipcode) {
 		System.out.println("Retrieved postcode value is " + zipcode);
 		type(txtBoxZipCode,zipcode);
 		return this;
 	}
 
+	@FindBy(name="postcode")
+	WebElement txtBoxZipCodeRemove;
+	
+	
 	@FindBy(name="city")
 	WebElement txtBoxCity;
-	public CheckoutPage enterCustomerCity(String Country, String city) {
-		type(txtBoxCity,markets.get(Country).getProperty("propCity", city));
+	public CheckoutPage enterCustomerCity(String city) {
+		type(txtBoxCity,city);
 		return this;
 	}
 
@@ -231,8 +222,8 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 	@FindBy(name="region_id")
 	WebElement state_selection;
-	public CheckoutPage selectState(String Country, String state) {
-		state=markets.get(Country).getProperty("state");
+	public CheckoutPage selectState(String state) {
+		//state=markets.get(Country).getProperty("state");
 		System.out.println("Retrieved state value is " + state);
 		String current_url=driver.get().getCurrentUrl();
 		System.out.println(current_url+" current url");
@@ -281,6 +272,8 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 	}
 
+	
+	
 	@FindBy(css="div.option-shipping-method")
 	WebElement selectDeliveryType;
 	public CheckoutPage chooseDeliveryType() {
@@ -307,6 +300,7 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 	}
 
+		
 	public CheckoutPage loaderCheck() {
 		try {
 			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
@@ -368,54 +362,43 @@ public class CheckoutPage extends Class_initEcomPrac {
 	@FindBy(xpath="//label[@for='s_method_relaiscolis_relaiscolis']")
 	WebElement selectRCDeliveryMethod;
 	public CheckoutPage chooseRCDeliveryMethod() {
-		try {
+		
+		click(selectRCDeliveryMethod);
+		return this;
 
-			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
-			//System.out.prinln("Waiting for loader to finish page rendering.");
-			isPageReady = new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
-					(ExpectedConditions.attributeContains(loader, "style", "none")));
-			if(isPageReady) {
-
-				click(selectRCDeliveryMethod);
-
-			}
-			//System.out.prinln("Page rendering is complete to choose delivery type.");
+	}
+	
+	@FindBy(xpath="//*[@id=\"form_address\"]")
+	WebElement txtBoxRCAddress;
+	public CheckoutPage enterRCAddress(String addressRC) {
+		loaderCheck();
+		bodyContainer();
+		type(txtBoxRCAddress,addressRC);
 			return this;
+	}
+	
+	@FindBy(name="form_CP")
+	WebElement txtBoxRCZipCode;
+	public CheckoutPage enterRCZipCode(String zipRC) {
+		System.out.println("Retrieved postcode value is " + zipRC);
+		type(txtBoxRCZipCode,zipRC);
+		return this;
+	}
 
-		} catch (NoSuchElementException | TimeoutException e ) {
-			/*if(!(selectDeliveryType.getText().startsWith("Free")))
-				click(selectDelsiveryType);*/
-			return this;
-			// TODO Auto-generated catch block
-
-		}
-
+	@FindBy(name="form_city")
+	WebElement txtBoxRCCity;
+	public CheckoutPage enterRCCity(String cityRC) {
+		type(txtBoxRCCity,cityRC);
+		return this;
 	}
 
 	@FindBy(css="#relaiscolisRecherche button")
 	WebElement clickRCbutton;
 	public CheckoutPage clickRCbutton() {
-		try {
-
-			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
-			//System.out.prinln("Waiting for loader to finish page rendering.");
-			isPageReady = new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
-					(ExpectedConditions.attributeContains(loader, "style", "none")));
-			if(isPageReady) {
-
-				click(clickRCbutton);
-
-			}
-			//System.out.prinln("Page rendering is complete to choose delivery type.");
-			return this;
-
-		} catch (NoSuchElementException | TimeoutException e ) {
-			/*if(!(selectDeliveryType.getText().startsWith("Free")))
-				click(selectDelsiveryType);*/
-			return this;
-			// TODO Auto-generated catch block
-
-		}
+		click(clickRCbutton);
+		loaderCheck();
+		bodyContainer();
+		return this;
 
 	}
 
@@ -567,7 +550,7 @@ public class CheckoutPage extends Class_initEcomPrac {
 	WebElement nextButtonWoPUP;
 	public CheckoutPage clickNextButtonWoPUP() {
 
-		try {
+		/*try {
 			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
 			//System.out.prinln("Waiting for loader to finish page rendering.");
 			isPageReady = new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
@@ -578,7 +561,7 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 		click(nextButtonWoPUP);
 		return this;
@@ -755,6 +738,24 @@ public class CheckoutPage extends Class_initEcomPrac {
 		return this;
 	}
 
+	@FindBy(xpath="//*[@id=\"shipping-new-address-form\"]/div[4]/div/button[2]")
+	WebElement confirmAddress;
+	
+	public PaymentMethodsPage clickConfirmAddress(){ 
+		loaderCheck();
+		try {
+			click(confirmAddress);
+			System.out.println("Confirm address is clicked");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		loaderCheck();
+		bodyContainer();
+		return null;	
+		
+	}
+	
 	public PaymentMethodsPage clickNextProceedToPayment() {
 		loaderCheck();
 		bodyContainer();
@@ -1009,6 +1010,14 @@ public class CheckoutPage extends Class_initEcomPrac {
 		String shipping_price=driver.get().findElementByXPath("//label[contains(@for,'homedelivery')]/span[@class='price']").getText();
 		System.out.println("Expedited Shipping Price"+shipping_price);
 		return this;		
+	}
+
+
+	public CheckoutPage removeExtraDots(String zipcode) {
+		txtBoxZipCode.sendKeys(Keys.BACK_SPACE);
+		txtBoxZipCode.sendKeys(Keys.BACK_SPACE);
+		return this;
+		
 	}
 
 }

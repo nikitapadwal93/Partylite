@@ -5,8 +5,8 @@
     <listener class-name="framework.utils.TestNGListener"/>
   </listeners>
   <test thread-count="4" name="Test-FullRegression-OutsideOrder-AT(failed)" parallel="tests">
-    <parameter name="paramURL" value="https://magentoqa.partylite.ca/vsysxtvmyyggndv"/>
-    <parameter name="paramCountry" value="CA"/>
+    <parameter name="paramURL" value="https://magentoqa.partylite.com/"/>
+    <parameter name="paramCountry" value="US"/>
     <groups>
       <run>
         <include name="Smokes"/>

@@ -72,7 +72,9 @@ public class CartSummaryPage extends Class_initEcomPrac {
 	@FindBy(xpath="//*[@id=\"maincontent\"]/div[2]/div[3]/div/div/div")
 	WebElement coupon_apply_msg;
 	public CartSummaryPage verifyCouponApplyMessage() {
-		verifyPartialText(coupon_apply_msg, "Sie haben den Gutscheincode verwendet");
+		//verifyPartialText(coupon_apply_msg, "Sie haben den Gutscheincode verwendet");
+		String coupon_message=coupon_apply_msg.getText();
+		System.out.println(coupon_message);
 		return this;
 	}
 
@@ -133,6 +135,23 @@ public class CartSummaryPage extends Class_initEcomPrac {
 
 	}
 
+	@FindBy(xpath="//*[@id=\"newsletter\"]")
+	WebElement newsletterFooter;
+	public CartSummaryPage enterEmailtoSubscribeFooter(String email) {
+		type(newsletterFooter, email);
+		return this;
+
+	}
+	
+	@FindBy(xpath="//*[@id=\"newsletter-validate-detail\"]/div/div/div[1]/button")
+	WebElement clickSubscribefromFooter;
+	public CartSummaryPage clickFooterSubscribeButton() {
+		click(clickSubscribefromFooter);
+		return this;
+
+	}
+
+	
 	@FindBy(xpath="//button[@value='Add Gift Card']")
 	WebElement apply_btn;
 	public CartSummaryPage clickApplyButton() {

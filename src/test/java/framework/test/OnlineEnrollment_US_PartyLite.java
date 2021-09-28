@@ -48,6 +48,7 @@ public class OnlineEnrollment_US_PartyLite extends Class_initEcomPrac{
 			new LandingPage_PartyLite(driver, Test)
 			
 			//.closeDialogSignUpNewsLetter()
+			.closeListrakNewsLetter()
 			.clickToAllowCookie()
 			.clickOurMission()
 			.bodyContainer()

@@ -39,7 +39,7 @@ public class GuestOrder_PartyLite extends Class_initEcomPrac{
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="GuestOrder")
 	public void createGuestOrder(String SKU,String qty,String email,String firstname,
 			String lastname,String address1,String address2,String address3,
-			String zipcode,String city,String phone,String state,String PaymentType, String cardNumber,
+			String zipcode,String city,String phone, String state,String PaymentType, String cardNumber,
 			String expMonth,String expYear,String cardCVV, String coupon){
 		
 		try {
@@ -53,7 +53,7 @@ public class GuestOrder_PartyLite extends Class_initEcomPrac{
 			.clickToAllowCookie()
 			.clickBtnSearch()
 			.enterSKU(SKU)
-			.clickSearchButton()
+			//.clickSearchButton()
 			.clickProductImage()
 			.enterQty(qty)
 			.clickBtnAddToCart()
@@ -61,19 +61,19 @@ public class GuestOrder_PartyLite extends Class_initEcomPrac{
 			.clickBtnViewBasket()
 			.typeCouponCode(coupon)
 			.clickCouponApplyButton()
-			//.verifyCouponApplyMessage()
+			.verifyCouponApplyMessage()
 			//call voucher entry data
 			.clickGoToCheckout()
 			.enterCustomerEmail(email)
 			.enterCustomerFirstName(firstname)
 			.enterCustomerLastName(lastname)
-			.enterCustomerAddress1(country, address1)
+			.enterCustomerAddress1(address1)
 			.enterCustomerAddress2(address2)
 			.enterCustomerAddress3(address3)
-			.enterCustomerZipCode(country, zipcode)
-			.enterCustomerCity(country, city)
+			.enterCustomerZipCode(zipcode)
+			.enterCustomerCity(city)
 			.enterCustomerTelephone(country, phone)
-			.selectState(country, state)
+			.selectState(state)
 			.clickDeliveryTypeBox()
 			.chooseDeliveryType()
 			.clickGuestNextButton()

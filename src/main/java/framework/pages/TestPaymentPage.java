@@ -28,7 +28,7 @@ public class TestPaymentPage extends Class_initEcomPrac  {
 	public TestPaymentPage getOrderNumber() {
 		System.out.println(OrderNumber.getText());
 		reportStep("Order Number" + OrderNumber.getText() +" retrieved successfully","pass");
-		System.out.println("In WL"+driver.get().getCurrentUrl());
+		System.out.println("In WL "+driver.get().getCurrentUrl());
 		reportStep("In WL"+driver.get().getCurrentUrl(),"info");
 		return this;
 	}
@@ -118,6 +118,8 @@ public class TestPaymentPage extends Class_initEcomPrac  {
 		}
 		return null;
 	}
+	
+	
 	
 	@FindBy(className="kit-success_wrap_border")
 	WebElement kit_banner;

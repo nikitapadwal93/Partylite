@@ -3,19 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="framework.test.AffiliateSignInOrderCheckout">
+      <class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2">
         <methods>
           <include name="beforeSuite"/>
           <include name="populatePropCountry"/>
+          <include name="setDataLCO"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="beforeClass"/>
-          <include name="setDataSIGNINAFF"/>
-          <include name="signInToPartyLiteAff"/>
+          <include name="loggedInCustomerOrder"/>
           <include name="beforeMethod"/>
           <include name="markExtentReportWithTestNGFailStatus"/>
         </methods>
-      </class> <!-- framework.test.AffiliateSignInOrderCheckout -->
+      </class> <!-- framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -104,9 +104,7 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		} catch(Exception e) {
 			System.out.println("Newsletter subscription missing");
 			reportStep("Newsletter subscription missing","info");
-			//driver.get().navigate().refresh();
-			//a++;
-			//closeListrakNewsLetter();
+			
 		}
 
 		return this;

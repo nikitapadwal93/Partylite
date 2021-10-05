@@ -82,6 +82,35 @@ public class CheckoutPage extends Class_initEcomPrac {
 		type(txtBoxStreetAddress2,address2);
 		return this;
 	}
+	
+	@FindBy(xpath="//button[@class='action action-show-popup']")
+	WebElement clickAddNewAddress;
+	public CheckoutPage clickAddNewAddress() {
+		click(clickAddNewAddress);
+		return this;
+	}
+	
+
+	@FindBy(xpath="(//button[@class='action action-select-shipping-item'])[2]")
+	WebElement clickAddressAgain;
+	public CheckoutPage clickAddress() {
+		click(clickAddressAgain);
+		return this;
+	}
+	
+	@FindBy(xpath="(//button[@class='action action-select-shipping-item'])[1]")
+	WebElement clickSavedAddress;
+	public CheckoutPage clickOnSavedAddress() {
+		click(clickSavedAddress);
+		return this;
+	}
+	
+	@FindBy(xpath="//button[@class='action primary action-save-address']")
+	WebElement clickSaveAddress;
+	public CheckoutPage clickSaveNewAddress() {
+		click(clickSaveAddress);
+		return this;
+	}
 
 	@FindBy(name="street[2]") // multi-lingual support added
 	WebElement txtBoxStreetAddress3;
@@ -348,6 +377,14 @@ public class CheckoutPage extends Class_initEcomPrac {
 		click(selectPickUpPointDeliveryMethod);
 		return this;		
 	}
+	
+	@FindBy(xpath="//button[@class='showparcels secondary-btn']")
+	WebElement selectParcelShop;
+	public CheckoutPage chooseParcelShop() {
+
+		click(selectPickUpPointDeliveryMethod);
+		return this;		
+	}
 
 	@FindBy(xpath="//label[@for='s_method_expedited_expedited']")
 	WebElement selectExpeditedMethod;
@@ -509,7 +546,7 @@ public class CheckoutPage extends Class_initEcomPrac {
 		//(//div[@id='map']//div[@title])
 		//driver.get().findElementsByXPath("((//div[contains(@style, 'z-index: 4')])/img)[1]");
 		System.out.println("The number of store images available - " + storeImgs.size());
-		System.out.println("The title of the first store image is - " + storeImgs.get(0).getAttribute("title"));
+		System.out.println("The title of the third store image is - " + storeImgs.get(2).getAttribute("title"));
 		int count =0;
 		for (WebElement w : storeImgs) {
 

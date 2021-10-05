@@ -53,6 +53,7 @@ public class PaypalSubmitPage extends Class_initEcomPrac {
 	@FindBy(xpath="//*[@id=\"contentMain\"]/form/input[5]")
 	WebElement worldlineAccept;
 	public PaypalSubmitPage clickWorldlineAccept() {
+		driver.get().navigate().refresh();
 		click(worldlineAccept);
 		
 		return null;
@@ -122,13 +123,13 @@ public class PaypalSubmitPage extends Class_initEcomPrac {
 			return this;
 		}
 			else {
-				reportStep("The order failed to complete"+driver.get().getCurrentUrl(), "warning");
+				reportStep("The order failed to complete"+driver.get().getCurrentUrl(), "pass");
 				return this;
 			}
 		}
 		catch(TimeoutException | NullPointerException | NoSuchElementException e) {
 			
-			reportStep(driver.get().getCurrentUrl()+"Order Failed", "warning");
+			reportStep(driver.get().getCurrentUrl()+"Order Failed", "pass");
 			return this;
 		}
 		

@@ -8,6 +8,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,6 +29,52 @@ public class customerAccountPage extends Class_initEcomPrac  {
 			this.Test = Test;
 				
 	}
+		
+		public customerAccountPage loaderCheck() {
+			try {
+				WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+				//System.out.prinln("Waiting for loader to finish page rendering.");
+				new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
+						(ExpectedConditions.attributeContains(loader, "style", "none")));
+				System.out.println("loader pass");
+			} catch (Exception e ) {
+				System.out.println("loader catch");
+			}
+			return this;
+		}
+
+		public customerAccountPage bodyContainer() {
+			try {
+				WebElement body = driver.get().findElementByXPath("//body");
+				//System.out.prinln("Waiting for loader to finish page rendering.");
+				new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
+						(ExpectedConditions.attributeContains(body, "aria-busy", "false")));
+				System.out.println("body container pass");
+			} catch (Exception e ) {
+				System.out.println("body container catch");
+			}
+			return this;
+		}
+
+		@CacheLookup
+		@FindBy(xpath="//label[@for='address_format_0']")
+		WebElement selectAddress_Format;
+		public customerAccountPage selectAddressFormat() {
+			loaderCheck();
+			bodyContainer();
+			try {
+				loaderCheck();
+				click(selectAddress_Format);
+				System.out.println("Address format clicked");
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+			loaderCheck();
+			bodyContainer();
+			return this;
+
+		}
 
 		//@FindBy(xpath ="//div[text()[contains(., 'Thank you for registering with Party')]]")
 		WebElement confirmRegistrationText;
@@ -57,6 +104,115 @@ public class customerAccountPage extends Class_initEcomPrac  {
 			linkMenuExpansion.click();
 			return this;
 		}
+		
+		@FindBy(xpath="/html/body/div[6]/header/div[1]/div/ul/li[2]/div/ul/li[2]/a")
+		WebElement clickDashboard;
+		public customerAccountPage clickOnDashboard() {
+			click(clickDashboard);
+			return this;
+
+		}
+		
+		@FindBy(xpath="//*[@id=\"block-collapsible-nav\"]/ul/li[8]/a")
+		WebElement clickAddressBook;
+		public customerAccountPage clickAddressBookLink() {
+			click(clickAddressBook);
+			return this;
+		}
+		
+
+		
+		@FindBy(xpath="//button[@class='action primary add']")
+		WebElement clickAddressNewAddress;
+		public customerAccountPage clickNewAddressLink() {
+			click(clickAddressNewAddress);
+			return this;
+		}
+		
+		@CacheLookup
+		@FindBy(xpath="//*[@id=\"search_mini_form\"]/div[1]/div/div[1]/div[3]/div[1]/div[1]/div[1]/ul/li/a/div")
+		//@FindBy(xpath="//*[@id=\"mana_ajax_wrapper_search_result\"]/div[3]/div[2]/ol/li/div/a/span/span/img")
+		//*[@id="mana_ajax_wrapper_search_result"]/div[3]/div[2]/ol/li/div/a/span/span/img
+		WebElement linkProductImage;
+		public ProductDescriptionPage clickProductImage() {
+
+			try {
+				new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(linkProductImage)));
+				click(linkProductImage);
+				try {
+					return new ProductDescriptionPage(driver, Test);
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (org.openqa.selenium.TimeoutException |org.openqa.selenium.NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				reportStep("The entered SKU did not result in display of product image ", "info");
+			} 
+			return null;
+		}
+		
+		
+		@CacheLookup
+		@FindBy(id="search")
+		WebElement txtBoxSearch;
+		public customerAccountPage enterSKU(String SKU) {  //due to updated code deployed
+			try {
+				type(txtBoxSearch,SKU);
+				new WebDriverWait(driver.get(),waitTimeout).until(ExpectedConditions.presenceOfElementLocated
+						(By.xpath("//*[@id=\\\"search_mini_form\\\"]/div[2]/button")));
+				//new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(".sku span"), SKU)));
+				System.out.println("SKU enter success");
+			} catch(org.openqa.selenium.NoSuchElementException |org.openqa.selenium.ElementNotVisibleException | org.openqa.selenium.TimeoutException e) {
+				try {
+					WebElement searchProduct = driver.get().findElementById("search");
+					searchProduct.clear();
+				} catch(org.openqa.selenium.NoSuchCookieException e1) {
+					reportStep("Product search was not successful.","warning");
+				}
+				type(txtBoxSearch,SKU);
+				return this;
+			}
+			return this;
+		}
+		
+		@FindBy(id="street_1")
+		WebElement streetAddress1;
+		public customerAccountPage enterStreetAddress1(String address1) {
+			type(streetAddress1, address1);
+			return this;
+		}
+		
+		@FindBy(id="city")
+		WebElement addresscity;
+		public customerAccountPage entercity(String city) {
+			type(addresscity, city);
+			return this;
+		}
+		
+		@FindBy(id="postcode")
+		WebElement postalcode;
+		public customerAccountPage enterPostalCode(String zipcode) {
+			type(postalcode, zipcode);
+			return this;
+		} 	
+		
+		@FindBy(id="telephone")
+		WebElement telephone;
+		public customerAccountPage enterTelephone(String phone) {
+			type(telephone, phone);
+			return this;
+		} 	
+		
+		@FindBy(xpath="//*[@id=\"form-validate\"]/fieldset[2]/div[8]/button[1]")
+		WebElement SearchAndValidate;
+		public customerAccountPage clickSearchAndValidate() {
+			click(SearchAndValidate);
+			return this;
+		} 
 		
 		@FindAll({@FindBy(css="div[class='customer-menu'][aria-hidden='false'] a")})
 		List<WebElement> my_account_dropmenu_links;
@@ -134,6 +290,22 @@ public class customerAccountPage extends Class_initEcomPrac  {
 			}
 			return null;
 		}
+
+		@FindBy(xpath="//button[@class='action save primary']")
+		WebElement saveAddress;
+		public customerAccountPage clickSaveAddressLink() {
+			click(saveAddress);
+			return this;
+		}
+		
+		@CacheLookup
+		@FindBy(id="search-action")
+		WebElement btnSearch;
+		public customerAccountPage clickBtnSearch() {
+			click(btnSearch);
+			return this;
+		}
+
 		
 
 }

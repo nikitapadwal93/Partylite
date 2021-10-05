@@ -13,8 +13,8 @@ public class TestNGListener implements IRetryAnalyzer, IAnnotationTransformer {
 	@Override
 	public boolean retry(ITestResult result) {
 		
-		if(!(result.isSuccess()) && (maxCount<1)) {
-			maxCount++;
+		if(!(result.isSuccess()) && maxCount<1) {
+			//maxCount++;
 			return true;
 		}
 		result.setStatus(ITestResult.FAILURE);

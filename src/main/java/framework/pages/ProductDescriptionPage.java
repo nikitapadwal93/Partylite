@@ -92,6 +92,36 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 	} 
 	}
 	
+	@FindBy(xpath="//*[@id=\"search_mini_form\"]/div[1]/div/div[1]/div[3]/div[1]/div[1]/div[1]/ul/li[1]/a/div")
+	WebElement linkProductImage2;
+	public ProductDescriptionPage clickProductImageForTwoResults() {
+		
+	try {
+		new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.visibilityOf(linkProductImage2));
+		click(linkProductImage2);
+		return this;
+	} catch (NoSuchElementException e) {
+		// TODO Auto-generated catch block
+		reportStep("The entered SKU isn't available or invalid", "warnining");
+		return null;
+	} 
+	}
+	
+	@FindBy(xpath="//*[@id=\"newsletter\"]")
+	WebElement newsletterFooter;
+	public ProductDescriptionPage enterEmailtoSubscribeFooter(String email) {
+		type(newsletterFooter, email);
+		return this;
+
+	}
+	
+	@FindBy(xpath="//*[@id=\"newsletter-validate-detail\"]/div/div/div[1]/button")
+	WebElement clickSubscribefromFooter;
+	public ProductDescriptionPage clickFooterSubscribeButton() {
+		click(clickSubscribefromFooter);
+		return this;
+
+	}
 	
 	@FindBy(css=".minicart-wrapper .showcart")
 	WebElement btnMiniCart;

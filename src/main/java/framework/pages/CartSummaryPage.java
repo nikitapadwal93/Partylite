@@ -55,13 +55,13 @@ public class CartSummaryPage extends Class_initEcomPrac {
 
 	@FindBy(id="coupon_code_fake")
 	WebElement txtboxCouponCode;
-	public CartSummaryPage typeCouponCode(String coupon_code) {
-		type(txtboxCouponCode, coupon_code);
+	public CartSummaryPage typeCouponCode(String coupon) {
+		type(txtboxCouponCode, coupon);
 		return this;
 
 	}
 
-	@FindBy(xpath="//*[@id=\"discount-coupon-form\"]/div[1]/div[2]/div/button")
+	@FindBy(xpath="//button[@class='action apply primary']")
 	WebElement apply_btn_coupon;
 	public CartSummaryPage clickCouponApplyButton() {
 		click(apply_btn_coupon);

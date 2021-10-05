@@ -52,9 +52,9 @@ import framework.appInit.Class_initEcomPrac;
 			
 			@FindBy(id="email_address")
 			WebElement txtboxEmail;
-			public createNewCustomerAcct enterEmail(String Email) {
+			public createNewCustomerAcct enterEmail(String email) {
 				long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
-				genEmail= Email+randomNum+"@mailinator.com";
+				genEmail= email+randomNum+"@mailinator.com";
 				
 				////System.out.prinln(genEmail);
 				type(txtboxEmail, genEmail);
@@ -64,11 +64,11 @@ import framework.appInit.Class_initEcomPrac;
 			@FindBy(id="email_address")
 			WebElement txtboxRealEmail;
 			public createNewCustomerAcct enterRealEmail(String Email) {
-//				long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
-//				genEmail= Email+randomNum+"@mailinator.com";
+			long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
+				genEmail= Email+randomNum+"@mailinator.com";
 				
 				////System.out.prinln(genEmail);
-				type(txtboxRealEmail, Email);
+				type(txtboxRealEmail, genEmail);
 				return this;
 			}
 			
@@ -101,7 +101,10 @@ import framework.appInit.Class_initEcomPrac;
 			
 			@FindBy(id="email_address_confirmation")
 			WebElement txtboxEmailConf;
-			public createNewCustomerAcct enterEmailConf(String EmailConf) {
+			public createNewCustomerAcct enterEmailConf(String confemail) {
+				
+				long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
+				//Guest_Email= confemail+randomNum+"@mailinator.com";
 				type(txtboxEmailConf, genEmail);
 				return this;
 			}
@@ -165,6 +168,14 @@ import framework.appInit.Class_initEcomPrac;
 				}
 				return null;
 			}
+			
+			@FindBy(xpath="(//button[@data-action='customer-menu-toggle'])[1]")
+			WebElement linkMenuExpansion;
+			public createNewCustomerAcct clickMenuExpansionLink() {
+				click(linkMenuExpansion);
+				return this;
+			}
+			
 			
 			@FindBy(css=".form-create-account button")
 			WebElement buttonNanoUserCreateAccount;

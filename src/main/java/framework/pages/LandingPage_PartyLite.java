@@ -31,7 +31,7 @@ import framework.appInit.Class_initEcomPrac;
 //@Listeners(framework.utils.NameOfTestListener.class)
 
 public class LandingPage_PartyLite extends Class_initEcomPrac {
-
+	String genEmail= null;
     int a=1;
 	public LandingPage_PartyLite(ThreadLocal<RemoteWebDriver> driver, ThreadLocal<ExtentTest> Test) throws FileNotFoundException, IOException {
 		super();
@@ -114,11 +114,28 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	WebElement NewsLetterEmail;
 	public LandingPage_PartyLite enterNewsletterEmail(String emailsubscribe) {
 		try {
-			type(NewsLetterEmail, emailsubscribe);
-			reportStep("Newsletter email entered as "+emailsubscribe+"","info");
+			long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
+			genEmail= emailsubscribe+randomNum+"@mailinator.com";
+			type(NewsLetterEmail, genEmail);
+			reportStep("Newsletter email entered as "+genEmail+"","info");
 			
 		} catch(Exception e) {
 			System.out.println("Newsletter email textbox not found");
+			reportStep("Newsletter subscription email textbox missing","info");
+		}
+
+		return this;
+	}
+	
+	@FindBy(xpath = "//input[@id='fname']")
+	WebElement NewsLetterName;
+	public LandingPage_PartyLite enterNewsletterName(String subscribername) {
+		try {
+			type(NewsLetterName, subscribername);
+			reportStep("Newsletter email entered as "+subscribername+"","info");
+			
+		} catch(Exception e) {
+			System.out.println("Newsletter name textbox not found");
 			reportStep("Newsletter subscription email textbox missing","info");
 		}
 
@@ -275,6 +292,13 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		} 
 		return null;
 	}
+	
+	@FindBy(xpath="(//button[@data-action='customer-menu-toggle'])[1]")
+	WebElement linkMenuExpansion;
+	public LandingPage_PartyLite clickMenuExpansionLink() {
+		click(linkMenuExpansion);
+		return this;
+	}
 
 	@FindBy(xpath="//li[@class='authorization-link']/a")
 	WebElement linkSignIn;
@@ -382,13 +406,6 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		return this;
 	}
 
-	@FindBy(xpath="(//button[@data-action='customer-menu-toggle'])[1]")
-	WebElement linkMenuExpansion;
-	public LandingPage_PartyLite clickMenuExpansionLink() {
-		linkMenuExpansion.click();
-		return this;
-	}
-	
 	@FindBy(xpath="//*[@id='newsletter']")
 	WebElement newsletterFooter;
 	public LandingPage_PartyLite enterEmailtoSubscribeFooter(String email) {
@@ -401,6 +418,14 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	WebElement clickSubscribefromFooter;
 	public LandingPage_PartyLite clickFooterSubscribeButton() {
 		click(clickSubscribefromFooter);
+		return this;
+
+	}
+	
+	@FindBy(xpath="(//*[@id=\"id50L0qXaW\"])[1]")
+	WebElement clickDashboard;
+	public LandingPage_PartyLite clickOnDashboard() {
+		click(clickDashboard);
 		return this;
 
 	}
@@ -454,7 +479,90 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		verifyDisplayed(my_account_button);
 		return this;
 	}
+	
+	public LandingPage_PartyLite loaderCheck() {
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			//System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
+					(ExpectedConditions.attributeContains(loader, "style", "none")));
+			System.out.println("loader pass");
+		} catch (Exception e ) {
+			System.out.println("loader catch");
+		}
+		return this;
+	}
 
+
+	@CacheLookup
+	@FindBy(xpath="//label[@for='address_format_0']")
+	WebElement selectAddress_Format;
+	public LandingPage_PartyLite selectAddressFormat() {
+		loaderCheck();
+		bodyContainer();
+		try {
+			loaderCheck();
+			click(selectAddress_Format);
+			System.out.println("Address format clicked");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		loaderCheck();
+		bodyContainer();
+		return this;
+
+	}
+	
+	@FindBy(xpath="//*[@id=\"block-collapsible-nav\"]/ul/li[8]/a")
+	WebElement clickAddressBook;
+	public LandingPage_PartyLite clickAddressBookLink() {
+		click(clickAddressBook);
+		return this;
+	}
+	
+	@FindBy(xpath="//button[@class='action primary add']")
+	WebElement clickAddressNewAddress;
+	public LandingPage_PartyLite clickNewAddressLink() {
+		click(clickAddressNewAddress);
+		return this;
+	}
+	
+	@FindBy(xpath="//button[@class='action save primary']")
+	WebElement saveAddress;
+	public LandingPage_PartyLite clickSaveAddressLink() {
+		click(saveAddress);
+		return this;
+	}
+	
+	@FindBy(id="street_1")
+	WebElement streetAddress1;
+	public LandingPage_PartyLite enterStreetAddress1(String address1) {
+		type(streetAddress1, address1);
+		return this;
+	}
+	
+	@FindBy(id="city")
+	WebElement addresscity;
+	public LandingPage_PartyLite entercity(String city) {
+		type(addresscity, city);
+		return this;
+	}
+	
+	@FindBy(id="postcode")
+	WebElement postalcode;
+	public LandingPage_PartyLite enterPostalCode(String zipcode) {
+		type(postalcode, zipcode);
+		return this;
+	} 	
+	
+	@FindBy(id="telephone")
+	WebElement telephone;
+	public LandingPage_PartyLite enterTelephone(String phone) {
+		type(telephone, phone);
+		return this;
+	} 	
+	
 	@FindBy(linkText="My Party Contacts")
 	WebElement linkMyPartyContacts;
 	public MyParties_ContactsPage clickLinkMyPartyContacts() {

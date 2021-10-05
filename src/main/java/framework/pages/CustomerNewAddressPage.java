@@ -41,6 +41,14 @@ public class CustomerNewAddressPage extends Class_initEcomPrac {
 			return this;
 		}
 		
+		@FindBy(xpath="//*[@id=\"block-collapsible-nav\"]/ul/li[8]/a")
+		WebElement clickAddressBook;
+		public CustomerNewAddressPage clickAddressBookLink() {
+			click(clickAddressBook);
+			return this;
+		
+		}
+		
 		@FindBy(id="street_3")
 		WebElement txtBoxStreetAddress3;
 		public CustomerNewAddressPage enterCustomerAddress3(String address3) {

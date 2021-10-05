@@ -4,9 +4,9 @@
   <listeners>
     <listener class-name="framework.utils.TestNGListener"/>
   </listeners>
-  <test thread-count="8" name="Test-Online_Enrollment-US(failed)" parallel="tests">
-    <parameter name="paramURL" value="https://mcstaging.partylite.com.au"/>
-    <parameter name="paramCountry" value="AU"/>
+  <test thread-count="8" name="TC-11: AT - PWS - eShop - Anonymous Checkout(failed)" parallel="tests">
+    <parameter name="paramURL" value="https://testpwsmcstaging.partylite.at/"/>
+    <parameter name="paramCountry" value="AT-PWS"/>
     <groups>
       <run>
         <include name="Smokes"/>
@@ -15,19 +15,19 @@
       </run>
     </groups>
     <classes>
-      <class name="framework.test.OnlineEnrollment_US_PartyLite">
+      <class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11">
         <methods>
+          <include name="setDataGO"/>
+          <include name="createGuestOrder" invocation-numbers="0"/>
           <include name="beforeSuite"/>
-          <include name="createGuestOrder" invocation-numbers="0 0"/>
           <include name="populatePropCountry"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
-          <include name="setDataOEUS"/>
           <include name="markExtentReportWithTestNGFailStatus"/>
         </methods>
-      </class> <!-- framework.test.OnlineEnrollment_US_PartyLite -->
+      </class> <!-- framework.test.GuestOrder_PartyLite_AT_Smoke_TC11 -->
     </classes>
-  </test> <!-- Test-Online_Enrollment-US(failed) -->
+  </test> <!-- TC-11: AT - PWS - eShop - Anonymous Checkout(failed) -->
 </suite> <!-- Failed suite [Suite-FullSmokeTest] -->

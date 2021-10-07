@@ -120,6 +120,12 @@ public class customerAccountPage extends Class_initEcomPrac  {
 			return this;
 		}
 		
+		@FindBy(xpath="//*[@id=\"block-collapsible-nav\"]/ul/li[10]/a")
+		WebElement clickAddressBookCH;
+		public customerAccountPage clickAddressBookLinkforCH() {
+			click(clickAddressBookCH);
+			return this;
+		}
 
 		
 		@FindBy(xpath="//button[@class='action primary add']")
@@ -211,6 +217,13 @@ public class customerAccountPage extends Class_initEcomPrac  {
 		WebElement SearchAndValidate;
 		public customerAccountPage clickSearchAndValidate() {
 			click(SearchAndValidate);
+			return this;
+		} 
+		
+		@FindBy(xpath="//*[@id=\"form-validate\"]/fieldset[2]/div[7]/button[1]")
+		WebElement SearchAndValidatech;
+		public customerAccountPage clickSearchAndValidateforCH() {
+			click(SearchAndValidatech);
 			return this;
 		} 
 		

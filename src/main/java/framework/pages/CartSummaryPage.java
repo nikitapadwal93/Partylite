@@ -64,6 +64,7 @@ public class CartSummaryPage extends Class_initEcomPrac {
 	@FindBy(xpath="//button[@class='action apply primary']")
 	WebElement apply_btn_coupon;
 	public CartSummaryPage clickCouponApplyButton() {
+		bodyContainer();
 		click(apply_btn_coupon);
 		return this;
 
@@ -124,6 +125,31 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		type(txtboxGiftCardNumber, gift_card_number);
 		return this;
 
+	}
+	
+	@FindBy(id="giftcard-code")
+	WebElement txtboxGCNumber;
+	public CartSummaryPage enterGCNumber(String gcno) {
+		loaderCheck();
+		bodyContainer();
+		type(txtboxGCNumber, gcno);
+		return null;	
+	}
+	
+	@FindBy(xpath="//input[@id='giftcard-pin']")
+	WebElement enterGCPin;
+	public CartSummaryPage enterGCPinforCH(String gcpin) {
+		loaderCheck();
+		bodyContainer();
+		type(enterGCPin, gcpin);
+		return null;	
+	}
+	
+	@FindBy(xpath="//button[@class='action add primary']")
+	WebElement clickGCApply;
+	public CartSummaryPage clickGCApplyButton() {
+		click(clickGCApply);
+		return null;	
 	}
 
 	@FindBy(id="giftcard-pin")

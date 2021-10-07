@@ -37,7 +37,7 @@ public class GuestOrder_PartyLite_AT_Smoke_TC11 extends Class_initEcomPrac{
 	}
 	
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="GuestOrder")
-	public void createGuestOrder(String SKU1, String SKU2,String SKU3,String qty, String coupon,String email,String firstname,
+	public void createGuestOrder(String SKU1, String SKU2,String SKU3, String SKU4, String qty, String coupon,String email,String firstname,
 			String lastname,String address1,String address2,String zipcode,
 			String city,String phone, String PaymentType, String cardNumber,
 			String expMonth,String expYear,String cardCVV){
@@ -53,6 +53,10 @@ public class GuestOrder_PartyLite_AT_Smoke_TC11 extends Class_initEcomPrac{
 			.clickToAllowCookie()
 			.clickBtnSearch()
 			.enterSKU(SKU1)
+			.clickProductImage()
+			.clickBtnAddToCart()
+			.clickBtnSearch()
+			.enterSKU(SKU4)
 			.clickProductImage()
 			.clickBtnAddToCart()
 			.clickBtnSearch()

@@ -268,7 +268,7 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	}
 
 	@CacheLookup
-	@FindBy(xpath="//*[@id=\"search_mini_form\"]/div[1]/div/div[1]/div[3]/div[1]/div[1]/div[1]/ul/li/a/div")
+	@FindBy(xpath="//*[@class='mst-product-image-wrapper']")
 	//@FindBy(xpath="//*[@id=\"mana_ajax_wrapper_search_result\"]/div[3]/div[2]/ol/li/div/a/span/span/img")
 	//*[@id="mana_ajax_wrapper_search_result"]/div[3]/div[2]/ol/li/div/a/span/span/img
 	WebElement linkProductImage;

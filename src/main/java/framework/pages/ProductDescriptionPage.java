@@ -77,7 +77,7 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 		return this;
 	}
 	
-	@FindBy(css=".search-product .image a")
+	@FindBy(xpath="//*[@class='mst-product-image-wrapper']")
 	WebElement linkProductImage;
 	public ProductDescriptionPage clickProductImage() {
 		

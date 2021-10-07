@@ -206,7 +206,7 @@
 			<class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11" />
 		</classes>
 	</test> -->
- <!--  
+ 
 	<test name="TC-12: CHFR - CWS - eShop - Logged in Checkout">
 		<parameter name="paramURL"
 			value="https://mcstaging.partylite.ch/" />
@@ -221,22 +221,23 @@
 		<classes>
 			<class name="framework.test.LoggedInCustomerOrder_PartyLite_CHFR_Smoke_TC12" />
 		</classes>
-	</test>   -->
-	
-	<test name="TC-3: CAEN - PWS - eShop - Anonymous checkout" >
+	</test>   
+<!--  	
+	<test name="TC-11: AT - PWS - eShop - Anonymous Checkout">
 		<parameter name="paramURL"
-			value="https://mcstaging.partylite.ca/ctwenty-six" />
-		<parameter name="paramCountry" value="CA" />
+			value="https://testpwsmcstaging.partylite.at/" />
+		<parameter name="paramCountry" value="AT-PWS" />
 		<groups>
 			<run>
+				<include name="Smokes" />
 				<include name="Common" />
-				<include name="eShop" />
+				<include name="PEX" />
 			</run>
 		</groups>
 		<classes>
-			<class name="framework.test.GuestOrder_PartyLite_CAEN_Smoke_demo" />		
+			<class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11" />
 		</classes>
-	</test> 
+	</test>   -->
 
 	<!-- <test name ="Admin_Settings_Captcha_enable"> <groups> <run> <include 
 		name="Captcha"/> <include name="Common"/> </run> </groups> <classes> <class 

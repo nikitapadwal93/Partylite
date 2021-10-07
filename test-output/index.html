@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite_FullSmokeTest">
-                    <span>C:\Users\Admin\Downloads\PartyLiteAn (1)\PartyLiteAn\testng_local.xml</span>
+                    <span>C:\Users\Admin\Downloads\relite\partylite-test-automation\testng_local.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite_FullSmokeTest">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_FullSmokeTest" title="framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3" hash-for-method="createGuestOrder(FS29, 1.0, test_smoke2209shashwat@mailinator.com, Shashwat, Guest, 9 Euclid St,    ,    , L3R 1P5, U...)">createGuestOrder(FS29, 1.0, test_smoke2209shashwat@mailinator.com, Shashwat, Guest, 9 Euclid St,    ,    , L3R 1P5, U...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_FullSmokeTest" title="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11" hash-for-method="createGuestOrder(P93141, V06199, G73C123, GC-20, 2.0, WELCOME10, test_smoke1001shashwat@mailinator.com, Shashwat, Gue...)">createGuestOrder(P93141, V06199, G73C123, GC-20, 2.0, WELCOME10, test_smoke1001shashwat@mailinator.com, Shashwat, Gue...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_FullSmokeTest -->
@@ -120,15 +120,15 @@
           <div class="suite-Suite_FullSmokeTest-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3</span>
+              <span class="class-name">framework.test.GuestOrder_PartyLite_AT_Smoke_TC11</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createGuestOrder(FS29, 1.0, test_smoke2209shashwat@mailinator.com, Shashwat, Guest, 9 Euclid St,    ,    , L3R 1P5, U...)">
-                  </a> <!-- createGuestOrder(FS29, 1.0, test_smoke2209shashwat@mailinator.com, Shashwat, Guest, 9 Euclid St,    ,    , L3R 1P5, U...) -->
+                  <a name="createGuestOrder(P93141, V06199, G73C123, GC-20, 2.0, WELCOME10, test_smoke1001shashwat@mailinator.com, Shashwat, Gue...)">
+                  </a> <!-- createGuestOrder(P93141, V06199, G73C123, GC-20, 2.0, WELCOME10, test_smoke1001shashwat@mailinator.com, Shashwat, Gue...) -->
                   <span class="method-name">createGuestOrder</span>
-                  <span class="parameters">(FS29, 1.0, test_smoke2209shashwat@mailinator.com, Shashwat, Guest, 9 Euclid St,    ,    , L3R 1P5, Unionville, Ontario, Ontario, Visa Debit Card, 4462030000000000, 02, 23.0, 123)</span>
+                  <span class="parameters">(P93141, V06199, G73C123, GC-20, 2.0, WELCOME10, test_smoke1001shashwat@mailinator.com, Shashwat, Guest, Mainhartsdorf 1,    , 8832.0, OBERWÖLZ, OBERWÖLZ, Visa Debit Card, 4462030000000000, 02, 23.0, 123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Suite_FullSmokeTest -->
         <div panel-name="test-xml-Suite_FullSmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Admin\Downloads\PartyLiteAn (1)\PartyLiteAn\testng_local.xml</span>
+            <span class="header-content">C:\Users\Admin\Downloads\relite\partylite-test-automation\testng_local.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,19 +146,20 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;framework.utils.TestNGListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;8&quot; name=&quot;TC-3: CAEN - PWS - eShop - Anonymous checkout&quot; parallel=&quot;tests&quot;&gt;
-    &lt;parameter name=&quot;paramURL&quot; value=&quot;https://mcstaging.partylite.ca/ctwenty-six&quot;/&gt;
-    &lt;parameter name=&quot;paramCountry&quot; value=&quot;CA&quot;/&gt;
+  &lt;test thread-count=&quot;8&quot; name=&quot;TC-11: AT - PWS - eShop - Anonymous Checkout&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;paramURL&quot; value=&quot;https://testpwsmcstaging.partylite.at/&quot;/&gt;
+    &lt;parameter name=&quot;paramCountry&quot; value=&quot;AT-PWS&quot;/&gt;
     &lt;groups&gt;
       &lt;run&gt;
+        &lt;include name=&quot;Smokes&quot;/&gt;
         &lt;include name=&quot;Common&quot;/&gt;
-        &lt;include name=&quot;eShop&quot;/&gt;
+        &lt;include name=&quot;PEX&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3&quot;/&gt;
+      &lt;class name=&quot;framework.test.GuestOrder_PartyLite_AT_Smoke_TC11&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TC-3: CAEN - PWS - eShop - Anonymous checkout --&gt;
+  &lt;/test&gt; &lt;!-- TC-11: AT - PWS - eShop - Anonymous Checkout --&gt;
 &lt;/suite&gt; &lt;!-- Suite-FullSmokeTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,7 +171,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TC-3: CAEN - PWS - eShop - Anonymous checkout (1 class)</span>
+                <span class="test-name">TC-11: AT - PWS - eShop - Anonymous Checkout (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -215,13 +216,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createGuestOrder')
-data.setCell(0, 2, 'framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3')
-data.setCell(0, 3, 183263);
+data.setCell(0, 2, 'framework.test.GuestOrder_PartyLite_AT_Smoke_TC11')
+data.setCell(0, 3, 279314);
 window.suiteTableData['Suite_FullSmokeTest']= { tableData: data, tableDiv: 'times-div-Suite_FullSmokeTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Suite_FullSmokeTest">
               </div> <!-- times-div-Suite_FullSmokeTest -->
             </div> <!-- times-div -->
@@ -247,42 +248,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">framework.test.GuestOrder_PartyLite_AT_Smoke_TC11</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">populatePropCountry(CA)</span>
-                <span class="method-start">222 ms</span>
+                <span class="method-name">populatePropCountry(AT-PWS)</span>
+                <span class="method-start">235 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
-                <span class="method-name">setDataGO(CA)</span>
-                <span class="method-start">229 ms</span>
+                <span class="method-name">setDataGO(AT-PWS)</span>
+                <span class="method-start">243 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">247 ms</span>
+                <span class="method-start">262 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(https://mcstaging.partylite.ca/ctwenty-six)</span>
-                <span class="method-start">1590 ms</span>
+                <span class="method-name">beforeMethod(https://testpwsmcstaging.partylite.at/)</span>
+                <span class="method-start">1737 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createGuestOrder(FS29, 1.0, test_smoke2209shashwat@mailinator.com, Shashwat, Guest, 9 Euclid St,    ,    , L3R 1P5, U...)</span>
-                <span class="method-start">16914 ms</span>
+                <span class="method-name">createGuestOrder(P93141, V06199, G73C123, GC-20, 2.0, WELCOME10, test_smoke1001shashwat@mailinator.com, Shashwat, Gue...)</span>
+                <span class="method-start">10124 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">200184 ms</span>
+                <span class="method-start">289443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">markExtentReportWithTestNGFailStatus([TestResult name=createGuestOrder status=SUCCESS method=GuestOrder_PartyLite_CAEN_Smoke_TC3.createGu...)</span>
-                <span class="method-start">201557 ms</span>
+                <span class="method-name">markExtentReportWithTestNGFailStatus([TestResult name=createGuestOrder status=SUCCESS method=GuestOrder_PartyLite_AT_Smoke_TC11.createGue...)</span>
+                <span class="method-start">290632 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">201608 ms</span>
+                <span class="method-start">290655 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

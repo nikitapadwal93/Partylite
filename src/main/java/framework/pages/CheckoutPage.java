@@ -443,7 +443,8 @@ public class CheckoutPage extends Class_initEcomPrac {
 	WebElement clickRClink;
 	public CheckoutPage clickRClink() {
 		try {
-
+			loaderCheck();
+			bodyContainer();
 			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
 			//System.out.prinln("Waiting for loader to finish page rendering.");
 			isPageReady = new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed

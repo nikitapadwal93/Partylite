@@ -107,12 +107,25 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 	} 
 	}
 	
+	public ProductDescriptionPage loaderCheck() {
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			//System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
+					(ExpectedConditions.attributeContains(loader, "style", "none")));
+			System.out.println("loader pass");
+		} catch (Exception e ) {
+			System.out.println("loader catch");
+		}
+		return this;
+	}
+	
 	@FindBy(xpath="//*[@id=\"newsletter\"]")
 	WebElement newsletterFooter;
 	public ProductDescriptionPage enterEmailtoSubscribeFooter(String email) {
 		type(newsletterFooter, email);
+		System.out.println("Email entered in footer is "+ email);
 		return this;
-
 	}
 	
 	@FindBy(xpath="//*[@id=\"newsletter-validate-detail\"]/div/div/div[1]/button")
@@ -120,8 +133,43 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 	public ProductDescriptionPage clickFooterSubscribeButton() {
 		click(clickSubscribefromFooter);
 		return this;
+	}
+	
+	@FindBy(xpath="//*[@id=\"html-body\"]/div[8]/aside[3]/div[2]/footer/button")
+	WebElement clickContinue;
+	public ProductDescriptionPage clickContinueShopping() {
+		click(clickContinue);
+		return null;
+	}
+	
+	@FindBy(xpath="//button[@data-role='proceed-to-checkout']")
+	WebElement btnGoToCheckout;
+	public CheckoutPage clickGoToCheckout() {
+		try {
+			WebElement total_cart_page=driver.get().findElementByCssSelector("#cart-totals table .grand");
+			new WebDriverWait(driver.get(), reducedTimeout).until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(total_cart_page)));
+			System.out.println("Totals table wait success");
+		}
+		catch(Exception e) {
+			System.out.println("Aria busy false check in cart page");
+		}
+
+		loaderCheck();
+		try {
+			new WebDriverWait(driver.get(), reducedTimeout).until(ExpectedConditions.elementToBeClickable(btnGoToCheckout));
+			click(btnGoToCheckout);
+			return new CheckoutPage(driver, Test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 
 	}
+
 	
 	@FindBy(css=".minicart-wrapper .showcart")
 	WebElement btnMiniCart;

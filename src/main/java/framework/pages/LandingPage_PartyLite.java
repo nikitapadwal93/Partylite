@@ -117,6 +117,7 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 			long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
 			genEmail= emailsubscribe+randomNum+"@mailinator.com";
 			type(NewsLetterEmail, genEmail);
+			System.out.println("email entered in newsletter subscription is"+ genEmail);
 			reportStep("Newsletter email entered as "+genEmail+"","info");
 			
 		} catch(Exception e) {
@@ -399,7 +400,7 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		return this;
 	}
 
-	@FindBy(xpath="//*[@id=\"ltkpopup-thanks\"]/div/a")
+	@FindBy(xpath="(//button[@class='action-close'])[3]")
 	WebElement btnContinueShopping;
 	public LandingPage_PartyLite clickContinueShopping() {
 		click(btnContinueShopping);

@@ -4,21 +4,19 @@
   <listeners>
     <listener class-name="framework.utils.TestNGListener"/>
   </listeners>
-  <test thread-count="8" name="TC-11: AT - PWS - eShop - Anonymous Checkout(failed)" parallel="tests">
-    <parameter name="paramURL" value="https://testpwsmcstaging.partylite.at/"/>
-    <parameter name="paramCountry" value="AT-PWS"/>
+  <test thread-count="8" name="TC-3: CAEN - PWS - eShop - Anonymous checkout(failed)" parallel="tests">
+    <parameter name="paramURL" value="https://mcstaging.partylite.ca/ctwenty-six"/>
+    <parameter name="paramCountry" value="CA"/>
     <groups>
       <run>
-        <include name="Smokes"/>
         <include name="Common"/>
-        <include name="PEX"/>
+        <include name="eShop"/>
       </run>
     </groups>
     <classes>
-      <class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11">
+      <class name="framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3">
         <methods>
           <include name="setDataGO"/>
-          <include name="createGuestOrder" invocation-numbers="0"/>
           <include name="beforeSuite"/>
           <include name="populatePropCountry"/>
           <include name="afterMethod"/>
@@ -26,8 +24,9 @@
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
           <include name="markExtentReportWithTestNGFailStatus"/>
+          <include name="createGuestOrder" invocation-numbers="0"/>
         </methods>
-      </class> <!-- framework.test.GuestOrder_PartyLite_AT_Smoke_TC11 -->
+      </class> <!-- framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3 -->
     </classes>
-  </test> <!-- TC-11: AT - PWS - eShop - Anonymous Checkout(failed) -->
+  </test> <!-- TC-3: CAEN - PWS - eShop - Anonymous checkout(failed) -->
 </suite> <!-- Failed suite [Suite-FullSmokeTest] -->

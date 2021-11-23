@@ -136,7 +136,7 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		return null;	
 	}
 	
-	@FindBy(xpath="//input[@id='giftcard-pin']")
+	@FindBy(xpath="//*[@id='giftcard-pin']")
 	WebElement enterGCPin;
 	public CartSummaryPage enterGCPinforCH(String gcpin) {
 		loaderCheck();
@@ -158,7 +158,6 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		gift_card_pin= markets.get(Country).getProperty("GC2"); //multi-lingual support
 		type(txtboxGiftCardPIN, gift_card_pin);
 		return this;
-
 	}
 
 	@FindBy(xpath="//*[@id=\"newsletter\"]")
@@ -358,6 +357,14 @@ public class CartSummaryPage extends Class_initEcomPrac {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
+	}
+
+	
+	@FindBy(xpath="//*[@id=\"html-body\"]/div[7]/aside[3]/div[2]/footer/button/span")
+	WebElement clickContinue;
+	public ProductDescriptionPage clickContinueShopping() {
+		click(clickContinue);
 		return null;
 	}
 

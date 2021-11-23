@@ -39,7 +39,7 @@ public class LoggedInCustomerOrder_PartyLite_CHFR_Smoke_TC12 extends Class_initE
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="CustomerOrder")
 	public void loggedInCustomerOrder(String fname, String lname,String email, String confemail, String password,  String ContentForVerification,
 			String SKU,	String qty, String gcno, String gcpin, String address1,String zipcode,
-			String city, String state, String phone, String PaymentType){
+			String city, String state, String phone, String PaymentType, String Country ){
 		
 		try {
 			try {
@@ -77,9 +77,10 @@ public class LoggedInCustomerOrder_PartyLite_CHFR_Smoke_TC12 extends Class_initE
 			.clickBtnAddToCart()
 			.clickBtnMiniCart()
 			.clickBtnViewBasket()
-			.enterGCNumber(gcno)
-			.enterGCPinforCH(gcpin)
-			.clickGCApplyButton()
+			//.enterGCNumber(gcno)
+			//.typeGiftCardPIN(country, gcpin)
+			//.enterGCPinforCH(gcpin)
+			//.clickGCApplyButton()
 			.clickGoToCheckout()
 			.clickOnSavedAddress()
 			.clickDeliveryTypeBox()

@@ -52,7 +52,7 @@ public class LoggedInCustomerOrder_PartyLite_Smoke_TC2 extends Class_initEcomPra
 			.enterEmailName(customer_email)
 			.enterPassword(customer_password)
 			.btnClickSignin()
-			.closeSocialNewAcctDialog()
+			//.closeSocialNewAcctDialog()
 			.verifyUserLogin(country, ContentToVerify)
 //			.gotoCustomerAddress(country) 
 //			//.clickaddNewAddress()// removed navigated to the add new address page in gotoCustomerAddress method itself.
@@ -71,7 +71,7 @@ public class LoggedInCustomerOrder_PartyLite_Smoke_TC2 extends Class_initEcomPra
 			.clickBtnSearch()
 			.enterSKU(SKU)
 			.clickProductImage()
-			.enterQty(qty)
+			//.enterQty(qty)
 			.clickBtnAddToCart()
 			.clickBtnMiniCart()
 			.clickBtnViewBasket()

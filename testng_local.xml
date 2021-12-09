@@ -3,23 +3,23 @@
 	<listeners>
 		<listener class-name="framework.utils.TestNGListener" />
 	</listeners>
- <!--    
-	<test name="TC-2: US - CWS - eShop - Logged in checkout" >
+   
+	<!-- <test name="TC-2: US - CWS - eShop - Logged in checkout" >
 		<parameter name="paramURL"
 			value="https:mcstaging.partylite.com" />
 		<parameter name="paramCountry" value="US" />
 		<groups>
 			<run>
 				<include name="Common" />
-				<include name="eShop" />
+				<include name="eShop" />\
 			</run>
 		</groups>
 		<classes>
 			<class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2" />		
 		</classes>
-	</test>
+	</test> -->
 
-<test name="TC-3: CAEN - PWS - eShop - Anonymous checkout" >
+<!-- <test name="TC-3: CAEN - PWS - eShop - Anonymous checkout" >
 		<parameter name="paramURL"
 			value="https://mcstaging.partylite.ca/ctwenty-six" />
 		<parameter name="paramCountry" value="CA" />
@@ -32,9 +32,25 @@
 		<classes>
 			<class name="framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3" />		
 		</classes>
-	</test>  	 
+	</test>   -->
+	
+	<!-- <test name="TC-4: CAFR - PWS - Enrollment" >
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.ca/cthirty-three" />
+		<parameter name="paramCountry" value="OECA" />
+		<groups>
+			<run>
+				<include name="Common" />
+				<include name="eShop" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.OnlineEnrollment_CAFR_Smoke_TC4" />		
+		</classes>
+	</test>  	 -->	
   
-   <test name="TC-6: AU - CWS - eShop - Anonymous Checkout2">
+   <!-- <test name="TC-6: AU - CWS - eShop - Anonymous Checkout2">
 		<parameter name="paramURL"
 			value="https://mcstaging.partylite.com.au/ " />
 		<parameter name="paramCountry" value="AU" />
@@ -48,7 +64,7 @@
 		<classes>
 			<class name="framework.test.GuestOrder_PartyLite_AU_Smoke_TC6" />
 		</classes>
-	</test> --> 
+	</test> -->
  <!--   
 <test name="TC-7: FR - PWS - eShop">
 		<parameter name="paramURL"
@@ -99,7 +115,7 @@
 		</classes>
 	</test>    -->
 
-	<test name="TC-11: AT - PWS - eShop - Anonymous Checkout">
+	<!-- <test name="TC-11: AT - PWS - eShop - Anonymous Checkout">
 		<parameter name="paramURL"
 			value="https://testpwsmcstaging.partylite.at/" />
 		<parameter name="paramCountry" value="AT-PWS" />
@@ -113,7 +129,7 @@
 		<classes>
 			<class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11" />
 		</classes>
-	</test> 
+	</test>  -->
   <!--  
 	<test name="TC-12: CHFR - CWS - eShop - Logged in Checkout">
 		<parameter name="paramURL"

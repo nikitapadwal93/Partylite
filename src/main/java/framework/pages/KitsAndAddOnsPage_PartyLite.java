@@ -136,4 +136,47 @@ public class KitsAndAddOnsPage_PartyLite extends Class_initEcomPrac {
 		}
 		return null;
 	}
+	
+	@FindBy(css = "button.kit-selected-button")
+	WebElement web_oe_kit_1;
+
+	public KitsAndAddOnsPage_PartyLite clickKit_BudleItems() {
+		/*
+		 * Actions actions = new Actions(driver.get());
+		 * actions.moveToElement(web_oe_kit).click().build().perform();
+		 */
+		System.out.println("Before selecting kit" + driver.get().getCurrentUrl());
+		try {
+			// boolean btntxt =
+			// driver.get().getTitle().contains("select")||driver.get().getTitle().contains("Sélectionner");
+			// System.out.println(btntxt);
+			// driver.get().executeScript("arguments[0].click()", web_oe_kit_1);
+			for (int i = 1; i <= 4; i++) {
+				WebElement kitscreen = driver.get()
+						.findElementByXPath("//*[@id='about-you']/fieldset[1]/div[3]/div[" + 1 + "]");
+				new WebDriverWait(driver.get(), reducedTimeout)
+						.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(kitscreen)));
+				WebElement kit = driver.get()
+						.findElementByXPath("//*[@id='about-you']/fieldset[1]/div[3]/div[" + i + "]");
+				kit.click();
+			}
+		} catch (Exception e) {
+			System.out.println("No Kit or Addons");
+		}
+
+		System.out.println("after kit selected" + driver.get().getCurrentUrl());
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			// System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(loader, "style", "none")));
+
+			// System.out.prinln("Page rendering is complete to click on delivery type
+			// selection dropdown.");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		return this;
+	}
 }

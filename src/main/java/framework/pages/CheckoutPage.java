@@ -1057,5 +1057,16 @@ public class CheckoutPage extends Class_initEcomPrac {
 		return this;
 		
 	}
+	
+	@FindBy(xpath = "//*[@id='opc-sidebar']/div[1]/table/tbody/tr[2]/td/span")
+	WebElement ShippingAmt;
+
+	public CheckoutPage verifyshipping() {
+		verifyEnabled(ShippingAmt);
+		System.out.println("Shipping & Handling Fee= " + ShippingAmt.getText());
+		reportStep("S&H fee= " + ShippingAmt.getText(), "pass");
+		return this;
+	}
+
 
 }

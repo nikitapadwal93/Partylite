@@ -863,7 +863,86 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		}
 		return null;
 	}
+	
+	@FindBy(id = "switcher-language-trigger")
+	WebElement EnglishBtn;
 
+	public LandingPage_PartyLite englishCABtnClick() {
+		click(EnglishBtn);
+		return this;
+	}
+
+	@FindBy(xpath = "//*[@id='switcher-language']/div/ul/li/a")
+	WebElement FranceCABtn;
+
+	public LandingPage_PartyLite franceCABtnClick() {
+		click(FranceCABtn);
+		return this;
+	}
+
+	@FindBy(xpath = "//*[@id='fname']")
+	WebElement ltkname;
+
+	public LandingPage_PartyLite enterNamePopup() {
+		try {
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='ltkpopup-wrapper']")));
+			type(ltkname, "Saravanan");
+			reportStep("Name entered in the popup field ", "PASS");
+		}
+
+		catch (org.openqa.selenium.ElementNotInteractableException | org.openqa.selenium.NoSuchElementException e2) {
+			reportStep("Listrak popup is not displayed ", "info");
+			System.out.println("Listrak popup is not displayed");
+		}
+
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='ltkpopup-email']")
+	WebElement ltkemail;
+
+	public LandingPage_PartyLite enterEmailPopup() {
+		try {
+			// new
+			// WebDriverWait(driver.get(),waitTimeout).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='ltklpopup-bg-c']")));
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='ltkpopup-wrapper']")));
+			click(ltkemail);
+			long randomNum = (long) Math.floor(Math.random() * 9000000000L) + 8888888888888L;
+			random_oe_email = "Popup" + randomNum + "@mailinator.com";
+			type(ltkemail, random_oe_email);
+			reportStep("Entered the email-id= " + a + random_oe_email, "PASS");
+		}
+
+		catch (org.openqa.selenium.ElementNotInteractableException | org.openqa.selenium.NoSuchElementException e1) {
+			reportStep("Listrak popup is not displayed ", "info");
+			System.out.println("Listrak popup is not displayed");
+		}
+
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='ltkpopup-submit']")
+	WebElement ltksubmitpop;
+
+	public LandingPage_PartyLite LtkSubmitpopup() {
+		click(ltksubmitpop);
+		try {
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='ltkpopup-wrapper']")));
+			WebElement closebtn = driver.get().findElementById("ltkpopup-close-button");
+			click(closebtn);
+			System.out.println("Submit the pop-up subscription");
+		}
+
+		catch (Exception e1) {
+			System.out.println("Missed listrak Thank you page");
+			reportStep("Missed listrak Thank you page", "info");
+		}
+
+		return this;
+	}
 }
 
 

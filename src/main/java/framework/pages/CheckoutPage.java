@@ -16,6 +16,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -267,6 +268,65 @@ public class CheckoutPage extends Class_initEcomPrac {
 		}
 		return this;
 	}
+	
+	@FindBy(xpath = "//*[@id='payment_type']")
+	List<WebElement> dd;
+	public CheckoutPage verifyPaymentDropdown() {
+		Select drop = new Select(driver.get().findElement(By.id("payment_type")));
+		dd = drop.getOptions();
+		System.out.println(dd.size());
+		for (int j = 0; j < dd.size(); j++) {
+	    System.out.println(dd.get(j).getText());
+		reportStep("Payment dropdown" + dd.get(j).getText() , "test");
+			}
+		return this;
+		}
+	
+	@FindBy(xpath = "//*[@id='payment_type']")
+	WebElement ClickPaymentType;
+	public CheckoutPage clickPaymentType() {
+		try {
+			click(ClickPaymentType);
+			System.out.println("Payment option is clicked");
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Payment option is missed");
+		}
+		click(ClickPaymentType);
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='payment_type']/option[2]")
+	WebElement SelectAllOtherCards;
+	public CheckoutPage selectOtherCards() {
+		try {
+			click(SelectAllOtherCards);
+			System.out.println("'All Other cards' option is selected");
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("All other card option is missed");
+		}
+		click(SelectAllOtherCards);
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='payment_type']/option[3]")
+	WebElement SelectPaypal;
+	public CheckoutPage selectPaypal() {
+		try {
+			click(SelectPaypal);
+			System.out.println("Paypal option is selected");
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Paypal option is missed");
+		}
+		click(SelectPaypal);
+		return this;
+	}
+
 
 
 	@FindBy(css="div.select-shipping-methods")
@@ -300,7 +360,32 @@ public class CheckoutPage extends Class_initEcomPrac {
 
 
 	}
+	
+	@FindBy(xpath ="//label[@for='s_method_dpdclassic_dpdclassic']")
+	WebElement selectHomeDelivery;
+	public CheckoutPage chooseHomeDelivery() {
+		String current_url=driver.get().getCurrentUrl();
+		System.out.println(current_url+" current url");
+		if(current_url.contains("/party/checkout"))
+		{
+			try {
 
+				WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+				//System.out.prinln("Waiting for loader to finish page rendering.");
+				isPageReady = new WebDriverWait(driver.get(), reducedTimeout).until(ExpectedConditions.refreshed
+						(ExpectedConditions.attributeContains(loader, "style", "none")));
+
+			} catch (Exception e) {
+				System.out.println("shipping method catch");
+				// TODO Auto-generated catch block
+
+			}
+		}
+		System.out.println("shipping method selection");
+		click(selectHomeDelivery);
+		return this;
+
+	}
 	
 	
 	@FindBy(css="div.option-shipping-method")
@@ -1067,6 +1152,14 @@ public class CheckoutPage extends Class_initEcomPrac {
 		reportStep("S&H fee= " + ShippingAmt.getText(), "pass");
 		return this;
 	}
+	
+	@FindBy(xpath = "//*[@class='grand totals']")
+	WebElement OrderTotal_row;
+		public CheckoutPage verifyOrderTotal() {
+			System.out.println(OrderTotal_row.getText());
+			reportStep("Order total= "+OrderTotal_row.getText(), "PASS");
+			return this;
+		}	
 
 
 }

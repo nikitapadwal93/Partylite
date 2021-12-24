@@ -923,6 +923,26 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 		return this;
 	}
 	
+	@FindBy(xpath = "//*[@id='ltkpopup-submit']")  //This method used to submit the subscription for Smoke-TC1
+	WebElement ltksubmit;
+	public LandingPage_PartyLite clickLtkSubmit() {
+		click(ltksubmit);
+		try {
+			new WebDriverWait(driver.get(),waitTimeout).until(ExpectedConditions.presenceOfElementLocated
+					(By.xpath("//div[@class='ltklpopup-bg-c']")));
+			WebElement continuebtn = driver.get().findElementByXPath("//*[@id='ltkpopup-thanks']/div/a");
+			click(continuebtn);	
+			System.out.println("Submit the pop-up subscription");
+		}
+				
+			catch (Exception e1) {
+				System.out.println("Missed listrak Thank you page");
+				reportStep("Missed listrak Thank you page", "info");
+			}
+			
+		return this;
+	}	
+	
 	@FindBy(xpath = "//*[@id='ltkpopup-submit']")
 	WebElement ltksubmitpop;
 

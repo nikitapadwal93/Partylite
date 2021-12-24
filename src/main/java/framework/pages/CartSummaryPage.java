@@ -52,6 +52,31 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		}
 		return this;
 	}
+	
+	@FindBy(xpath = "//*[@id='block-discount-heading']") //
+	WebElement coupon_translation1;
+	public CartSummaryPage verifyCoupon1_Translation() {
+	
+		boolean coupontxt= verifyExactText(coupon_translation1, "Apply Coupon");
+		
+		if(!coupontxt) {
+			reportStep("Coupon translaiton is incorrect= "+coupon_translation1 ,"FAIL");	
+			System.out.println("Coupon text is incorrect");
+			}
+		else
+		System.out.println("Coupon text is correct");
+		reportStep("Coupon translaiton is correct= "+coupon_translation1 ,"PASS");
+	
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@class='field']/label")
+	WebElement coupon_translation2;
+	public CartSummaryPage verifyCoupon2_Translation() {
+		verifyExactText(coupon_translation2, "Enter Coupon");
+		reportStep("Coupon translaiton is correct= "+coupon_translation2 ,"PASS");
+		return this;
+	}
 
 	@FindBy(id="coupon_code_fake")
 	WebElement txtboxCouponCode;
@@ -59,6 +84,47 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		type(txtboxCouponCode, coupon);
 		return this;
 
+	}
+	
+	@FindBy(id = "coupon_code_fake")
+	WebElement enterFREECoupon;
+	public CartSummaryPage enterFREECoupon() {
+		//Thread.sleep(2000);
+		try {
+			WebElement bodyContainer = driver.get().findElementByXPath("//body[@data-container='body']");
+			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed(ExpectedConditions.attributeToBe(bodyContainer, "aria-busy", "false")));
+			System.out.println("Aria busy success");
+		}
+	
+		catch (Exception e) {
+			e.printStackTrace();
+				}
+		try {
+		verifyDisplayed(enterFREECoupon);
+		if (driver.get().getCurrentUrl().contains("https://pexdev.partylite.co.uk") || 
+			driver.get().getCurrentUrl().contains("https://pexdev.partylite.com") ||
+			driver.get().getCurrentUrl().contains("https://pexdev.partylite.com.au")||
+			driver.get().getCurrentUrl().contains("https://pexdev.partylite.ca"))
+			type(enterFREECoupon, "FREEENROLL");
+		
+		else if (driver.get().getCurrentUrl().contains("https://mcstaging.partylite.co.uk") || driver.get().getCurrentUrl().contains("https://mcstaging.partylite.com.au"))
+			type(enterFREECoupon, "FAITH100");
+		
+		else if (driver.get().getCurrentUrl().contains("https://mcstaging.partylite.com"))
+				type(enterFREECoupon, "KRISTIN100");
+		
+		else if (driver.get().getCurrentUrl().contains("https://mcstaging.partylite.ca"))
+				type(enterFREECoupon, "CA_KRISTIN100");
+		
+		else if (driver.get().getCurrentUrl().contains("https://mcpreprod.partylite.com.au") || driver.get().getCurrentUrl().contains("https://mcpreprod.partylite.co.uk"))
+			type(enterFREECoupon, "SHAREIT");
+		
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
 	}
 
 	@FindBy(xpath="//button[@class='action apply primary']")
@@ -70,12 +136,11 @@ public class CartSummaryPage extends Class_initEcomPrac {
 
 	}
 
-	@FindBy(xpath="//*[@id=\"maincontent\"]/div[2]/div[3]/div/div/div")
+	@FindBy(xpath = "//div[@data-ui-id='message-success']")
 	WebElement coupon_apply_msg;
 	public CartSummaryPage verifyCouponApplyMessage() {
-		//verifyPartialText(coupon_apply_msg, "Sie haben den Gutscheincode verwendet");
-		String coupon_message=coupon_apply_msg.getText();
-		System.out.println(coupon_message);
+		verifyPartialText(coupon_apply_msg, "You used coupon code");
+		reportStep("Coupon applied successfully= "+coupon_apply_msg ,"PASS");
 		return this;
 	}
 
@@ -249,6 +314,35 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		return null;
 
 	}
+	
+	@FindBy(xpath ="//*[@class='qty-increase']")
+	WebElement addProductQty;
+	public CartSummaryPage addProductQty() {
+		click(addProductQty);
+		System.out.println("Clicked on + to add more qty");
+		reportStep("Cicked on '+' to add more qty", "pass");
+		return this;
+	}
+	
+	@FindBy(xpath ="//*[@id='form-validate']/div[2]/button")
+	WebElement updateProductQty;
+	public CartSummaryPage clickUpdateQty() {
+		click(updateProductQty);
+		System.out.println("Clicked on 'Update qty' button");
+		reportStep("Clicked on 'Update qty' button", "pass");
+	return this;
+	}
+	
+	
+	@FindBy(xpath ="//*[@id='shopping-cart-table']/tbody[2]/tr[2]/td/div/a")
+	WebElement removeItem;
+	public CartSummaryPage clickRemoveItem() {
+		click(removeItem);
+		System.out.println("Clicked on 'Remove item link");
+		reportStep("Item has been removed from the cart", "pass");
+		return this;
+	}
+
 
 	public CartSummaryPage cartPageLoader() {
 		try {

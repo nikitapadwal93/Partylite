@@ -29,7 +29,7 @@ public class PaypalSubmitPage extends Class_initEcomPrac {
 	
 	@FindBy(xpath="//input[@name='process']")
 	WebElement buttonPaypalConfirm;
-	public OrderCompletionPage clickPaypalSubmit() {
+	public OrderCompletionPage clickPaypalSubmit() { /* Old Paypal-Template functions */
 		try {
 			click(buttonPaypalConfirm);
 		}
@@ -133,5 +133,46 @@ public class PaypalSubmitPage extends Class_initEcomPrac {
 			return this;
 		}
 		
+	}
+	
+	@FindBy(xpath = "//*[@id=\"btnLogin\"]")
+	WebElement btnLoginPaypal;
+	public PaypalSubmitPage clickLoginPaypal() {
+		click(btnLoginPaypal);
+		try {
+			return new PaypalSubmitPage(driver, Test);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"continue_abovefold\"]")
+	WebElement btnPaypal;
+	public OrderCompletionPage clickPaypalPayNow() { 
+		try {
+			click(btnPaypal);
+		}
+		catch(Exception e) {
+			System.out.println("Reload button shows instead of paypal submit");
+			driver.get().navigate().refresh();
+			click(btnPaypal);
+		}
+		
+		try {
+			return new OrderCompletionPage(driver, Test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

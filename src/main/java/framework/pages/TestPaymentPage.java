@@ -40,6 +40,27 @@ public class TestPaymentPage extends Class_initEcomPrac  {
 		return this;
 	}
 	
+	@FindBy(xpath="//fieldset[@class='cardNumber']//input")  // multi-lingual markets to be paid by Mastercard
+	WebElement MC_CardNumber;
+	public TestPaymentPage enterMasterCardNum() {
+		type(MC_CardNumber, "5555555555554444");
+		return this;
+	}
+	
+	@FindBy(xpath="//fieldset[@class='cardNumber']//input")  // Used only for UK
+	WebElement Debit_CardNumber;
+	public TestPaymentPage enterVisaDebit_UK() {
+		type(Debit_CardNumber, "4462030000000000");
+		return this;
+	}
+	
+	@FindBy(xpath="//fieldset[@class='cardNumber']//input")  // Used only for US
+	WebElement BoxCardNumber;
+	public TestPaymentPage enterDiscoverCardNum() {
+		type(BoxCardNumber, "6011000400000000");
+		return this;
+	}
+	
 	@FindBy(name="expdatemonth")
 	WebElement selectExpMonth;
 	public TestPaymentPage enterCardExpMonth(String expMonth) {
@@ -137,6 +158,8 @@ public class TestPaymentPage extends Class_initEcomPrac  {
 			reportStep("failure page for OE "+ driver.get().getCurrentUrl(), "fail");
 		return this;
 	}
+	
+
 	
 }
 

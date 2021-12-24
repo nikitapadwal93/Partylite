@@ -355,6 +355,7 @@ try {
 		return this;
 	}
 	
+	
 	@FindBy(id="contact_phone")
 	WebElement web_oe_user_cphone;
 	public OnlineEnrollmentLandingPage_PartyLite enterUserContactPhone(String cphone) {
@@ -402,6 +403,31 @@ try {
 		else if(driver.get().getCurrentUrl().contains("partylite.co.uk"))
 			//type(web_oe_user_mphone, ca_random_mobnum);
 			type(web_oe_user_mphone, mphone);
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='pl_aff_sorting_code_number']")
+	WebElement web_oe_sortcode;
+
+	public OnlineEnrollmentLandingPage_PartyLite enterSortingCode() {
+		verifyDisplayed(web_oe_sortcode);
+		type(web_oe_sortcode, "12-34-56");
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='pl_aff_account_number']")
+	WebElement web_oe_accnum;
+
+	public OnlineEnrollmentLandingPage_PartyLite enterAcctNum() {
+		type(web_oe_accnum, "14785296");
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='pl_aff_bank_name']")
+	WebElement web_oe_bankname;
+
+	public OnlineEnrollmentLandingPage_PartyLite enterBankname() {
+		type(web_oe_bankname, "Santander UK");
 		return this;
 	}
 	
@@ -472,6 +498,85 @@ try {
 		return this;
 	}
 	
+	@FindBy(xpath = "//*[@id='about-you']/fieldset[3]/div[1]/label")
+	WebElement web_oe_user_billingcheckbox;
+
+	public OnlineEnrollmentLandingPage_PartyLite clickBillingCheckbox() {
+		verifyDisplayed(web_oe_user_billingcheckbox);
+		click(web_oe_user_billingcheckbox);
+		return this;
+	}
+	
+	@FindBy(id = "billing_line_1")
+	WebElement web_oe_user_bill_ad1;
+
+	public OnlineEnrollmentLandingPage_PartyLite enterUserBillAddressLine1(String billaddress1) {
+		verifyDisplayed(web_oe_user_bill_ad1);
+		if (driver.get().getCurrentUrl().contains("partylite.com"))
+			type(web_oe_user_bill_ad1, billaddress1);
+		else if (driver.get().getCurrentUrl().contains("partylite.ca"))
+			type(web_oe_user_bill_ad1, billaddress1);
+		else if (driver.get().getCurrentUrl().contains("partylite.co.uk"))
+			// type(web_oe_user_mphone, ca_random_mobnum);
+			type(web_oe_user_bill_ad1, billaddress1);
+		return this;
+
+	}
+	
+	@FindBy(id = "billing_city")
+	WebElement web_oe_user_bicity;
+
+	public OnlineEnrollmentLandingPage_PartyLite enterUserBillCity(String billcity) {
+		verifyDisplayed(web_oe_user_bicity);
+		if (driver.get().getCurrentUrl().contains("partylite.com"))
+			type(web_oe_user_bicity, billcity);
+		else if (driver.get().getCurrentUrl().contains("partylite.ca"))
+			type(web_oe_user_bicity, billcity);
+		else if (driver.get().getCurrentUrl().contains("partylite.co.uk"))
+			type(web_oe_user_bicity, billcity);
+		return this;
+	}
+	
+	@FindBy(xpath = "//label[@for='billing_regions-opener']")
+	WebElement web_oe_user_statedropdown1;
+	public OnlineEnrollmentLandingPage_PartyLite clickStateDropdown1(String state1) {
+		WebElement drop_state1;
+		verifyDisplayed(web_oe_user_statedropdown1);
+		click(web_oe_user_statedropdown1);
+		try {
+			if (driver.get().getCurrentUrl().contains("partylite.com.au"))
+				//drop_state1 = driver.get().findElementByXPath("//span[contains(text(),'" + state1 + "')]");
+				drop_state1 = driver.get().findElementByXPath("//div[contains(@class, 'field billing_regions')]//span[contains(text(),'" + state1 + "')]");
+			else
+				drop_state1 = null;
+			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.elementToBeClickable(drop_state1));
+			driver.get().executeScript("arguments[0].click()", drop_state1);
+			/*
+			 * Actions actions = new Actions(driver.get());
+			 * actions.moveToElement(drop_state).click().build().perform();
+			 */
+			System.out.println("Billing State selected using javascript executor");
+			// driver.get().executeScript("arguments[0].click()", drop_state);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	@FindBy(id = "billing_postcode")
+	WebElement web_oe_user_bipostcode;
+
+	public OnlineEnrollmentLandingPage_PartyLite enterUserBillPostcode(String billzipcode) {
+		verifyDisplayed(web_oe_user_bipostcode);
+		if (driver.get().getCurrentUrl().contains("partylite.com"))
+			type(web_oe_user_bipostcode, billzipcode);
+		else if (driver.get().getCurrentUrl().contains("partylite.ca"))
+			type(web_oe_user_bipostcode, billzipcode);
+		else if (driver.get().getCurrentUrl().contains("partylite.co.uk"))
+			type(web_oe_user_bipostcode, billzipcode);
+		return this;
+	}
+	
 	@FindBy(xpath="//label[@for='marketing-opener']")
 	WebElement web_oe_user_marketing;
 	public OnlineEnrollmentLandingPage_PartyLite clickMarketingDropdown(String state) {
@@ -532,6 +637,110 @@ try {
 			e.printStackTrace();
 		}
 		
+		try {
+			return new KitsAndAddOnsPage_PartyLite(driver, Test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	@FindBy(xpath = "//*[@id='about-you']/fieldset[2]/div[5]/div[3]/div/ul/li")
+	WebElement web_oe_user_shipresult;
+	public OnlineEnrollmentLandingPage_PartyLite clickShipExpResult() {
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			// System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(loader, "style", "none")));
+
+			// System.out.prinln("Page rendering is complete to click on delivery type
+			// selection dropdown.");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		try {
+			Actions actions = new Actions(driver.get());
+			actions.moveToElement(web_oe_user_shipresult).click().build().perform();
+			System.out.println("Experian suggestion selected" + driver.get().getCurrentUrl());
+		} catch (Exception e) {
+			System.out.println("No address suggestion");
+			WebElement web_oe_user_manual1 = driver.get().findElementByCssSelector("button.with-address");
+			Actions actions = new Actions(driver.get());
+			actions.moveToElement(web_oe_user_manual1).click().build().perform();
+		}
+
+		// driver.get().executeScript("arguments[0].click()", web_oe_user_expresult);
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			// System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(loader, "style", "none")));
+
+			// System.out.prinln("Page rendering is complete to click on delivery type
+			// selection dropdown.");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		try {
+			return new OnlineEnrollmentLandingPage_PartyLite(driver, Test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[@id='about-you']/fieldset[3]/div[6]/div[3]/div/ul/li[1]")
+	WebElement web_oe_user_billresult;
+	public KitsAndAddOnsPage_PartyLite clickBillExpResult() {
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			// System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(loader, "style", "none")));
+
+			// System.out.prinln("Page rendering is complete to click on delivery type
+			// selection dropdown.");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		try {
+			Actions actions = new Actions(driver.get());
+			actions.moveToElement(web_oe_user_billresult).click().build().perform();
+			System.out.println("Experian suggestion selected" + driver.get().getCurrentUrl());
+		} catch (Exception e) {
+			System.out.println("No address suggestion");
+			WebElement web_oe_user_manual2 = driver.get().findElementByCssSelector("button.with-address");
+			Actions actions = new Actions(driver.get());
+			actions.moveToElement(web_oe_user_manual2).click().build().perform();
+		}
+
+		// driver.get().executeScript("arguments[0].click()", web_oe_user_expresult);
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			// System.out.prinln("Waiting for loader to finish page rendering.");
+			new WebDriverWait(driver.get(), waitTimeout)
+					.until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(loader, "style", "none")));
+
+			// System.out.prinln("Page rendering is complete to click on delivery type
+			// selection dropdown.");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
 		try {
 			return new KitsAndAddOnsPage_PartyLite(driver, Test);
 		} catch (FileNotFoundException e) {

@@ -37,8 +37,7 @@ public class OnlineEnrollment_BankInfo_UK_Regression_TC14 extends Class_initEcom
 	}
 	
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="GuestOrder")
-	public void createGuestOrder(String password, String phone,String sort_code,String account_num,
-			String bank_name, String address1,
+	public void createGuestOrder(String password, String phone, String address1,
 			String city,String zipcode, String state, String cardNumber,
 			String expMonth,String expYear,String cardCVV){
 		
@@ -70,9 +69,9 @@ public class OnlineEnrollment_BankInfo_UK_Regression_TC14 extends Class_initEcom
 			.clickNext()
 			//.enterUserContactPhone(phone)
 			.enterUserMobilePhone(phone)
-			.enterSortingCode(sort_code)
-			.enterAcctNum(account_num)
-			.enterBankname(bank_name)
+			.enterSortingCode()
+			.enterAcctNum()
+			.enterBankname()
 			.enterUserShipAddressLine1(address1)
 			.enterUserShipCity(city)
 			.enterUserShipPostcode(zipcode)

@@ -25,7 +25,7 @@ public class OnlineEnrollment_US_Smoke_TC1 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataOEUS(@Optional String paramCountry) {
-		tcName = "US Online Enrollment with MFEE Only";
+		tcName = "Smoke_TC-2: US Online Enrollment with MFEE Only";
 		tcDescription = "Smoke Test case 1";
 		category = "Smokes_"+paramCountry;
 		authors = "Nikita";

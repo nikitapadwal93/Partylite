@@ -1160,6 +1160,18 @@ public class CheckoutPage extends Class_initEcomPrac {
 			reportStep("Order total= "+OrderTotal_row.getText(), "PASS");
 			return this;
 		}	
+		
+	@FindBy(xpath="//span[@data-bind=\"text: $t('Use manual input')\"]")
+	WebElement clickheretoconfirmaddress;
+	public CheckoutPage clickheretoconfirmaddress() {
+			try {
+				click(clickheretoconfirmaddress);
+				System.out.println("Address has been confirmed");
+				} catch(org.openqa.selenium.NoSuchElementException e) {  
+					System.out.println("Button not found");
+				}
+			return this;
+		}
 
 
 }

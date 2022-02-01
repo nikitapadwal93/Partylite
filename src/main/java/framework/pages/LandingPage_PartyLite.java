@@ -844,7 +844,15 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 	@FindBy(xpath="//a[@href='/our-mission']")
 	WebElement our_mission;
 	public LandingPage_PartyLite clickOurMission() {
+		try {
+			new WebDriverWait(driver.get(),waitTimeout).until(ExpectedConditions.refreshed
+			(ExpectedConditions.elementToBeClickable(our_mission)));
 		click(our_mission);
+		System.out.println("our mission button clicked");
+		}
+		catch (Exception e) {
+			System.out.println("Cannot find button our mission");
+		}
 		return this;
 	}
 	
@@ -882,7 +890,6 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 
 	@FindBy(xpath = "//*[@id='fname']")
 	WebElement ltkname;
-
 	public LandingPage_PartyLite enterNamePopup() {
 		try {
 			new WebDriverWait(driver.get(), waitTimeout)

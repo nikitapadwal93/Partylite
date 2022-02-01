@@ -24,7 +24,7 @@ public class LoggedInCustomerOrder_PartyLite_Smoke_TC2 extends Class_initEcomPra
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataLCO(@Optional String paramCountry) {
-		tcName = "US - CWS - eShop - Logged in checkoutr";
+		tcName = "Smoke_TC-2:US - CWS - eShop - Logged in checkoutr";
 		tcDescription = "placing order in eShop by a customer";
 		category = "Smokes_"+paramCountry;
 		authors = "Shashwat";

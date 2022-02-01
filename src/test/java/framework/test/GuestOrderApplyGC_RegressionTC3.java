@@ -24,13 +24,13 @@ public class GuestOrderApplyGC_RegressionTC3 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataGOGC(@Optional String paramCountry) {
-		tcName = "GuestOrderApplyGC";
+		tcName = "GuestOrderApplyGC_RegressionTC3";
 		tcDescription = "placing order in eShop by guest (Apply GC in the cart page)";
 		category = "Smokes_"+paramCountry;
 		authors = "Nikhil";
 		testNodes = "guest order in eshop";
 		ExcelFileName="PartyLite_Smokes_Data";
-		sheetName = "GuestOrder_GC_PL";
+		sheetName = "Regression_TC3";
 		country = paramCountry;
 		
 	}

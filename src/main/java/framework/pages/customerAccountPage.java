@@ -213,6 +213,21 @@ public class customerAccountPage extends Class_initEcomPrac  {
 			return this;
 		} 	
 		
+		@FindBy(id = "region_id")
+		WebElement selectState;
+		public customerAccountPage selectStateFromDropdown(String state) {
+		{
+			try {
+				selectDropDownUsingText(selectState, state);
+			} catch (org.openqa.selenium.NoSuchElementException e) { // multi-lingual support added
+				reportStep("State selection option not available in the screen. Ignoring this step.", "info");
+				return this;
+			}
+		}
+			return this;
+		}	
+		
+		
 		@FindBy(xpath="//*[@id=\"form-validate\"]/fieldset[2]/div[8]/button[1]")
 		WebElement SearchAndValidate;
 		public customerAccountPage clickSearchAndValidate() {
@@ -306,10 +321,24 @@ public class customerAccountPage extends Class_initEcomPrac  {
 
 		@FindBy(xpath="//button[@class='action save primary']")
 		WebElement saveAddress;
-		public customerAccountPage clickSaveAddressLink() {
-			click(saveAddress);
-			return this;
+		public LandingPage_PartyLite clickSaveAddressLink() {
+			try {
+				new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(saveAddress)));
+				click(saveAddress);
+				System.out.println("save address button clicked");
+				try {
+					return new LandingPage_PartyLite(driver, Test);
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} catch (org.openqa.selenium.TimeoutException |org.openqa.selenium.NoSuchElementException e) {
+				System.out.println("save address button not found");
+			} 
+			return null;
 		}
+		
 		
 		@CacheLookup
 		@FindBy(id="search-action")

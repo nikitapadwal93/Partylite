@@ -112,15 +112,18 @@ public class PaypalSubmitPage extends Class_initEcomPrac {
 	@FindBy(xpath="//div[@class='success-text']/h2")
 	WebElement confirmOrderSuccess;
 	public PaypalSubmitPage confirmOrderIsSuccess() {
-		String successMessage=confirmOrderSuccess.getText(); 
+		//String successMessage=confirmOrderSuccess.getText(); 
 		try {
 			System.out.println("After submit card details  "+driver.get().getCurrentUrl());
 			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
 					(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//section[@class='details']"))));
-			if(successMessage.contains("Thanks for shopping!")
+		/*	if(successMessage.contains("Thanks for shopping!")
 					|| driver.get().getCurrentUrl().contains("onepage/success")) {
 				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed with text - " + successMessage, "pass");
-			return this;
+			return this; */
+			if(driver.get().getCurrentUrl().contains("onepage/success")){
+				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed", "pass");
+				return this;
 		}
 			else {
 				reportStep("The order failed to complete"+driver.get().getCurrentUrl(), "pass");
@@ -174,5 +177,35 @@ public class PaypalSubmitPage extends Class_initEcomPrac {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	@FindBy(xpath ="//input[@id='btnLogin']")
+	WebElement LoginPaypal;
+	//@FindBy(xpath ="//div[@id='frameDiv']")
+	//WebElement frame;
+	public PaypalSubmitPage loginPaypal() {
+		try {
+			///switchToFrame(frame);
+			click(LoginPaypal);
+			System.out.println("Clicked on paypal login");
+		}
+		catch (Exception e) {
+			System.out.println("Failed to click on Paypal login");
+		}
+		return this;
+	}
+	
+	@FindBy(xpath ="//button[@id='continue_abovefold']")
+	WebElement Paynow;
+	public PaypalSubmitPage payNow() {
+		try {
+			//switchToFrame(frame);
+			click(Paynow);
+			System.out.println("Clicked on paynow");
+		}
+		catch (Exception e) {
+			System.out.println("Failed to click on Paynow");
+		}
+		return this;
 	}
 }

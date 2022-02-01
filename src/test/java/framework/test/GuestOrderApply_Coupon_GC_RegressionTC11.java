@@ -24,8 +24,8 @@ public class GuestOrderApply_Coupon_GC_RegressionTC11 extends Class_initEcomPrac
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataGOGC(@Optional String paramCountry) {
-		tcName = "GuestOrderApplyGC";
-		tcDescription = "placing order in eShop by guest (Apply GC in the cart page)";
+		tcName = "GuestOrderApply_Coupon_GC_RegressionTC11";
+		tcDescription = "placing order in eShop by guest (Apply Coupon + GC in the cart page)";
 		category = "Smokes_"+paramCountry;
 		authors = "Nikhil";
 		testNodes = "guest order in eshop";

@@ -54,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 22, 2021 08:24:13 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 1, 2022 02:01:59 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -81,7 +81,10 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>Smokes_AT-PWS</a></li>
+					<li><a href='#'>Smokes_PWS_UK</a></li>
+					<li><a href='#'>Smokes_DE</a></li>
+					<li><a href='#'>Smokes_AU-PWS</a></li>
+					<li><a href='#'>Smokes_AU</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -122,7 +125,7 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
@@ -136,7 +139,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, 
@@ -161,26 +164,458 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Smoke_TC-11: AT - PWS - eShop - Anonymous Checkout</span>
-						<span class='test-time'>Oct 22, 2021 08:24:15 PM</span>
+						<span class='test-name'>UK Online Enrollment with MFEE Only</span>
+						<span class='test-time'>Feb 1, 2022 02:02:00 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 22, 2021 08:24:15 PM</span>
-	<span class='label end-time'>Oct 22, 2021 08:29:09 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 4m 54s+165ms</span>
+	<span class='label start-time'>Feb 1, 2022 02:02:00 PM</span>
+	<span class='label end-time'>Feb 1, 2022 02:05:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 40s+558ms</span>
 </div>
-<div class='test-desc'>placing order in eShop by guest </div>
+<div class='test-desc'>MFEE Only by all other cards option [MasterCard] </div>
 <ul class='collapsible node-list' data-collapsible='accordion'>
-	<li class='node level-1 leaf pass' status='pass' test-id='2'>
+	<li class='node level-1 leaf pass' status='pass' test-id='5'>
 		<div class='collapsible-header'>
-			<div class='node-name'>guest order in eshop</div>
-			<span class='node-time'>Oct 22, 2021 08:24:15 PM</span>
-			&middot; <span class='node-duration'>0h 4m 54s+165ms</span>
+			<div class='node-name'>consultant enrollment process</div>
+			<span class='node-time'>Feb 1, 2022 02:02:00 PM</span>
+			&middot; <span class='node-duration'>0h 3m 40s+558ms</span>
 			<span class='test-status right pass'>pass</span>
 			<div class='category-list'>
-				<span class='category label'>Smokes_AT-PWS</span>
+				<span class='category label'>Smokes_PWS_UK</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='author-list right'>
+				<span class='author label white-text'>Nikita</span>
+			</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:02 PM</td>
+							<td class='step-details'>
+									Launched chrome browser successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:30 PM</td>
+							<td class='step-details'>
+									Application is available for testing
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:42 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.id: ltkpopup-close-button' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:42 PM</td>
+							<td class='step-details'>
+									Newsletter closed in 1st attempt
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:42 PM</td>
+							<td class='step-details'>
+									To close the continue button
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:59 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //a[@href='/our-mission']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:59 PM</td>
+							<td class='step-details'>
+									Body container reached false
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:14 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //a[@href='/affiliate-enrollment']' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:03:14 PM</td>
+							<td class='step-details'>
+									Body container reached false
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:14 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: form#about-you input] with value codemoe8893798433915@mailinator.com
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:26 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: form#about-you button#send span] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: password] with value PEXpassword123!
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: re-enter-password] with value PEXpassword123!
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: user_firstname] with value ipisatpdly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: user_lastname] with value fsccr
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Clear action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: date-birth] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: date-birth] with value 11011199
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: button.next] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:31 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: mobile_phone] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:31 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: mobile_phone] with value 01923 123456
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:31 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //*[@id='pl_aff_sorting_code_number']] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //*[@id='pl_aff_sorting_code_number']] with value 12-34-56
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //*[@id='pl_aff_account_number']] with value 14785296
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //*[@id='pl_aff_bank_name']] with value Santander UK
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: shipping_line_1] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: shipping_line_1] with value 9 The Fairway
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: shipping_city] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: shipping_city] with value Bradford
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: shipping_postcode] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> id: shipping_postcode] with value BD5 8FB
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: button.next] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:22 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-role='proceed-to-checkout']' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:22 PM</td>
+							<td class='step-details'>
+									Element [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //*[@id='opc-sidebar']/div[1]/table/tbody/tr[2]/td/span] is enabled
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:22 PM</td>
+							<td class='step-details'>
+									S&H fee= £0.00
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:35 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: div.select-shipping-methods] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:35 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: div.option-shipping-method] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:47 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> css selector: #shipping-method-buttons-container button] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:58 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //fieldset[@class='cardNumber']//input] with value 4462030000000000
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:58 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> name: expdatemonth] with value 05
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:58 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> name: expdateyear] with value 23
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:58 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> xpath: //fieldset[@class='cvv']/input] with value 123
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:58 PM</td>
+							<td class='step-details'>
+									Order NumberAmount:  45.00 GBP
+Order ID:  7500008217
+Order description:  https://mcstaging.partylite.co.uk/ retrieved successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:04:58 PM</td>
+							<td class='step-details'>
+									In WLhttps://testpage.payments.worldlinenordics.com/pay/?creq=BhP4R9wAAAPrOAxbJgdQjPOMkY4T7m3PIC8sbp-fevfPQy5qIxpkEzJZ3N1julmXk61OM5gBicPGhhiDNreB8uHAhnmUIXoJzT-BcxlgqoB9SRA35NXmNZa6nwB5MrZVd8UN72gfv9RwgQ7zgiwbakQhxO2yyIUH-B08MeDr0o0T_VPp_lUNGhK9okgaSDJDXfqs6h_LRlXF8NIv7ndX1o67WRVfv8TF9dxP6VmG7WkM3-5UsR1u0R2GjoATFkmF4MgHiXSaxuHc9gdWcLK6a46ljTwH6jBnEj-d_6qwbwnCMWDPcGulG9_Os5XnwYQCiTqo7foNo0TzyvxWIyEzU1-rzJyBwrark02rjNmHarTNLeMqwYKwROIpiZtQANxqFMDZftjFyu0sdDZmgXt7d9DkcINhZHsi28enVzzS-yFdwbQhKdTGhQH4EMYO3AQFxrtvO1bJ-tZyzLRpBp1W5d7wn7bjZFuDI6mgI7Fem50-nZ02VZG77KIDpEjZCKw11kiOWiBLDeqLV59Gj1iHjZQxdUJEAmFED3nwyHPZjoZt8VZuhR0_52HL4DLBmY_JQ4xVTfp76q0kMpRCav3Sh575Jq9Ou-R6PbhCSIAJ7ZxP4odmOJZb9mZHJFEoh7JpNPsoLZ6BzYS8e-ZCJu6kl2dVwdT3qyGDU8Zke3OumCgQojE1Ft4q0nn9PqFDAvSw7iN1uYESEKSNkEXCj9dBdXasWO7Gwisfk1FYU8jUE4Ont5qeYeMMAeuUqqheQNYq6KGoHzjaYgpmny6_6uay41FLSQNVeFjRpk145JhbtfNtIGt3PzBdKvFoJrlT3fyS0CyCmBB8kXf3jAIh9LtwK7NnUsXhpCdJQ7IfFI_r1_GtmzFkxl8bEu9Q26b_ZMRU780iwX9CUP-vn3gg2xr3UJyZCKJgeuJWUg5uurPQQsRQgjK0qeAo7EJKJzsj13XPjC187Ef0K0sq_QPWRdF8FCKYthlsD7X0Oidbdspt7e4gKR5Dg70d42A_fmSAqM8VjEnfwbGkcWLc1rCQHS94yTlCL6Rn5h9EEJzyZu0zjJLcaczJw4hVtUJSRi8R1XfYCXjZADGG5UZ4ZuJ0nMOqhEqhJgidQk-clqRlpQmQFqUL-iEQdLFIyNPwl5KIGEhkKWk6MxUHn4zrCCRrQ5JnoouxU3ydFz3H0PCSHPjbXT_rBV-dho6dZKK7LxOdG5qlQn34PU35Fggz8kvz5s-afLJ8Q9ia2LhrP2ZzJdEk_jhKLdSqg_vKH8shAQ5SNTbV7rro-a5fmu7yZ4xnQFoF38nFyVo-kW8bc94PG_2fDaLwtJ7mD88u0OK1a9TJSOkwMIYavRIX4CLOyRjmHOvk0ELvv09uwRfwDCr8tdcjbeVMoHw3HbiJ3KWS9jzWRrHmCwCCS7SsQwvDQSzMXuklDIOR37On5DM5_E4vhIGKZOU5Ly0iqKyl7MIw1K8RAbG7EqWs531euffzhWuhDh3sR5Rpc-NpPzzIrv4_PXze98hFK-hqQwY5eaw%3D
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:14 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.id: submitCC' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:40 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="authform"]/input[5]' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:40 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (07f01238b20ef73f32722ff080eb891d)] -> class name: kit-success_wrap_border] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:40 PM</td>
+							<td class='step-details'>
+									Success page for OE https://mcstaging.partylite.co.uk/enrollment-success
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:05:41 PM</td>
+							<td class='step-details'>
+									All browser instances got successfully closed
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Smoke_TC-8: DE- DE- CWS - eShop</span>
+						<span class='test-time'>Feb 1, 2022 02:02:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 1, 2022 02:02:00 PM</span>
+	<span class='label end-time'>Feb 1, 2022 02:06:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 52s+320ms</span>
+</div>
+<div class='test-desc'>placing order in eShop by a customer </div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='8'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Logged In customer order checkout</div>
+			<span class='node-time'>Feb 1, 2022 02:02:00 PM</span>
+			&middot; <span class='node-duration'>0h 4m 52s+320ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>Smokes_DE</span>
 			</div>
 		</div>
 		<div class='collapsible-body'>
@@ -199,7 +634,7 @@
 					<tbody>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>8:24:18 PM</td>
+							<td class='timestamp'>2:02:02 PM</td>
 							<td class='step-details'>
 									Launched chrome browser successfully
 								
@@ -207,7 +642,7 @@
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:24:23 PM</td>
+							<td class='timestamp'>2:02:27 PM</td>
 							<td class='step-details'>
 									Application is available for testing
 								
@@ -215,7 +650,47 @@
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:24:38 PM</td>
+							<td class='timestamp'>2:02:27 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //input[@id='fname']] with value random50
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:27 PM</td>
+							<td class='step-details'>
+									Newsletter email entered as random50
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:27 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //input[@id='ltkpopup-email']] with value test8890365840267@mailinator.com
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:27 PM</td>
+							<td class='step-details'>
+									Newsletter email entered as test8890365840267@mailinator.com
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:39 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='ltkpopup-submit']' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:51 PM</td>
 							<td class='step-details'>
 									Click action on Proxy element for: DefaultElementLocator 'By.id: ltkpopup-close-button' performed successfully
 								
@@ -223,7 +698,7 @@
 						</tr>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>8:24:38 PM</td>
+							<td class='timestamp'>2:02:51 PM</td>
 							<td class='step-details'>
 									Newsletter closed in 1st attempt
 								
@@ -231,7 +706,7 @@
 						</tr>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>8:24:38 PM</td>
+							<td class='timestamp'>2:02:51 PM</td>
 							<td class='step-details'>
 									To close the continue button
 								
@@ -239,199 +714,103 @@
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:24:50 PM</td>
+							<td class='timestamp'>2:03:12 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search-action] performed successfully
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //input[@id='email']] with value dedemagqa@mailinator.com
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:24:50 PM</td>
+							<td class='timestamp'>2:03:12 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search] with value P93141
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //input[@id='pass'][@title]] with value 1sqa@work!
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:01 PM</td>
+							<td class='timestamp'>2:03:32 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search] with value P93141
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //button[@class='action login primary']' performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:05 PM</td>
+							<td class='timestamp'>2:03:32 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //*[@class='mst-product-image-wrapper']] performed successfully
+									Text MEIN KONTO retrieved successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:09 PM</td>
+							<td class='timestamp'>2:03:32 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: product-addtocart-button] performed successfully
+									Text is displayed as expected - mein konto
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:09 PM</td>
+							<td class='timestamp'>2:03:32 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search-action] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> id: search-action] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:09 PM</td>
+							<td class='timestamp'>2:03:32 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search] with value GC-20
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> id: search] with value FS29
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:28 PM</td>
+							<td class='timestamp'>2:03:42 PM</td>
 							<td class='step-details'>
-									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='mst-product-image-wrapper']' performed successfully
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> id: search] with value FS29
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:33 PM</td>
+							<td class='timestamp'>2:03:52 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: product-addtocart-button] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //*[@class='mst-product-image-wrapper']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:34 PM</td>
+							<td class='timestamp'>2:04:00 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search-action] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> id: product-addtocart-button] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:34 PM</td>
+							<td class='timestamp'>2:04:01 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search] with value V06199
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> css selector: .minicart-wrapper .showcart] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:54 PM</td>
+							<td class='timestamp'>2:04:09 PM</td>
 							<td class='step-details'>
-									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="search_mini_form"]/div[1]/div/div[1]/div[3]/div[1]/div[1]/div[1]/ul/li[1]/a/div' performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> css selector: .minicart-wrapper .viewcart, a.viewcart] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:58 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: product-addtocart-button] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:59 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search-action] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:25:59 PM</td>
-							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: search] with value G73C123
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:18 PM</td>
-							<td class='step-details'>
-									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="search_mini_form"]/div[1]/div/div[1]/div[3]/div[1]/div[1]/div[1]/ul/li[1]/a/div' performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:19 PM</td>
-							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: qty] with value 2.0
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:24 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: product-addtocart-button] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:24 PM</td>
-							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //*[@id="newsletter"]] with value test_smoke1022.12@mailinator.com
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:24 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //*[@id="newsletter-validate-detail"]/div/div/div[1]/button] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:25 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> css selector: .minicart-wrapper .showcart] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:35 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> css selector: .minicart-wrapper .viewcart, a.viewcart] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:35 PM</td>
-							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: coupon_code_fake] with value WELCOME10
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:26:47 PM</td>
-							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //button[@class='action apply primary']] performed successfully
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:17 PM</td>
+							<td class='timestamp'>2:04:42 PM</td>
 							<td class='step-details'>
 									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-role='proceed-to-checkout']' performed successfully
 								
@@ -439,177 +818,209 @@
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:30 PM</td>
+							<td class='timestamp'>2:04:43 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> id: customer-email] with value test_smoke1022.12@mailinator.com
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: (//button[@class='action action-select-shipping-item'])[1]] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:30 PM</td>
+							<td class='timestamp'>2:04:55 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: firstname] with value Shashwat
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> css selector: div.select-shipping-methods] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:30 PM</td>
+							<td class='timestamp'>2:04:55 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: lastname] with value Guest
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //label[@for='s_method_dpdparcelshops_dpdparcelshops']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:31 PM</td>
+							<td class='timestamp'>2:04:55 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: street[0]] with value Mainhartsdorf 1
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //*[@id='shipping-method-buttons-container']/div/button] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:31 PM</td>
+							<td class='timestamp'>2:04:55 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: street[1]] with value
+									[[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> class name: checkout-cart-validationmessages-message-error] is displayed correctly
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:31 PM</td>
+							<td class='timestamp'>2:04:55 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: postcode] with value 8832.0
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@data-bind='click: showparcelshop, visible: isParcelShopVisible()']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:31 PM</td>
+							<td class='timestamp'>2:04:59 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: city] with value OBERWÖLZ
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@title='Zoom out']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:32 PM</td>
+							<td class='timestamp'>2:04:59 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: telephone] with value 9977-0989898
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@title='Zoom out']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:44 PM</td>
+							<td class='timestamp'>2:04:59 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> css selector: div.select-shipping-methods] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@title='Zoom out']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:44 PM</td>
+							<td class='timestamp'>2:05:02 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> css selector: div.option-shipping-method] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@data-role='opc-continue']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:54 PM</td>
+							<td class='timestamp'>2:05:24 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //button[@data-role='opc-continue']] performed successfully
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="checkout"]/div[1]/a' performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:57 PM</td>
+							<td class='timestamp'>2:05:42 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //label[@for='address_format_0']] performed successfully
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-role='proceed-to-checkout']' performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:27:58 PM</td>
+							<td class='timestamp'>2:05:42 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //button[@data-role='opc-continue']] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@data-bind='click: showparcelshop, visible: isParcelShopVisible()']] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:02 PM</td>
+							<td class='timestamp'>2:05:45 PM</td>
 							<td class='step-details'>
-									Click action on [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //label[@for='termsCash' or @for='termsCredit' or @for='terms1']/span] performed successfully
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@title='Zoom out']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:46 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@title='Zoom out']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:46 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@title='Zoom out']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:48 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //button[@data-role='opc-continue']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:51 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //label[@for='termsCash' or @for='termsCredit' or @for='terms1']/span] performed successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>8:28:02 PM</td>
+							<td class='timestamp'>2:05:51 PM</td>
 							<td class='step-details'>
-									Before WLhttps://testpwsmcstaging.partylite.at/checkout/#payment
+									Before WLhttps://www.partylite.biz/checkout/#payment
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:22 PM</td>
+							<td class='timestamp'>2:06:10 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //fieldset[@class='cardNumber']//input] with value 4462030000000000
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //fieldset[@class='cardNumber']//input] with value 4462030000000000
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:22 PM</td>
+							<td class='timestamp'>2:06:10 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: expdatemonth] with value 02
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> name: expdatemonth] with value 02
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:22 PM</td>
+							<td class='timestamp'>2:06:10 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> name: expdateyear] with value 23.0
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> name: expdateyear] with value 23.0
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:22 PM</td>
+							<td class='timestamp'>2:06:10 PM</td>
 							<td class='step-details'>
-									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (e242a45c65a66f3d6e19e74cba1cf01b)] -> xpath: //fieldset[@class='cvv']/input] with value 123
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (d7e98153033224806deb98c7581d309e)] -> xpath: //fieldset[@class='cvv']/input] with value 123
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:22 PM</td>
+							<td class='timestamp'>2:06:10 PM</td>
 							<td class='step-details'>
-									Order NumberBetrag:  105.21 EUR
-Bestellnummer:  7500004169
-Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
+									Order NumberBetrag:  24,26 EUR
+Bestellnummer:  7500008226
+Bestellung:  https://www.partylite.biz/ retrieved successfully
 								
 							</td>
 						</tr>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>8:28:22 PM</td>
+							<td class='timestamp'>2:06:10 PM</td>
 							<td class='step-details'>
-									In WLhttps://testpage.payments.worldlinenordics.com/pay/?creq=BhP4R9wAAAPrfBQeEKop14sJpULz_WDEj6Yad_-Mo4BcXOXx1kB4YQkNXKcTinVqSzkqTYM9CNACXFhkF-C9119q7fRlB1aH3pksypAL_Iv939oJB7cZsvbjsLS7_7SVqEiXuw2LntYVwgZSbJStF_80niVoASHB-SpTNe02KrgxZoFEBNtkcoDCKYZig22DfAOtDR_CY71-YN2xaRLxPGHMU416NahWn3VtMC7J6WiEwXek4NhnNJyzc32D7vLvOGAaVI4oDictKNqF61PmLUJHLmsTAsl6TwO8UbsETUopuIaGqjYVaD6Axqln0_i5ttCrHEJASdsnfxMJprEFthXhfdVJFbbYtlpPbGRyVcPwmnJtvxbcxrzh5lgG1UqsmpmDwobftoO-w3-pZYTOZyJSCseTRk1QXq936vNGEJa2vGTk6jjrG92QiexVJoWi2__tzWJqDF7Mtn4VzEaOf8JQ_aONbnyordcpINPXy4-GDgU_5dLiZ5QWuhOjNOIOi-oW96HvKVvq0mdJ-Fm4Hr9yookZRAZC1s7iHgWs0usbIZfySXx3lFfT_l7OMEiYxFH7wEiFxrgmnHyQCPY68IiLD8t-fBeHhBLCuhr3bFY5fLu72KA4XGZZU7qWtJdJWmK2UmjemdWkgOl6xKVAZYc5E53sw4h58VO3qs4jiZ_uU7uRuy9T_N_Elr_Ri3upZWNLpS2s0SDKhM5izywXGn1JLA00QtD52gj1b97zf9_8uQdKRuwvJY_V12ph6qRdi5sqY3DgueesSbmx3Xm1P3vm5Qb9F3Zu-wBHu3fUgku06W3BxRe2iUTxYkK7AZGStDRyb7mIO75rpw4wfEWkjDB1FJwXQBTFt5yaZr-wExq7e0LznxQ1owHMDGf3YpUqnYufyrk2yg0OiefwyStWeP_ZFRSEuBGm5DoONYRWJGsLXUQrGrU40JBmk5lgOcpLHpAMK4gZlCN-nGwpmTRj_1H_gEXW_f8eGqxSstCQx4S1f366QcDshMhEUxr94UQNRsA7LweIzmQ0m--EHfI8KGW--0rfWAjGhpfQkDmgDwLkQDYq10iBP2VgKhcyGfXyjl0R5rT0gn2-rJjIovadFXIS-j9VWhsAB61uZmHYvSexbnNTxKZBQVJopcGa_bdEa8b8qALmkgbFHW43gbcFUeo3rMxgpGNsxnhGa2-h3DuvBYzrz3tOBbtTG8eEuzxGCigSTU8omwYPEB_T7KCU6tLeDkkuqgl6e2s4Dj2Pu9oAMyPDBVVTZXFoBI9FUoctsGPshwL4--2F_tsAT-gF837zUSE_oMIiKIUxXZg341xKiaulBgk4YCrtHvcUmB7Sf3VVw_V5rcR-v-xwrE5Zlkef_yYl3C7_1X8ELyVYydIqAhee1ZazOmwp2p4SsfkOJsucbV--NYhpEwsGeeazFVQF-FHBpXz_ChO32TC0fXppH2snhsNVjKO3h4iujY5kDEFZ0iRTKM2A5rPbw93FIdQqYUTCnyMxPKUyIpKsarzC_uIeuot0-ev2TZgJbdFRszXXcLLGyRtTYRR0C5K_p2PFoG6yxxg1O9Bmcc5MHeXso_zdyYypc8Z_LU6TG6mtmiRiNs-66wdoZkq3rFWfeSOUdqToKXVgfnihSUrtnuHxrzmwlwDnLwJ9iLgv6DbJ2wqj_aOT6jhQaoZ8Sd4KCF-bLeJgFHhR6lCeIJ173lc1AUjzKppi22Orvw_R6X7WKJgNGotaoUfsbJY3CM_FZH1Y8YkROE1PPIGhmPhTE9eDylqvXpgm4I8%3D
+									In WLhttps://testpage.payments.worldlinenordics.com/pay/?creq=BhP4R9wAAAPrGYz2-ooCH7m9_UNPUtYIvDDjyTJmtyBshG9SjBZkQj0Ej2T85J43EugZFid0atPv9Lybw9LfjxtvTCx5tkvS_jFhbte5u1kTo37ZDYaUar1yckKDnQdSRnFwYlyKlP0T_utlgvdT2kJ4Ry45KULwb9BNm8hQ4QqXOJv10_e0QwdDakqAzFSnD-G2M_Ehd06zsBHJktWMcmZAgTyLQCHNV7xSRfH6zEugprFmzT12WTG3uz2EtHcc_E2A0HeGCzCyTBk-rgBDaajUGI80bJy6KZVMvTOt6TXO26E22Bmo6jnpSgyAz9s7aN3xJXSYyVYNn0B1kur5SQEwlCvvNpdAw5cawVRfkjcAOW1m1zHlVVuXyxcjr0En1Fba2PuZQliNZbh0CFb5XdJVZZ4Y2QuIPHJWr336X8jbyRJ3gyRoiAXMKmOHr87ot9mvHb9FABYua068kx64XulknIrr_qz4TIVS-CPU1rxOtoP9IYiLs1STx1V4O7pxue2-QvfxzbSjpVsXZL5K-ms7gVv-9IIBtI5Q0EjMIIJI0giGWZAjSLrMv8T6oGaiemujeEKaukrpKUsE2LKPHxGt3xqNx0VVpmiy3H8y2Ax1cogyF6ZbKtnH8Nkt8sopmqDOvsmWDTEselGRGzJ4uvjyx2wNmDGUS8mkp8X9CbW2jaPmEq7cbeFHSAUMbCXgZvx_JjBDN9rLUo6-uv4ICAHS26ruNzeO3sIhENAK2NmMEirzJZAS9kKg8Ro2h0G3SttJ8NwqAvCQV2Vv4sEUswEaReSd1kzJw5fPl7OBnov8XIx8_cBatxzLFq5ljrgCnD8gyYbX0HjSJqefF46LDy9r4KPz3XQ5i435pGhtlvFcSw70lF-m3KhW0qew0qNoidmCezkW8F8Xq-F5ZEhnllMiuSpJbZbwKymysBsQ4zm5kXpAsijaWhou-0tD3k-tUUv_8aUFoN6kP2LU51DKvsG--h5HiWxridqpmZgRoZTD0dWF6dU1Wdz9kF3wLu4MgjIlsvXTyDqhj7yVQqYC4Ef8BwyNYJmKsBI1RPTs1SqGyQh_-FwwodGtVICC_X1gJkQA1jW0YxRtN2qvm-P1yK0Fv5yrt8o2SxzbzxdajuDMRcr-WR_64Bo7RXsvxIMW2w9RV3HelH12_BTCyzliTtRbjyhTHSfHRlSVYvmLA03Ur3-SSr_ZAlUn-7w_kYK1gHTLiroXVQX0FLnWtS9LotXPky2-5HQFD4dXsBy_D7abi93ky1dQQiyjo18ffqtKA6DTEmlzrg6neX9L-_pfnJ7UP0Q77dDxyK7ZPvyyRLdG-OSSPpJPbLB7ibdfha3Vow71akX5gMoAI67d0Y5s9y3dscqDxnIjZDpCze7-LILPHid93DIQO5g4Ky2KtTcgRlD6bL9TLOV0cY5l1RAGa4lJqOjAqe2qRnHaT8pHcUnM69Y22bBvlSNarqxyzBF__-rwGc25K74Bou3rcKsPWQhkbPDNpKId8A%3D%3D
 								
 							</td>
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:28:38 PM</td>
+							<td class='timestamp'>2:06:25 PM</td>
 							<td class='step-details'>
 									Click action on Proxy element for: DefaultElementLocator 'By.id: submitCC' performed successfully
 								
@@ -617,7 +1028,7 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:29:08 PM</td>
+							<td class='timestamp'>2:06:52 PM</td>
 							<td class='step-details'>
 									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="authform"]/input[5]' performed successfully
 								
@@ -625,15 +1036,846 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 						</tr>
 						<tr class='log' status='pass'>
 							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>8:29:08 PM</td>
+							<td class='timestamp'>2:06:52 PM</td>
 							<td class='step-details'>
-									https://testpwsmcstaging.partylite.at/checkout/onepage/success/The order is successfully placed with text - Vielen Dank für Deinen Einkauf!
+									https://www.partylite.biz/checkout/onepage/success/The order is successfully placed
 								
 							</td>
 						</tr>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>8:29:09 PM</td>
+							<td class='timestamp'>2:06:52 PM</td>
+							<td class='step-details'>
+									All browser instances got successfully closed
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>AU Online Enrollment Test case 5</span>
+						<span class='test-time'>Feb 1, 2022 02:02:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 1, 2022 02:02:00 PM</span>
+	<span class='label end-time'>Feb 1, 2022 02:05:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 9s+348ms</span>
+</div>
+<div class='test-desc'>Apply FREE-Enrollment Coupon </div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='7'>
+		<div class='collapsible-header'>
+			<div class='node-name'>consultant enrollment process</div>
+			<span class='node-time'>Feb 1, 2022 02:02:00 PM</span>
+			&middot; <span class='node-duration'>0h 3m 9s+348ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>Smokes_AU-PWS</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='author-list right'>
+				<span class='author label white-text'>Nikita</span>
+			</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:02 PM</td>
+							<td class='step-details'>
+									Launched chrome browser successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:29 PM</td>
+							<td class='step-details'>
+									Application is available for testing
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:41 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.id: ltkpopup-close-button' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:41 PM</td>
+							<td class='step-details'>
+									Newsletter closed in 1st attempt
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:41 PM</td>
+							<td class='step-details'>
+									To close the continue button
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:59 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //a[@href='/our-mission']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:59 PM</td>
+							<td class='step-details'>
+									Body container reached false
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:14 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //a[@href='/affiliate-enrollment']' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:03:14 PM</td>
+							<td class='step-details'>
+									Body container reached false
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:14 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: form#about-you input] with value codemoe8889170299611@mailinator.com
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:27 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: form#about-you button#send span] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: password] with value PEXpassword123!
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: re-enter-password] with value PEXpassword123!
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: user_firstname] with value btxgcqxgwp
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: user_lastname] with value ognhy
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Clear action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: date-birth] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:28 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: date-birth] with value 11011199
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:29 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: button.next] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:31 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: contact_phone] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: contact_phone] with value 0212341234'
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: mobile_phone] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: mobile_phone] with value 0401212345'
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: shipping_line_1] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: shipping_line_1] with value 4 Henbury Avenue
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: shipping_city] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: shipping_city] with value Kandos
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: shipping_postcode] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:32 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: shipping_postcode] with value 2848
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //label[@for='shipping_regions-opener']] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //label[@for='shipping_regions-opener']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //*[@id='about-you']/fieldset[3]/div[1]/label] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //*[@id='about-you']/fieldset[3]/div[1]/label] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: billing_line_1] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: billing_line_1] with value 9 Eden Street
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: billing_city] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:33 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: billing_city] with value Gladstone
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:34 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //label[@for='billing_regions-opener']] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:34 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //label[@for='billing_regions-opener']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:34 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: billing_postcode] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:34 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: billing_postcode] with value 4680
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:34 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: button.next] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:52 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: coupon_code_fake] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:52 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> id: coupon_code_fake] with value FAITH100
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:59 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> xpath: //button[@class='action apply primary']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:59 PM</td>
+							<td class='step-details'>
+									Coupon applied successfully= You used coupon code "FAITH100"
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:31 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-role='proceed-to-checkout']' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:31 PM</td>
+							<td class='step-details'>
+									Order total= Order Total
+$0.00
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:43 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: div.select-shipping-methods] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:43 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: div.option-shipping-method] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:56 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> css selector: #shipping-method-buttons-container button] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:09 PM</td>
+							<td class='step-details'>
+									[[ChromeDriver: chrome on WINDOWS (9fb6916de1fb137ab9deb9867b5c1a58)] -> class name: kit-success_wrap_border] is displayed correctly
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:09 PM</td>
+							<td class='step-details'>
+									Success page for OE https://mcstaging.partylite.com.au/enrollment-success
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:05:09 PM</td>
+							<td class='step-details'>
+									All browser instances got successfully closed
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Smoke_TC-6: AU - CWS - eShop - Anonymous Checkout</span>
+						<span class='test-time'>Feb 1, 2022 02:02:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 1, 2022 02:02:00 PM</span>
+	<span class='label end-time'>Feb 1, 2022 02:05:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 31s+920ms</span>
+</div>
+<div class='test-desc'>placing order in eShop by guest </div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='6'>
+		<div class='collapsible-header'>
+			<div class='node-name'>guest order in eshop</div>
+			<span class='node-time'>Feb 1, 2022 02:02:00 PM</span>
+			&middot; <span class='node-duration'>0h 3m 31s+920ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>Smokes_AU</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='author-list right'>
+				<span class='author label white-text'>Shashwat</span>
+			</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:02 PM</td>
+							<td class='step-details'>
+									Launched chrome browser successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:27 PM</td>
+							<td class='step-details'>
+									Application is available for testing
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:39 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.id: ltkpopup-close-button' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:39 PM</td>
+							<td class='step-details'>
+									Newsletter closed in 1st attempt
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:02:39 PM</td>
+							<td class='step-details'>
+									To close the continue button
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:51 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> id: search-action] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:02:51 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> id: search] with value FS29
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:01 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> id: search] with value FS29
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:11 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //*[@class='mst-product-image-wrapper']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:18 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> id: product-addtocart-button] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:20 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> css selector: .minicart-wrapper .showcart] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:03:30 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> css selector: .minicart-wrapper .viewcart, a.viewcart] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:02 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-role='proceed-to-checkout']' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:14 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> id: customer-email] with value test_smoke2209guest@mailinator.com
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:14 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: firstname] with value Shashwat
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:14 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: lastname] with value Guest
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:15 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: street[0]] with value 434 Dorcas St
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:15 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: street[1]] with value
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:15 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: postcode] with value 3205.0
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:15 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: city] with value South Melbourne
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:15 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: telephone] with value 9898767854
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:15 PM</td>
+							<td class='step-details'>
+									Dropdown value selected by Text
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:27 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> css selector: div.select-shipping-methods] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:27 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> css selector: div.option-shipping-method] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:40 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //button[@data-role='opc-continue']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:41 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //label[@for='address_format_0']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:43 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //button[@data-role='opc-continue']] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:47 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //label[@for='termsCash' or @for='termsCredit' or @for='terms1']/span] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:04:47 PM</td>
+							<td class='step-details'>
+									Click action on [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //*[@id="checkout-payment-method-load"]/div/div/div[2]/div[2]/fieldset/div/div/div/label] performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:04:47 PM</td>
+							<td class='step-details'>
+									Before WLhttps://mcstaging.partylite.com.au/checkout/#payment
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:06 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //fieldset[@class='cardNumber']//input] with value 4462030000000000
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:06 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: expdatemonth] with value 02
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:06 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> name: expdateyear] with value 23.0
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:06 PM</td>
+							<td class='step-details'>
+									Text correctly entered into [[ChromeDriver: chrome on WINDOWS (99bce069272c244515ba937ca6189523)] -> xpath: //fieldset[@class='cvv']/input] with value 123
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:06 PM</td>
+							<td class='step-details'>
+									Order NumberAmount:  40.02 AUD
+Order ID:  7500008223
+Order description:  https://mcstaging.partylite.com.au/ retrieved successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:05:06 PM</td>
+							<td class='step-details'>
+									In WLhttps://testpage.payments.worldlinenordics.com/pay/?creq=BhP4R9wAAAPrNZouBa-k_KK-4GzB1Zzn5rbPq0pS1O-VYoknfQDosz66p2TD1XLUlWAAxe7ClG10GUZdfWvEvdIvcW5gA11Cmbu4Oj6wUWktUk2CBVDDeb9DpeOAjRPmrqAN4ou1pY9kXgir4bjk2fIu_E9Z_yiMzEQfr_R5xHzHq-pOABN8dNXt0iCFeXgFXxhAhOPtRH_H0bWlhhsQf0z6_Lif0LMI2kKriXz8zK-OB9PKqB304mSaX6wQKM7V6TT2fPr6IMUVc9poaLezt9TC77wd2yrQk6IdqOe5J86W10qKgRB3HFu61atQZ5NKB7SHS8bDhvfHRDKypBXPDPG7dxpQ_piz9XVEX9vMXGFHXcTikyZBVAzQ85h0Fda4yZISjm9wyrz1Cy6m8p2CY80mUli2MPPeJGu_ogwdPSXx08G05RzZt233aP5piyls_LgJmXpoYrWjsqUsQP3HxzsoHnlXar6WNTS-vnOvx4gVNG-QJmVa4w9P-WGvlmnk1_P2b2cngSpXZEHy-CkB9SCi8OGvKNdD55Fz0YE91kVDogGVyxM_ohilR2DEmCT9QW_tnA0I3IWxQ2vwyeYlN_OvqRocqbTmCuADGw5-t99uQGr6QcRHa-6ifKOh2Awb8wfsLBsEzZHuLiC-vf-wldYAHiAigYwxslRJ0sAaBfX8eUVKX477TgeCi_0B446wARhNSyyeMLLdDlxARQHvwD8RNWKAjQl6PH_pWC04zEinOyKwA_FjDJviVKyOgHOEdf7VDmIevH67N9O4FIXNak1FM7zdnve69SOmFj0gpjiyHvQ56t2JCJIg9pwETer5qj2tC8HlHuWfHaPTwP4GhXnt7k1oL-28rppey-e62PiBBscEBjaAtBHYEKHJBtlCcj1x6EI9gUL8y-vQWNuaHWhDfPvdGcIBRdYRvPdodJYEfw8LLydWKlQvvtAgHSpjAbnnLdhRdCjg1HScX7SZcjfWxtIxf67WW7TeFNgpBa2OvjK8U79i_kq4zAYd3sut7tVyfCdFMNvHy4qEx8IiotLHbm3_3WyJC5kW4Bpp3fvO-gNolYtz6L7a1kbe9xN46aQ4csPJvbB9PXPnBgQXsGKC_Ovb3c6F5WHPQ_Pa6lItpcYuG_C5_9nv_hsVmzcCiQnLT8Zxl1mQlPBKuJC2zMYpEvb6VRbZzB2GNOyDIpgQrYhtc357m9JMVkopldliAf4zcor7fvTVaNJrFXRCjiBLu7ouVDtLwBq7YM44oBTuJW928pG5xaDkB19xSLGmPTNSKZH7CGB1cnCdxmveeKc98oEKDuDdJBvLKlQi88NzbL_d0i-mwPmexmyasLgwajEa0rzI89Svi17zEXTE0sWuU3SdZpj4UzAMHHdMci1layIs_TixCbMDr2Q_raXJsC-N6Eu6F597tv05APyqmX4QpihYOurUCa47u-5EaqIQZvFgf3E7wko%3D
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:31 PM</td>
+							<td class='step-details'>
+									Click action on Proxy element for: DefaultElementLocator 'By.id: submitCC' performed successfully
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>2:05:31 PM</td>
+							<td class='step-details'>
+									https://mcstaging.partylite.com.au/checkout/onepage/success/The order is successfully placed
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>2:05:32 PM</td>
 							<td class='step-details'>
 									All browser instances got successfully closed
 								
@@ -687,7 +1929,7 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>Smokes_AT-PWS</span>
+						<span class='category-name'>Smokes_PWS_UK</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -709,8 +1951,107 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 22, 2021 08:24:15 PM</td>
-										<td class='linked' test-id='2'>guest order in eshop</td>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='5'>consultant enrollment process</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Smokes_DE</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='8'>Logged In customer order checkout</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Smokes_AU-PWS</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='7'>consultant enrollment process</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Smokes_AU</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='6'>guest order in eshop</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -747,14 +2088,14 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 			<ul id='author-collection' class='author-collection'>
 				<li class='author displayed active'>
 					<div class='author-heading'>
-						<span class='author-name'>Shashwat</span>
+						<span class='author-name'>Nikita</span>
 						<span class='author-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='author-content hide'>
 						<div class='author-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -769,8 +2110,51 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 22, 2021 08:24:15 PM</td>
-										<td class='linked' test-id='2'>guest order in eshop</td>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='5'>consultant enrollment process</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='7'>consultant enrollment process</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='author displayed active'>
+					<div class='author-heading'>
+						<span class='author-name'>Shashwat</span>
+						<span class='author-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='author-content hide'>
+						<div class='author-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='author-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='8'>Logged In customer order checkout</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 1, 2022 02:02:00 PM</td>
+										<td class='linked' test-id='6'>guest order in eshop</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -795,31 +2179,31 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 22, 2021 08:24:13 PM</div>
+					<div class='panel-lead'>Feb 1, 2022 02:01:59 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 22, 2021 08:29:09 PM</div>
+			 		<div class='panel-lead'>Feb 1, 2022 02:06:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 4m 55s+986ms</div>
+					<div class='panel-lead'>0h 4m 52s+984ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -835,7 +2219,34 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>Smokes_AT-PWS</td>
+							<td>Smokes_PWS_UK</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>Smokes_DE</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>Smokes_AU-PWS</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>Smokes_AU</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -854,16 +2265,16 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
+                parentCount: 4,
+				passParent: 4,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 4,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -886,7 +2297,7 @@ Bestellung:  https://testpwsmcstaging.partylite.at/ retrieved successfully
 		</script>
 		<script>
 			var timeline = {
-			        "Smoke_TC-11: AT - PWS - eShop - Anonymous Checkout":294.165
+			        "UK Online Enrollment with MFEE Only":220.558,"Smoke_TC-8: DE- DE- CWS - eShop":292.32,"AU Online Enrollment Test case 5":189.348,"Smoke_TC-6: AU - CWS - eShop - Anonymous Checkout":211.92
 			};
 		</script>
 	

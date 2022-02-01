@@ -159,6 +159,18 @@ public class TestPaymentPage extends Class_initEcomPrac  {
 		return this;
 	}
 	
+	@FindBy(xpath="//input[@name='authenticate']")
+	WebElement buttonauthenticate;
+	public TestPaymentPage clickauthenticate() {
+		try {
+		click(buttonauthenticate);
+		System.out.println("Authenticate button clicked");
+		}catch(Exception e) {
+			System.out.println("Authenticate button not find");
+		}
+		return this;
+	}
+	
 
 	
 }

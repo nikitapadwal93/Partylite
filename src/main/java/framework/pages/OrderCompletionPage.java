@@ -31,15 +31,18 @@ public class OrderCompletionPage extends Class_initEcomPrac  {
 	@FindBy(xpath="//div[@class='success-text']/h2")
 	WebElement confirmOrderSuccess;
 	public OrderCompletionPage confirmOrderIsSuccess() {
-		String successMessage=confirmOrderSuccess.getText(); 
+		//String successMessage=confirmOrderSuccess.getText(); 
 		try {
 			System.out.println("After submit card details  "+driver.get().getCurrentUrl());
 			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
 					(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//section[@class='details']"))));
-			if(successMessage.contains("Thanks for shopping!")
+		/*	if(successMessage.contains("Thanks for shopping!")
 					|| driver.get().getCurrentUrl().contains("onepage/success")) {
 				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed with text - " + successMessage, "pass");
-			return this;
+			return this; */
+			if(driver.get().getCurrentUrl().contains("onepage/success")){
+				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed", "pass");
+				return this;
 		}
 			else {
 				reportStep("The order failed to complete"+driver.get().getCurrentUrl(), "warning");
@@ -123,6 +126,41 @@ public class OrderCompletionPage extends Class_initEcomPrac  {
 		else
 			reportStep("failure page for OE "+ driver.get().getCurrentUrl(), "fail");
 		return this;
+	}
+	
+	@FindBy(xpath="//*[@id=\"newsletter\"]")
+	WebElement newsletterFooter;
+	public OrderCompletionPage enterEmailtoSubscribeFooter(String email) {
+		type(newsletterFooter, email);
+		System.out.println("Email entered in footer is "+ email);
+		return this;
+	}
+	
+	@FindBy(xpath="//*[@id=\"newsletter-validate-detail\"]/div/div/div[1]/button")
+	WebElement clickSubscribefromFooter;
+	public OrderCompletionPage clickFooterSubscribeButton() {
+		click(clickSubscribefromFooter);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	@FindBy(xpath="//aside[contains(@class,'_show')]//footer[contains(@class,'modal-footer')]//button[contains(@type,'button')]")
+	WebElement clickContinue;
+	public OrderCompletionPage clickContinueShopping() {
+		try {
+		click(clickContinue);
+		Thread.sleep(3000);
+		System.out.println("Subscription successfull");
+		System.out.println(driver.get().findElement(By.xpath("//span[@class='base']")).getText());
+		}
+		catch(Exception e) {
+			System.out.println("Continue button not found");
+		}
+		return null;
 	}
 	
 }

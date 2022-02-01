@@ -38,8 +38,8 @@ public class LoggedInCustomerOrder_PartyLite_CHFR_Smoke_TC12 extends Class_initE
 	
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="CustomerOrder")
 	public void loggedInCustomerOrder(String fname, String lname,String email, String confemail, String password,  String ContentForVerification,
-			String SKU,	String qty, String gcno, String gcpin, String address1,String zipcode,
-			String city, String state, String phone, String PaymentType, String Country ){
+			String SKU,	String qty, String giftcardnumber, String giftcardpin, String address1,String zipcode,
+			String city, String state, String phone, String PaymentType){
 		
 		try {
 			try {
@@ -73,20 +73,19 @@ public class LoggedInCustomerOrder_PartyLite_CHFR_Smoke_TC12 extends Class_initE
 			.clickBtnSearch()
 			.enterSKU(SKU)
 			.clickProductImage()
-			//.enterQty(qty)
+			.enterQty(qty)
 			.clickBtnAddToCart()
 			.clickBtnMiniCart()
 			.clickBtnViewBasket()
-			//.enterGCNumber(gcno)
-			//.typeGiftCardPIN(country, gcpin)
-			//.enterGCPinforCH(gcpin)
-			//.clickGCApplyButton()
+			.typeGiftCardNumber(country, giftcardnumber)
+			.typeGiftCardPIN(country, giftcardpin)
+			.clickApplyButtonFR()
 			.clickGoToCheckout()
 			.clickOnSavedAddress()
 			.clickDeliveryTypeBox()
 			.chooseDeliveryType()
-			.clickGuestNextButton()
-			.selectAddressFormat()
+			//.clickGuestNextButton()
+			//.selectAddressFormat()
 			.clickNextProceedToPayment()
 			.selectTypeOfPayment(PaymentType)
 			.clickAcceptTerms()
@@ -95,7 +94,9 @@ public class LoggedInCustomerOrder_PartyLite_CHFR_Smoke_TC12 extends Class_initE
 			.clickeWallet()
 			.getOrderNumber()
 			.clickPaypalConfirm()
-			.clickWorldlineAccept()
+			//.clickWorldlineAccept()
+			.loginPaypal()
+			.payNow()
 			//.clickConfirm()
 			//.clickAuthenticate()
 			.confirmOrderIsSuccess();

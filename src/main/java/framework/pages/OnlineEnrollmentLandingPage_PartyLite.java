@@ -162,6 +162,15 @@ try {
 		long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
 		random_oe_email = "codemoe"+randomNum+"@mailinator.com";
 		type(web_oe_email, random_oe_email);
+		try {
+			WebElement loader = driver.get().findElementByXPath("//div[@class='loading-mask']");
+			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
+					(ExpectedConditions.attributeContains(loader, "style", "none")));
+			
+		}catch (Exception e) {
+			
+			e.printStackTrace();
+		}
 		return this;
 	}
 	
@@ -752,6 +761,8 @@ try {
 		}
 		return null;
 	}
+	
+	
 
 }
 

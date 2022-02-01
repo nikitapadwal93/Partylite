@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="8" guice-stage="DEVELOPMENT" name="Failed suite [Suite-FullSmokeTest]" parallel="tests">
+  <parameter name="paramURL" value="https://testpwsmcstaging.partylite.at/"/>
+  <parameter name="paramCountry" value="AT-PWS"/>
+  <listeners>
+    <listener class-name="framework.utils.TestNGListener"/>
+  </listeners>
+  <test name="Test-FullRegression-CA(failed)" parallel="tests">
+    <parameter name="paramURL" value="https://testpwsmcstaging.partylite.at/"/>
+    <parameter name="paramCountry" value="AT-PWS"/>
+    <groups>
+      <run>
+        <include name="Smokes"/>
+        <include name="Common"/>
+      </run>
+    </groups>
     <classes>
-      <class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2">
+      <class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11">
         <methods>
+          <include name="setDataGO"/>
+          <include name="createGuestOrder" invocation-numbers="0"/>
           <include name="beforeSuite"/>
           <include name="populatePropCountry"/>
-          <include name="setDataLCO"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="beforeClass"/>
-          <include name="loggedInCustomerOrder"/>
           <include name="beforeMethod"/>
           <include name="markExtentReportWithTestNGFailStatus"/>
         </methods>
-      </class> <!-- framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2 -->
+      </class> <!-- framework.test.GuestOrder_PartyLite_AT_Smoke_TC11 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test-FullRegression-CA(failed) -->
+</suite> <!-- Failed suite [Suite-FullSmokeTest] -->

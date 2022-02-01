@@ -15,7 +15,7 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="framework.test.LoggedInCustomer_CA_RedeemAward_RegressionTC8" />
+			<class name="framework.test.OnlineEnrollment_CA_Regression_TC16" />
 		</classes>
 	</test>
 

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="8" guice-stage="DEVELOPMENT" name="Failed suite [Suite-FullSmokeTest]" parallel="tests">
+  <parameter name="paramURL" value="https://testpwsmcstaging.partylite.at/"/>
+  <parameter name="paramCountry" value="AT-PWS"/>
   <listeners>
     <listener class-name="framework.utils.TestNGListener"/>
   </listeners>
-  <test thread-count="8" name="TC-3: CAEN - PWS - eShop - Anonymous checkout(failed)" parallel="tests">
-    <parameter name="paramURL" value="https://mcstaging.partylite.ca/ctwenty-six"/>
-    <parameter name="paramCountry" value="CA"/>
+  <test name="Test-FullRegression-CA(failed)" parallel="tests">
+    <parameter name="paramURL" value="https://testpwsmcstaging.partylite.at/"/>
+    <parameter name="paramCountry" value="AT-PWS"/>
     <groups>
       <run>
+        <include name="Smokes"/>
         <include name="Common"/>
-        <include name="eShop"/>
       </run>
     </groups>
     <classes>
-      <class name="framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3">
+      <class name="framework.test.GuestOrder_PartyLite_AT_Smoke_TC11">
         <methods>
           <include name="setDataGO"/>
+          <include name="createGuestOrder" invocation-numbers="0"/>
           <include name="beforeSuite"/>
           <include name="populatePropCountry"/>
           <include name="afterMethod"/>
@@ -24,9 +27,8 @@
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
           <include name="markExtentReportWithTestNGFailStatus"/>
-          <include name="createGuestOrder" invocation-numbers="0"/>
         </methods>
-      </class> <!-- framework.test.GuestOrder_PartyLite_CAEN_Smoke_TC3 -->
+      </class> <!-- framework.test.GuestOrder_PartyLite_AT_Smoke_TC11 -->
     </classes>
-  </test> <!-- TC-3: CAEN - PWS - eShop - Anonymous checkout(failed) -->
+  </test> <!-- Test-FullRegression-CA(failed) -->
 </suite> <!-- Failed suite [Suite-FullSmokeTest] -->

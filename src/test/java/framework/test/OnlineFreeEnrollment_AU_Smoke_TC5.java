@@ -25,7 +25,7 @@ public class OnlineFreeEnrollment_AU_Smoke_TC5 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataOEUS(@Optional String paramCountry) {
-		tcName = "AU Online Enrollment Test case 5";
+		tcName = "Smoke_TC-5- OnlineFreeEnrollment_AU_Smoke_TC5";
 		tcDescription = "Apply FREE-Enrollment Coupon";
 		category = "Smokes_"+paramCountry;
 		authors = "Nikita";

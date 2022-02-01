@@ -1,113 +1,602 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48" started-at="2021-11-08T15:31:30 IST" finished-at="2021-11-08T15:31:30 IST">
+  <suite name="Suite-FullSmokeTest" duration-ms="292933" started-at="2022-02-01T08:31:59Z" finished-at="2022-02-01T08:36:52Z">
     <groups>
       <group name="Smokes">
-        <method signature="LoggedInCustomerOrder_PartyLite_Smoke_TC2.loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="loggedInCustomerOrder" class="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2"/>
+        <method signature="OnlineFreeEnrollment_AU_Smoke_TC5.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="createGuestOrder" class="framework.test.OnlineFreeEnrollment_AU_Smoke_TC5"/>
+        <method signature="GuestOrder_PartyLite_AU_Smoke_TC6.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="createGuestOrder" class="framework.test.GuestOrder_PartyLite_AU_Smoke_TC6"/>
+        <method signature="LoggedInCustomerOrder_PartyLite_Smoke_TC8.loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="loggedInCustomerOrder" class="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8"/>
+        <method signature="OnlineEnrollment_UK_Smoke_TC9.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="createGuestOrder" class="framework.test.OnlineEnrollment_UK_Smoke_TC9"/>
       </group> <!-- Smokes -->
       <group name="eShop">
-        <method signature="LoggedInCustomerOrder_PartyLite_Smoke_TC2.loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="loggedInCustomerOrder" class="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2"/>
+        <method signature="OnlineFreeEnrollment_AU_Smoke_TC5.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="createGuestOrder" class="framework.test.OnlineFreeEnrollment_AU_Smoke_TC5"/>
+        <method signature="GuestOrder_PartyLite_AU_Smoke_TC6.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="createGuestOrder" class="framework.test.GuestOrder_PartyLite_AU_Smoke_TC6"/>
+        <method signature="LoggedInCustomerOrder_PartyLite_Smoke_TC8.loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="loggedInCustomerOrder" class="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8"/>
+        <method signature="OnlineEnrollment_UK_Smoke_TC9.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="createGuestOrder" class="framework.test.OnlineEnrollment_UK_Smoke_TC9"/>
       </group> <!-- eShop -->
     </groups>
-    <test name="Default test" duration-ms="48" started-at="2021-11-08T15:31:30 IST" finished-at="2021-11-08T15:31:30 IST">
-      <class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="beforeSuite" is-config="true" duration-ms="253" started-at="2021-11-08T15:31:30 IST" finished-at="2021-11-08T15:31:30 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="FAIL" signature="populatePropCountry(java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="populatePropCountry" is-config="true" duration-ms="-1636365690286" started-at="2021-11-08T15:31:30 IST" finished-at="1970-01-01T05:30:00 IST">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'paramCountry' is required by BeforeTest on method populatePropCountry but has not been marked @Optional or defined
-in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--888008583\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'paramCountry' is required by BeforeTest on method populatePropCountry but has not been marked @Optional or defined
-in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--888008583\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:289)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
-at org.testng.TestRunner.beforeRun(TestRunner.java:613)
-at org.testng.TestRunner.run(TestRunner.java:584)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test name="OnlineFreeEnrollment_AU_Smoke_TC5" duration-ms="189963" started-at="2022-02-01T08:31:59Z" finished-at="2022-02-01T08:35:09Z">
+      <class name="framework.test.OnlineFreeEnrollment_AU_Smoke_TC5">
+        <test-method status="PASS" signature="populatePropCountry(java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="populatePropCountry" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AU-PWS]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- populatePropCountry -->
-        <test-method status="SKIP" signature="setDataLCO(java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="setDataLCO" is-config="true" duration-ms="-1636365690299" started-at="2021-11-08T15:31:30 IST" depends-on-methods="framework.appInit.Class_initEcomPrac.populatePropCountry" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="PASS" signature="setDataOEUS(java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="setDataOEUS" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" depends-on-methods="framework.appInit.Class_initEcomPrac.populatePropCountry" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AU-PWS]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setDataLCO -->
-        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="beforeClass" is-config="true" duration-ms="-1636365690315" started-at="2021-11-08T15:31:30 IST" finished-at="1970-01-01T05:30:00 IST">
+        </test-method> <!-- setDataOEUS -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="beforeClass" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="loggedInCustomerOrder" duration-ms="0" started-at="2021-11-08T15:31:30 IST" data-provider="CustomerOrder" finished-at="2021-11-08T15:31:30 IST">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Data Provider public java.lang.Object[][] framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2.getData() returned a null value]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Data Provider public java.lang.Object[][] framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2.getData() returned a null value
-at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:148)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:820)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:762)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:60)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:39)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:771)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="beforeMethod" is-config="true" duration-ms="28804" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://mcstaging.partylite.com.au/auseleven]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loggedInCustomerOrder -->
-        <test-method status="SKIP" signature="afterSuite()[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2@30a3107a]" name="afterSuite" is-config="true" duration-ms="-1636365690351" started-at="2021-11-08T15:31:30 IST" finished-at="1970-01-01T05:30:00 IST">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="createGuestOrder" duration-ms="159828" started-at="2022-02-01T14:02:29Z" data-provider="GuestOrder" finished-at="2022-02-01T14:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PEXpassword123!]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4 Henbury Avenue ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2848]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Kandos]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0212341234']]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0401212345']]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[New South Wales]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[9 Eden Street]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Gladstone]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Queensland]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4680]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[4111111111111111]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[05]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createGuestOrder -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="afterMethod" is-config="true" duration-ms="715" started-at="2022-02-01T14:05:09Z" finished-at="2022-02-01T14:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="markExtentReportWithTestNGFailStatus(org.testng.ITestResult)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1]" name="markExtentReportWithTestNGFailStatus" is-config="true" duration-ms="0" started-at="2022-02-01T14:05:09Z" finished-at="2022-02-01T14:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createGuestOrder status=SUCCESS method=OnlineFreeEnrollment_AU_Smoke_TC5.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineFreeEnrollment_AU_Smoke_TC5@72d818d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markExtentReportWithTestNGFailStatus -->
+      </class> <!-- framework.test.OnlineFreeEnrollment_AU_Smoke_TC5 -->
+    </test> <!-- OnlineFreeEnrollment_AU_Smoke_TC5 -->
+    <test name="GuestOrder_PartyLite_AU_Smoke_TC6" duration-ms="212533" started-at="2022-02-01T08:31:59Z" finished-at="2022-02-01T08:35:32Z">
+      <class name="framework.test.GuestOrder_PartyLite_AU_Smoke_TC6">
+        <test-method status="PASS" signature="populatePropCountry(java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="populatePropCountry" is-config="true" duration-ms="12" started-at="2022-02-01T14:01:59Z" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AU]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- populatePropCountry -->
+        <test-method status="PASS" signature="setDataGO(java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="setDataGO" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" depends-on-methods="framework.appInit.Class_initEcomPrac.populatePropCountry" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AU]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataGO -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="beforeClass" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="beforeMethod" is-config="true" duration-ms="26441" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://mcstaging.partylite.com.au]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="createGuestOrder" duration-ms="184778" started-at="2022-02-01T14:02:27Z" data-provider="GuestOrder" finished-at="2022-02-01T14:05:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FS29]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test_smoke2209guest@mailinator.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Shashwat]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Guest]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[434 Dorcas St]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[   ]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[   ]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3205.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[South Melbourne]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Victoria]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Victoria]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Visa Debit Card]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[4462030000000000]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[02]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[23.0]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[9 Eden Street]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[Gladstone]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Queensland]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[4680.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createGuestOrder -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="afterMethod" is-config="true" duration-ms="701" started-at="2022-02-01T14:05:31Z" finished-at="2022-02-01T14:05:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="markExtentReportWithTestNGFailStatus(org.testng.ITestResult)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb]" name="markExtentReportWithTestNGFailStatus" is-config="true" duration-ms="0" started-at="2022-02-01T14:05:32Z" finished-at="2022-02-01T14:05:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createGuestOrder status=SUCCESS method=GuestOrder_PartyLite_AU_Smoke_TC6.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.GuestOrder_PartyLite_AU_Smoke_TC6@148080bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markExtentReportWithTestNGFailStatus -->
+      </class> <!-- framework.test.GuestOrder_PartyLite_AU_Smoke_TC6 -->
+    </test> <!-- GuestOrder_PartyLite_AU_Smoke_TC6 -->
+    <test name="OnlineEnrollment_UK_Smoke_TC9" duration-ms="221171" started-at="2022-02-01T08:31:59Z" finished-at="2022-02-01T08:35:41Z">
+      <class name="framework.test.OnlineEnrollment_UK_Smoke_TC9">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="beforeSuite" is-config="true" duration-ms="88" started-at="2022-02-01T14:01:59Z" finished-at="2022-02-01T14:01:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="beforeClass" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="populatePropCountry(java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="populatePropCountry" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PWS_UK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- populatePropCountry -->
+        <test-method status="PASS" signature="setDataOEUS(java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="setDataOEUS" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" depends-on-methods="framework.appInit.Class_initEcomPrac.populatePropCountry" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PWS_UK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataOEUS -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="beforeMethod" is-config="true" duration-ms="29437" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://mcstaging.partylite.co.uk/ukeleven]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="createGuestOrder" duration-ms="190451" started-at="2022-02-01T14:02:30Z" data-provider="GuestOrder" finished-at="2022-02-01T14:05:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PEXpassword123!]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9 The Fairway]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[BD5 8FB]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Bradford]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[01923 123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[New York]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[4462030000000000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[05]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createGuestOrder -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="afterMethod" is-config="true" duration-ms="670" started-at="2022-02-01T14:05:40Z" finished-at="2022-02-01T14:05:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="markExtentReportWithTestNGFailStatus(org.testng.ITestResult)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="markExtentReportWithTestNGFailStatus" is-config="true" duration-ms="0" started-at="2022-02-01T14:05:41Z" finished-at="2022-02-01T14:05:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createGuestOrder status=SUCCESS method=OnlineEnrollment_UK_Smoke_TC9.createGuestOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markExtentReportWithTestNGFailStatus -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:framework.test.OnlineEnrollment_UK_Smoke_TC9@5ce81285]" name="afterSuite" is-config="true" duration-ms="191" started-at="2022-02-01T14:06:52Z" finished-at="2022-02-01T14:06:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- framework.test.OnlineEnrollment_UK_Smoke_TC9 -->
+    </test> <!-- OnlineEnrollment_UK_Smoke_TC9 -->
+    <test name="LoggedInCustomerOrder_PartyLite_Smoke_TC8" duration-ms="292933" started-at="2022-02-01T08:31:59Z" finished-at="2022-02-01T08:36:52Z">
+      <class name="framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8">
+        <test-method status="PASS" signature="populatePropCountry(java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="populatePropCountry" is-config="true" duration-ms="12" started-at="2022-02-01T14:01:59Z" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- populatePropCountry -->
+        <test-method status="PASS" signature="setDataLCO(java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="setDataLCO" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" depends-on-methods="framework.appInit.Class_initEcomPrac.populatePropCountry" finished-at="2022-02-01T14:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataLCO -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="beforeClass" is-config="true" duration-ms="0" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="beforeMethod" is-config="true" duration-ms="26640" started-at="2022-02-01T14:02:00Z" finished-at="2022-02-01T14:02:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://partylite.biz/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="loggedInCustomerOrder" duration-ms="264985" started-at="2022-02-01T14:02:27Z" data-provider="CustomerOrder" finished-at="2022-02-01T14:06:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[random50]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[dedemagqa@mailinator.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1sqa@work!]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[MY ACCOUNT]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FS29]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Heidelberger Mühle]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[   ]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[   ]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[16928.0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Groß Pankow]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Prignitz]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[01923 825119]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Visa Debit Card]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[4462030000000000]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[02]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[23.0]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loggedInCustomerOrder -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="afterMethod" is-config="true" duration-ms="695" started-at="2022-02-01T14:06:52Z" finished-at="2022-02-01T14:06:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="markExtentReportWithTestNGFailStatus(org.testng.ITestResult)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b]" name="markExtentReportWithTestNGFailStatus" is-config="true" duration-ms="0" started-at="2022-02-01T14:06:52Z" finished-at="2022-02-01T14:06:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loggedInCustomerOrder status=SUCCESS method=LoggedInCustomerOrder_PartyLite_Smoke_TC8.loggedInCustomerOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8@31dc339b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markExtentReportWithTestNGFailStatus -->
+      </class> <!-- framework.test.LoggedInCustomerOrder_PartyLite_Smoke_TC8 -->
+    </test> <!-- LoggedInCustomerOrder_PartyLite_Smoke_TC8 -->
+  </suite> <!-- Suite-FullSmokeTest -->
 </testng-results>

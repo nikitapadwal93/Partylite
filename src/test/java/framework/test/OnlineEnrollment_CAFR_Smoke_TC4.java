@@ -25,7 +25,7 @@ public class OnlineEnrollment_CAFR_Smoke_TC4 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataOECA(@Optional String paramCountry) {
-		tcName = "CAFR Online Enrollment on Affiliate site";
+		tcName = "Smoke_TC-4: CAFR Online Enrollment on Affiliate site";
 		tcDescription = "Smoke test case 4";
 		category = "Smokes_"+paramCountry;
 		authors = "Saravanan";

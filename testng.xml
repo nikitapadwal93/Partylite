@@ -4,23 +4,22 @@
 		<listener class-name="framework.utils.TestNGListener" />
 	</listeners>
 
-	<!-- <test name="Test-FullRegression-CA">
+	<test name="Test-FullRegression-CA">
 		<parameter name="paramURL"
-			value="https://magentoqa.partylite.ca" />
-		<parameter name="paramCountry" value="CA" />
+			value="https://mcstaging.partylite.com" />
+		<parameter name="paramCountry" value="US" />
 		<groups>
 			<run>
 				<include name="Smokes" />
 				<include name="Common" />
-				<include name="PEX" />
 			</run>
 		</groups>
 		<classes>
-			<class name="framework.test.GuestOrder_PartyLite" />
+			<class name="framework.test.OnlineEnrollment_US_Smoke_TC1" />
 		</classes>
 	</test>
 	
-	<test name="Test-FullRegression-US">
+<!-- 	<test name="Test-FullRegression-US">
 		<parameter name="paramURL"
 			value="https://magentoqa.partylite.com" />
 		<parameter name="paramCountry" value="US" />

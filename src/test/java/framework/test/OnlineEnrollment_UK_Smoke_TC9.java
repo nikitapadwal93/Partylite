@@ -25,7 +25,7 @@ public class OnlineEnrollment_UK_Smoke_TC9 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataOEUS(@Optional String paramCountry) {
-		tcName = "UK Online Enrollment with MFEE Only";
+		tcName = "Smoke_TC-9:UK Online Enrollment with MFEE Only";
 		tcDescription = "MFEE Only by all other cards option [MasterCard]";
 		category = "Smokes_"+paramCountry;
 		authors = "Nikita";

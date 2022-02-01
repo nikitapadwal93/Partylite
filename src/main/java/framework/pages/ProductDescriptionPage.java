@@ -49,6 +49,7 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 	@FindBy(id="product-addtocart-button")
 	WebElement btnAddToCart;
 	public ProductDescriptionPage clickBtnAddToCart() {
+		System.out.println(driver.get().findElementById("product-addtocart-button").getText());
 		click(btnAddToCart);
 		return this;
 	}
@@ -132,13 +133,27 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 	WebElement clickSubscribefromFooter;
 	public ProductDescriptionPage clickFooterSubscribeButton() {
 		click(clickSubscribefromFooter);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return this;
 	}
 	
-	@FindBy(xpath="//*[@id=\"html-body\"]/div[8]/aside[3]/div[2]/footer/button")
+	//@FindBy(xpath="//*[@id=\"html-body\"]/div[8]/aside[3]/div[2]/footer/button")
+	@FindBy(xpath="//aside[contains(@class,'_show')]//footer[contains(@class,'modal-footer')]//button[contains(@type,'button')]")
 	WebElement clickContinue;
 	public ProductDescriptionPage clickContinueShopping() {
+		try {
 		click(clickContinue);
+		Thread.sleep(3000);
+		System.out.println("Continue button clicked");
+		System.out.println(driver.get().findElement(By.xpath("//span[@class='base']")).getText());
+		}
+		catch(Exception e) {
+			System.out.println("Continue button not found");
+		}
 		return null;
 	}
 	
@@ -201,6 +216,7 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 		}catch(Exception e)
 		{
 			e.printStackTrace();
+			System.out.println("mini cart button not found");
 			
 		}
 	return this;
@@ -230,7 +246,6 @@ public class ProductDescriptionPage extends Class_initEcomPrac{
 			e.printStackTrace();
 		}
 		return null;
-	}
-	
+	}	
 	
 }

@@ -136,11 +136,14 @@ public class CartSummaryPage extends Class_initEcomPrac {
 
 	}
 
-	@FindBy(xpath = "//div[@data-ui-id='message-success']")
+	//@FindBy(xpath = "//div[@data-ui-id='message-success']")
+	@FindBy(xpath = "//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
 	WebElement coupon_apply_msg;
 	public CartSummaryPage verifyCouponApplyMessage() {
-		verifyPartialText(coupon_apply_msg, "You used coupon code");
-		reportStep("Coupon applied successfully= "+coupon_apply_msg ,"PASS");
+		String coupon_validation= coupon_apply_msg.getText();
+		System.out.println(coupon_validation);
+		//verifyPartialText(coupon_apply_msg, "You used coupon code");
+		reportStep("Coupon applied successfully= "+coupon_validation ,"PASS");
 		return this;
 	}
 
@@ -204,8 +207,8 @@ public class CartSummaryPage extends Class_initEcomPrac {
 	@FindBy(xpath="//*[@id='giftcard-pin']")
 	WebElement enterGCPin;
 	public CartSummaryPage enterGCPinforCH(String gcpin) {
-		loaderCheck();
-		bodyContainer();
+		//loaderCheck();
+		//bodyContainer();
 		type(enterGCPin, gcpin);
 		return null;	
 	}
@@ -221,6 +224,22 @@ public class CartSummaryPage extends Class_initEcomPrac {
 	WebElement txtboxGiftCardPIN;
 	public CartSummaryPage typeGiftCardPIN(String Country, String gift_card_pin) {
 		gift_card_pin= markets.get(Country).getProperty("GC2"); //multi-lingual support
+		type(txtboxGiftCardPIN, gift_card_pin);
+		return this;
+	}
+	
+	@FindBy(id="giftcard-code")
+	WebElement txtboxGiftCardNumber2;
+	public CartSummaryPage typeGiftCardNumber2(String Country, String gift_card_number) {
+		gift_card_number= markets.get(Country).getProperty("GC3");
+		type(txtboxGiftCardNumber, gift_card_number);
+		return this;
+	}
+	
+	@FindBy(id="giftcard-pin")
+	WebElement txtboxGiftCardPIN2;
+	public CartSummaryPage typeGiftCardPIN2(String Country, String gift_card_pin) {
+		gift_card_pin= markets.get(Country).getProperty("GC4"); 
 		type(txtboxGiftCardPIN, gift_card_pin);
 		return this;
 	}
@@ -246,6 +265,14 @@ public class CartSummaryPage extends Class_initEcomPrac {
 	WebElement apply_btn;
 	public CartSummaryPage clickApplyButton() {
 		click(apply_btn);
+		return this;
+
+	}
+	
+	@FindBy(xpath="//button[@value=\"Ajouter un bon d'achat\"]")
+	WebElement apply_btnFR;
+	public CartSummaryPage clickApplyButtonFR() {
+		click(apply_btnFR);
 		return this;
 
 	}

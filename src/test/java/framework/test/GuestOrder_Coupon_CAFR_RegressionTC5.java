@@ -25,13 +25,13 @@ public class GuestOrder_Coupon_CAFR_RegressionTC5 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataGO(@Optional String paramCountry) {
-		tcName = "GuestOrder";
-		tcDescription = "placing order in eShop by guest";
+		tcName = "GuestOrder_Coupon_CAFR_RegressionTC5";
+		tcDescription = "placing order in eShop by guest (Apply coupon in checkout)";
 		category = "Smokes_"+paramCountry;
 		authors = "Nikhil";
 		testNodes = "guest order in eshop";
 		ExcelFileName="PartyLite_Smokes_Data";
-		sheetName = "LineType_Coupon_CA_PL";
+		sheetName = "Regression_TC5";
 		country = paramCountry;
 		
 	}

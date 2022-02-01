@@ -37,8 +37,8 @@ public class LoggedInCustomerOrder_PartyLite_Smoke_TC8 extends Class_initEcomPra
 	
 	
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="CustomerOrder")
-	public void loggedInCustomerOrder(String email,String password, String emailsubscribe, String subscribername, String ContentForVerification,String SKU,String qty,
-			String address1,String address2,String address3,
+	public void loggedInCustomerOrder(String subscribername, String emailsubscribe, String email,String password, String ContentForVerification,
+			String SKU,String qty,String address1,String address2,String address3,
 			String zipcode,String city, String state, String phone,String PaymentType, String cardNumber,
 			String expMonth,String expYear,String cardCVV){
 		
@@ -78,8 +78,8 @@ public class LoggedInCustomerOrder_PartyLite_Smoke_TC8 extends Class_initEcomPra
 			.clickZoomOut()
 			.clickStoreImg()
 			.selectStoreImg()
-		    .clickNextButtonGuest()
-			.selectAddressFormat()
+		    //.clickNextButtonGuest()
+			//.selectAddressFormat()
 			.clickNextProceedToPayment()
 			.clickBacktoOrder()
 			.clickGoToCheckout()
@@ -90,7 +90,7 @@ public class LoggedInCustomerOrder_PartyLite_Smoke_TC8 extends Class_initEcomPra
 			.clickStoreImg()
 			.selectStoreImg()
 			//.clickAddress()
-			.clickGuestNextButton()
+			//.clickGuestNextButton()
 			//.selectAddressFormat()
 			.clickNextProceedToPayment()
 			.selectTypeOfPayment(PaymentType)

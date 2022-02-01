@@ -25,10 +25,10 @@ public class OnlineEnrollment_CA_Regression_TC16 extends Class_initEcomPrac{
 	@Parameters("paramCountry")
 	@BeforeTest(groups= {"Common"})
 	public void setDataOECA(@Optional String paramCountry) {
-		tcName = "Online Enrollment";
+		tcName = "OnlineEnrollment_CA_Regression_TC16";
 		tcDescription = "consultant enrollment process cananda";
 		category = "Smokes_"+paramCountry;
-		authors = "Anand";
+		authors = "Nikhil";
 		testNodes = "consultant enrollment process";
 		ExcelFileName="PartyLite_Smokes_Data";
 		sheetName = "Regression_TC16";
@@ -37,9 +37,10 @@ public class OnlineEnrollment_CA_Regression_TC16 extends Class_initEcomPrac{
 	}
 
 	@Test(groups= {"eShop", "Smokes"}, dataProvider="GuestOrder")
-	public void createGuestOrder(String password,String address1,
-			String zipcode,String city,String phone,String state, String cardNumber,
-			String expMonth,String expYear,String cardCVV){
+	public void createGuestOrder(String fname, String lname,String email, String confemail,String password,
+			String address1,String city,String zipcode,String phone,String state,
+			String password2,String phone2,String address2,String zipcode2, String city2,String state2,
+			String cardNumber,String expMonth,String expYear,String cardCVV){
 
 		try {
 
@@ -50,29 +51,63 @@ public class OnlineEnrollment_CA_Regression_TC16 extends Class_initEcomPrac{
 				//.closeDialogSignUpNewsLetter()
 				.closeListrakNewsLetter()
 				.clickToAllowCookie()
+				.clickSignin()
+				.clickCreateAnAccount()
+				.enterFirstname(fname)
+				.enterLastname(lname)
+				.enterEmail(email)
+				.enterEmailConf(confemail)
+				.enterPassword(password)
+				.enterPasswordConf(password)
+				.clickTermsConditions()
+				.clickCreateAnAccount()
+				.clickMenuExpansionLink()
+				.clickOnDashboard()
+				.clickAddressBookLink()
+				.enterStreetAddress1(address1)
+				.entercity(city)
+				.enterPostalCode(zipcode)
+				.enterTelephone(phone)
+				.selectStateFromDropdown(state)
+				.clickSearchAndValidate()
+				.selectAddressFormat()
+				.selectStateFromDropdown(state)
+				.clickSaveAddressLink()
 				.clickOurMission()
 				.bodyContainer()
 				.clickEnrollNow()
 				.bodyContainer()
-				.enterEmail()
-				.clickSubmit()
-				//.re_enterEmail()
-				.enterPassword(password)
-				.re_enterPassword(password)
-				.enterFname()
-				//.enterMname()
-				.enterLname()
-				//.enterPFname()
+				//.enterEmail()
+				//.clickSubmit()
+				//.enterPassword(password2)
+				//.re_enterPassword(password2)
+				//.enterFname()
+				//.enterLname()
 				.enterUserDOB()
 				.clickNext()
-				.enterUserContactPhone(phone)
-				.enterUserMobilePhone(phone)
-				.enterUserShipAddressLine1(address1)
-				.enterUserShipCity(city)
-				.enterUserShipPostcode(zipcode)
-				.clickStateDropdown(state)
+				.enterUserContactPhone(phone2)
+				.enterUserMobilePhone(phone2)
+				.enterUserShipAddressLine1(address2)
+				.enterUserShipPostcode(zipcode2)
+				.enterUserShipCity(city2)
+				.clickStateDropdown(state2)
 				.clickNext()
 				.clickExpResult()
+				.clickKit_BudleItems()
+				.clickKit()
+				.gotoCart()
+				.clickGoToCheckout()
+				.verifyshipping()
+				.clickAgree()
+				.clickNextProceedToPaymentOE()		
+				.enterCardNumber(cardNumber)
+				.enterCardExpMonth(expMonth)
+				.enterCardExpYear(expYear)
+				.enterCardCVV(cardCVV)
+				.getOrderNumber()
+				.clickConfirm()
+				.verifyKitSuccessPage();
+				
 				/*
 				 * .clickIDontHaveCons() .clickMySponsor() .verifySponsor()
 				 * .clickMySponsorConfirm()
@@ -82,24 +117,19 @@ public class OnlineEnrollment_CA_Regression_TC16 extends Class_initEcomPrac{
 				 * .clickNext() .clickKit() .clickNext() .enterConsPWS() .clickKit()
 				 * .verifyPWSAvailable()
 				 */
-				.gotoCart()
-				.clickGoToCheckout()
-				.clickAgree()
+				
+				
+				
 				/*
 				 * .clickAgreeNext() .clickDeliveryTypeBox() .chooseHomeDeliveryUSMethod()
 				 */
-				.clickNextProceedToPaymentOE()
+				
 				/*
 				 * .clickAcceptTerms() .clickPlaceOrderButton()
 				 */
-				.enterCardNumber(cardNumber)
-				.enterCardExpMonth(expMonth)
-				.enterCardExpYear(expYear)
-				.enterCardCVV(cardCVV)
-				.getOrderNumber()
-				.clickConfirm()
-				.verifyKitSuccessPage();
-
+				
+				
+				
 			} catch(RuntimeException e) {
 				System.out.println("Test case name =  " +getClass().getName());
 				e.printStackTrace();

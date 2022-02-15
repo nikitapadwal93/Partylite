@@ -86,6 +86,14 @@ public class CartSummaryPage extends Class_initEcomPrac {
 
 	}
 	
+	@FindBy(id="coupon_code_fake")
+	WebElement txtbox_PPC_Coupon;
+	public CartSummaryPage typePPCCoupon(String valid_coupon) {
+		type(txtbox_PPC_Coupon, valid_coupon);
+		return this;
+
+	}
+	
 	@FindBy(id = "coupon_code_fake")
 	WebElement enterFREECoupon;
 	public CartSummaryPage enterFREECoupon() {
@@ -101,12 +109,13 @@ public class CartSummaryPage extends Class_initEcomPrac {
 				}
 		try {
 		verifyDisplayed(enterFREECoupon);
+		//FREEENROLL : This free-enrollment coupon for pexdev-server
 		if (driver.get().getCurrentUrl().contains("https://pexdev.partylite.co.uk") || 
 			driver.get().getCurrentUrl().contains("https://pexdev.partylite.com") ||
 			driver.get().getCurrentUrl().contains("https://pexdev.partylite.com.au")||
 			driver.get().getCurrentUrl().contains("https://pexdev.partylite.ca"))
 			type(enterFREECoupon, "FREEENROLL");
-		
+		//Below free-enrollment coupons for staging-server
 		else if (driver.get().getCurrentUrl().contains("https://mcstaging.partylite.co.uk") || driver.get().getCurrentUrl().contains("https://mcstaging.partylite.com.au"))
 			type(enterFREECoupon, "FAITH100");
 		
@@ -115,9 +124,12 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		
 		else if (driver.get().getCurrentUrl().contains("https://mcstaging.partylite.ca"))
 				type(enterFREECoupon, "CA_KRISTIN100");
-		
+		//Below free-enrollment coupons for preprod-server
 		else if (driver.get().getCurrentUrl().contains("https://mcpreprod.partylite.com.au") || driver.get().getCurrentUrl().contains("https://mcpreprod.partylite.co.uk"))
 			type(enterFREECoupon, "SHAREIT");
+		
+		else if (driver.get().getCurrentUrl().contains("https://mcpreprod.partylite.com") || driver.get().getCurrentUrl().contains("https://mcpreprod.partylite.ca"))
+			type(enterFREECoupon, "NAI90K66Y9");
 		
 		}
 		
@@ -144,6 +156,14 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		System.out.println(coupon_validation);
 		//verifyPartialText(coupon_apply_msg, "You used coupon code");
 		reportStep("Coupon applied successfully= "+coupon_validation ,"PASS");
+		return this;
+	}
+	
+	@FindBy(xpath = "//div[@data-ui-id='message-error']")
+	WebElement coupon_invalid_msg;
+	public CartSummaryPage verifyCouponInvalidMessage() {
+		verifyPartialText(coupon_invalid_msg, "The coupon code");
+		reportStep("Coupon is not applied= "+coupon_invalid_msg ,"PASS");
 		return this;
 	}
 
@@ -193,6 +213,21 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		type(txtboxGiftCardNumber, gift_card_number);
 		return this;
 
+	}
+	
+	@FindBy(id="giftcard-code")
+	WebElement GiftCardNumberfromExcel;
+	public CartSummaryPage typeCardNumberExcel(String cardnum_readExcel) { //multi-lingual support
+		type(GiftCardNumberfromExcel, cardnum_readExcel);
+		return this;
+
+	}
+	
+	@FindBy(id="giftcard-pin")
+	WebElement GiftCardPINfromExcel;
+	public CartSummaryPage typeCardPINExcel(String cardpin_readExcel) { //multi-lingual support
+		type(GiftCardPINfromExcel, cardpin_readExcel);
+		return this;
 	}
 	
 	@FindBy(id="giftcard-code")
@@ -348,6 +383,19 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		click(addProductQty);
 		System.out.println("Clicked on + to add more qty");
 		reportStep("Cicked on '+' to add more qty", "pass");
+		return this;
+	}
+	
+	@FindBy(xpath ="//*[@class='qty-increase']") //Added for AU-Regression TC_17. This can be used for all AFF-markets.
+	WebElement addMultipleQty;
+	public CartSummaryPage addMultipleProductQty(String count) {
+		int Qty = Integer.parseInt(count);
+		for (int i=1; i<Qty; i++)
+			{
+			click(addMultipleQty);
+			}
+		System.out.println("Added multiple quantities");
+		reportStep("Added multiple quantities","pass");
 		return this;
 	}
 	

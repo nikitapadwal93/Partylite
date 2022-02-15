@@ -57,6 +57,84 @@ public class OrderCompletionPage extends Class_initEcomPrac  {
 		
 	}
 	
+	@FindBy(xpath = "//*[@class='action primary create']")
+	WebElement clickCreateAccount;
+	public OrderCompletionPage clickCreateAccButton() {
+		try {
+		    click(clickCreateAccount);
+		    System.out.println("clicked on create an account button");
+			
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Failed to click on create an account button");
+		}
+		return this;
+	}
+	
+	@FindBy(id="email_address")
+	WebElement txtboxEmail;
+	public OrderCompletionPage enterEmailaddress1(String emailaddress) {
+		//long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
+		clear(txtboxEmail);
+		//genEmail= email+randomNum+"@mailinator.com";
+		
+		type(txtboxEmail, emailaddress);
+		return this;
+	}
+	
+	@FindBy(id="email_address_confirmation")
+	WebElement txtboxEmailConf;
+	public OrderCompletionPage enterEmailConfaddress2(String confemailaddress) {
+		//long randomNum = (long)Math.floor(Math.random()*9000000000L)+8888888888888L;
+		type(txtboxEmailConf, confemailaddress);
+		return this;
+	}
+	
+	@FindBy(id="password")
+	WebElement txtPassword;
+	public OrderCompletionPage enterPassword(String Password) {
+		type(txtPassword, Password);
+		return this;
+	}
+	
+	@FindBy(id="password-confirmation")
+	WebElement txtPasswordConfirmation;
+	public OrderCompletionPage enterPasswordConf(String PasswordConf) {
+		type(txtPasswordConfirmation, PasswordConf);
+		return this;
+	}
+	
+	@FindBy(id="is_terms_conditions")
+	WebElement labelTermsConditions;
+	public OrderCompletionPage clickTermsConditions() {
+		try {
+			driver.get().executeScript("arguments[0].click()", labelTermsConditions);
+			System.out.println("Checkbox clicked");
+			//labelTermsConditions.click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	@FindBy(css=".form-create-account button")
+	WebElement buttonCreateAccount;
+	public customerAccountPage clickCreateAnAccount() {	
+		click(buttonCreateAccount);
+		try {
+			return new customerAccountPage(driver, Test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	@FindBy(xpath="//*[@id=\"authform\"]/input[5]")
 	WebElement buttonAuthenticate;
 	public OrderCompletionPage clickAuthenticate(){

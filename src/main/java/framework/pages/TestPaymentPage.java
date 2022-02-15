@@ -4,10 +4,15 @@ package framework.pages;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -171,6 +176,34 @@ public class TestPaymentPage extends Class_initEcomPrac  {
 		return this;
 	}
 	
+	@FindBy(xpath="//div[@class='success-text']/h2")
+	WebElement confirmOrderSuccess;
+	public TestPaymentPage confirmOrderIsSuccess1() {
+		//String successMessage=confirmOrderSuccess.getText(); 
+		try {
+			System.out.println("After submit card details  "+driver.get().getCurrentUrl());
+			new WebDriverWait(driver.get(), waitTimeout).until(ExpectedConditions.refreshed
+					(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//section[@class='details']"))));
+		/*	if(successMessage.contains("Thanks for shopping!")
+					|| driver.get().getCurrentUrl().contains("onepage/success")) {
+				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed with text - " + successMessage, "pass");
+			return this; */
+			if(driver.get().getCurrentUrl().contains("onepage/success")){
+				reportStep(driver.get().getCurrentUrl()+"The order is successfully placed", "pass");
+				return this;
+		}
+			else {
+				reportStep("The order failed to complete"+driver.get().getCurrentUrl(), "warning");
+				return this;
+			}
+		}
+		catch(TimeoutException | NullPointerException | NoSuchElementException e) {
+			
+			reportStep(driver.get().getCurrentUrl()+"Order Failed", "warning");
+			return this;
+		}
+		
+	}
 
 	
 }

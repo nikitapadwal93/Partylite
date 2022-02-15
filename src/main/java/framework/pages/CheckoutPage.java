@@ -1172,6 +1172,19 @@ public class CheckoutPage extends Class_initEcomPrac {
 				}
 			return this;
 		}
-
+	
+	@FindBy(xpath = "//*[@id='checkout-step-shipping']/div[1]/div/div[2]/div[1]/div[2]/button")
+	WebElement selectAddress;
+	public CheckoutPage AddressSelect() throws InterruptedException {
+		Thread.sleep(2000);
+		try {
+		click(selectAddress);
+		System.out.println("Address selected");
+		}
+		catch (Exception e) {
+			System.out.println("Address not selected");
+		}
+		return this;		
+	}
 
 }

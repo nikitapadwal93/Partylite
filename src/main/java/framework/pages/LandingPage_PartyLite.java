@@ -423,6 +423,15 @@ public class LandingPage_PartyLite extends Class_initEcomPrac {
 
 	}
 	
+	@FindBy(xpath="//*[@id='html-body']/div[7]/aside[4]/div[2]/footer/button/span")
+	WebElement clickContinuebutton_CH;
+	public LandingPage_PartyLite clickContinuebutton_CH() throws InterruptedException {
+		Thread.sleep(3000);
+		click(clickContinuebutton_CH);
+		Thread.sleep(3000);
+		return this;
+	}
+	
 	@FindBy(xpath="(//*[@id=\"id50L0qXaW\"])[1]")
 	WebElement clickDashboard;
 	public LandingPage_PartyLite clickOnDashboard() {

@@ -3,7 +3,7 @@
 	<listeners>
 		<listener class-name="framework.utils.TestNGListener" />
 	</listeners>
-	
+	<!-- 
 	<test name="Test-FullRegression-CA">
 		<parameter name="paramURL"
 			value="https://mcstaging.partylite.ca/ctwenty-six" />
@@ -17,7 +17,7 @@
 		<classes>
 			<class name="framework.test.OnlineEnrollment_CA_Regression_TC16" />
 		</classes>
-	</test>
+	</test> -->
 
 <!--
 	<test name="Test-FullRegression-CA">
@@ -108,6 +108,138 @@
 		</groups> <classes> <class name="framework.test.GuestOrder_PartyLite_FR_PWS_Smoke_TC7" 
 		/> </classes> </test> -->
 
+	
+			 <!-- 	<test name="Regression_TC-1: US - Affiliate Site -Apply Coupon- Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com/bnine"/>
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_ApplyGC_US_Regression_TC1" />
+		</classes>
+	</test>   -->
+	
+		
+	 	<!-- <test name="Regression_TC-2: US - Affiliate Site -Apply Coupon- Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com/bnine" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_ApplyCoupon_US_Regression_TC2" />
+		</classes>
+	</test>   -->
+  
+<!-- 
+  	<test name="Regression_TC-4: US - Corporate Site -Apply GC and PPC- Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com/" />
+		<parameter name="paramCountry" value="US" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_ApplyPPCGC_US_Regression_TC4" />
+		</classes>
+	</test>   -->
+	
+
+	<!-- <test name="Regression_TC-6: CA - Corporate Site -Apply PPC and  Coupon - Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.ca/" />
+		<parameter name="paramCountry" value="CA" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_ApplyPPCCoupon_CA_Regression_TC6" />
+		</classes>
+	</test>   -->
+	
+		<!-- <test name="Regression_TC-10: AU - Affiliate Site -Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.com.au/auseleven" />
+		<parameter name="paramCountry" value="AU" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_AU_Regression_TC10" />
+		</classes>
+	</test>   -->
+	
+		<!-- <test name="Regression_TC-12: UK - Affiliate Site -Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.co.uk/ukeleven" />
+		<parameter name="paramCountry" value="UK" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_UK_Regression_TC12" />
+		</classes>
+	</test>   -->
+	
+	<!-- <test name="Regression_TC-19: DE - CWS Site -Guest Checkout">
+		<parameter name="paramURL"
+			value="https://partylite.biz/"/>
+		<parameter name="paramCountry" value="DE" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.GuestOrder_DE_RegressionTC19" />
+		</classes>
+	</test> -->
+	
+	<!-- <test name="Regression_TC-21: FR - CWS Site -Apply GC and  Coupon - Logged in Checkout">
+		<parameter name="paramURL"
+			value="https://mcstaging.partylite.fr/" />
+		<parameter name="paramCountry" value="FR" />
+		<groups>
+			<run>
+				<include name="Regression" />
+				<include name="Common" />
+				<include name="PEX" />
+			</run>
+		</groups>
+		<classes>
+			<class name="framework.test.LoggedInCustomerOrder_ApplyGCCoupon_FR_Regression_TC21" />
+		</classes>
+	</test>    -->
+	
 	<!-- <test name ="Admin_Settings_Captcha_enable"> <groups> <run> <include 
 		name="Captcha"/> <include name="Common"/> </run> </groups> <classes> <class 
 		name="framework.test.TurnOnCaptcha_PartyLite" /> </classes> </test> -->

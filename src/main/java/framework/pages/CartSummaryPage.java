@@ -536,5 +536,13 @@ public class CartSummaryPage extends Class_initEcomPrac {
 		click(clickContinue);
 		return null;
 	}
+	
+	@FindBy(xpath="//button[@value=\"Ajouter un bon d'achat\"]")
+	WebElement apply_btn_FR;
+	public CartSummaryPage clickApplyButton_FR() {
+		click(apply_btn_FR);
+		return this;
+
+	}
 
 }
